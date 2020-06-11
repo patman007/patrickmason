@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hotel Room Service</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h1>Hotel Room Service</h1>        
+        <h3>Welcome to our hotel! We hope you enjoy your stay.</h3>        
+        <p>We value you as our guest! Use this online form to have a hot, delicous breakfast
+           delivered to your room. Please fill out this form before midnight so that we can
+           make proper accomodations. All meals are seved before 10AM. Tipping is encouraged
+        </p>
+
+        <form>
+            <fieldset>
+            <legend>Hotel Guest Contact Info</legend>           
+            <p>First Name:<input type="text" name="fname" required></p>
+            <p>Last Name:<input type="text" name="lname" required></p>            
+            <p>Room Number:<input type="number" name="room" min="100" max="500" required></p>
+            </fieldset>            
+            <br>
+            <label for="time"></label>What time would you like to be served?</label>
+            <input= type="number" id="time" name="time">
+                <select name="time"
+                    <label for="time"><What time would you like to be served?</label></What>
+                    <option value="0">12AM</option>
+                    <option value="1">1AM</option>
+                    <option value="2">2AM</option>
+                    <option value="3">3AM</option>
+                    <option value="4">4AM</option>
+                    <option value="5">5AM</option>
+                    <option value="6">6AM </option>
+                    <option value="7">7AM</option>
+                    <option value="8">8AM</option>
+                    <option value="9">9AM</option>
+                    <option value="10">10AM</option>
+                    <!--<option value="11">11:00 am</option>
+                    <option value="12">12:00 pm</option>
+                    <option value="13">1:00 pm</option>
+                    <option value="14">2:00 pm</option>
+                    <option value="15">3:00 pm</option>
+                    <option value="16">4:00 pm</option>
+                    <option value="17">5:00 pm</option>
+                    <option value="18">6:00 pm</option>
+                    <option value="19">7:00 pm</option>
+                    <option value="20">8:00 pm</option>
+                    <option value="21">9:00 pm</option>
+                    <option value="22">10:00 pm</option>
+                    <option value="23">11:00 pm</option>-->                                 
+                </select>
+                <br><br>            
+                        
+            <label for="breakfast">Please choose your entree:</label><br><br>
+            <select name="breakfast" id="breakfast" size="5">                
+                    <option value="Waffles and chicken">Waffles and chicken</option>
+                    <option value="Pancakes and syrup">Pancakes and syrup</option>
+                    <option value="Hashbrowns">Hashbrowns</option>
+                    <option value="Bacon & Eggs">Bacon & Eggs</option>
+                    <option value="Boring ol' Toast">Boring ol' Toast</option>                                           
+            </select>            
+            <br>    
+            <p>Would you like extra butter?</p>
+            <input type="checkbox" checked>Yes            
+            <input type="checkbox">No
+            <input type="checkbox">Surprise Me
+            <br>
+            <br>            
+            <input type="submit">            
+        </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+body, html {
+  box-sizing: border-box;  
+}
+
+/* Create three equal columns that sit next to each other */
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.column div{
+  margin: 2%;
+  width: 300px;
+  height: 300px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+/*.row {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;          
+}
+
+/* Create columns that sit next to each other */
+/*.column {  
+  width: 25%;
+  margin: auto;
+  padding-top: 50px;  
+}*/
+
+/*.column img {
+  margin: 5px;  
+}*/
