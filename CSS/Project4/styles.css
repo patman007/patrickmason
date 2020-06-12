@@ -1,25 +1,11 @@
 body, html {
     margin: 0;
-    background: #eceff1; 
+    background: #eceff1;
+    font-family: 'Oswald', sans-serif;
+    
   }
 
-  h1 {
-
-  }
-
-  h3 {
-
-
-  }
-
-  /*logo {
-
-  }*/
-
-  /*img {
-      width: 50%;
-  }*/
-  
+ 
   ul {
     list-style-type: none;
     margin: 0;
@@ -54,8 +40,7 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #eceff1;
-    /*background: #01579b;*/    
+    background: #eceff1;       
   }
 
   li a ul li {    

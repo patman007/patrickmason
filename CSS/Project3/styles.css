@@ -1,31 +1,31 @@
 body, html {
-    margin: 0em;
+    margin: 0;
     background: #eceff1; 
   }
   
   ul {
     list-style-type: none;
-    margin: 0em;
-    padding: 0em;    
-    overflow: hidden;           
+    margin: 0;
+    padding: 0;    
+    overflow: hidden;               
   }
   
   li {    
     float: left;
-    border-right: 1em solid white;
+    border-right: 0.05em solid white;
     background: #01579b;
         
   }
   
   li a {        
-    display: block;
+    display: block;    
     color: white;
-    padding: .2em .35em;     
-    font-size: 0.3em;
-    width: 0.5em;
-    height: 1em;
+    padding: 0em;     
+    font-size: auto;
+    width: 300px;
+    height: 70px;
     text-decoration: none;
-    text-align: center;
+    text-align: center;        
     font-family: 'Oswald', sans-serif;
   }
 
@@ -35,29 +35,32 @@ body, html {
 
   li a ul {
     list-style-type: none;
-    margin: 0em;
-    padding: 0em;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    background: #eceff1;        
+    background: #eceff1;            
   }
 
   li a ul li {    
-    float: left;        
+    float: left;
+    vertical-align: auto;
+            
   }  
 
   li a ul li a {        
     display: block;
     color: white;
-    padding: .2em .35em; 
-    width: 0.5em;
-    height: 1em;         
-    font-size: 0.3em;
+    padding: 0em; 
+    width: 300px;
+    height: 70px;         
+    font-size: auto;
     text-decoration: none;
-    text-align: center;
+    text-align: center;    
     font-family: 'Oswald', sans-serif;
-    font: bold;
+    font: bold;    
   }
 
   li ul li a:hover {    
     background: #ace39a;
+    color: white;
   }
