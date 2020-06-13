@@ -1,65 +1,128 @@
 body, html {
-    margin: 0;
-    background: #eceff1;
-    font-family: 'Oswald', sans-serif;
-    
+  margin: 0;
+  background: #eaf0f2;
+  font-family: "Oswald", sans-serif;
+}
+
+.logo {
+  padding-top: 15px 35px;
+  line-break: 35px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul h1 {  
+  color: white;
+}
+
+/*Navigation Bar*/
+li {  
+  float: left;
+  color: white;
+  font-size: 25px;
+  height: 75px;  
+  background: #263238;
+}
+
+/*Dropdown menu All Sub menu and Top Menu*/
+li a {
+  display: block;
+  color: #eaf0f2;
+  padding: 10px;
+  font-size: 25px;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  text-decoration: none;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+}
+
+/*Hover over Navigation Bar*/
+li a:hover {
+  background: #546e7a;
+}
+
+li a ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #eceff1;
+}
+
+li a ul li {
+  float: left;
+  vertical-align: auto;
+}
+
+/*Submenu Drop down*/
+li a ul li a {
+  display: block;
+  color: white;
+  padding: 0em;
+  width: 300px;
+  height: 70px;
+  font-size: auto;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.6s;
+  font-family: "Oswald", sans-serif;
+  font: bold;  
+}
+
+/*Hover over Navigation Bar*/
+li ul li a:hover {
+  background: #546e7a;
+}
+
+ /* This will select ALL ul's that are desc of li's which are
+  desc of  ul's */
+  ul li ul {
+    display: none;
   }
 
- 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;    
-    overflow: hidden;           
-  }
-  
-  li {    
-    display: block;
-    float: left;    
-    background: #263238;            
-  }
-  
-  li a {        
-    display: block;
-    color: white;
-    padding: 70px 150px;     
-    font-size: 60px;
-    width: 300px;
-    height: 70px;
-    text-decoration: none;
-    text-align: left;
-    font-family: 'Oswald', sans-serif;    
-  }
-
-  li a:hover {
-    background: #546e7a;
-  }
-
-  li a ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #eceff1;       
-  }
-
-  li a ul li {    
-    float: left;        
-  }  
-
-  li a ul li a {        
-    display: block;
-    color: white;    
-    width: 300px;
-    height: 70px;         
-    font-size: 60px;
-    text-decoration: none;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-  }
-
-  li ul li a:hover {    
-    background: #546e7a;
+  /* Then ask yourself, what are you 'hovering over?' */
+  ul li:hover ul {
+    display: initial; /* sets the value back to default */
   }
 
 
+ul h3 {
+  font-size: 28px;  
+}
+
+/*Image*/
+ul h3 img {  
+  padding: 20px;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+ul h4{  
+  font-size: 18px;
+  padding: 50px;
+  margin-top: 75px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font: bold;
+}
+
+
+/*Footer 1*/
+ul h4 ul li {  
+  padding: 50px;
+  margin-top: 75px;
+}
+
+/*Footer 2*/
+/*h4 ul li a {  
+  font-size: 18px;  
+}*/

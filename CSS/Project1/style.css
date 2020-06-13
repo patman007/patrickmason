@@ -1,12 +1,10 @@
-body,html {
+body, html {
     background: white;    
 }
 
-
 .button {
     /*Google Font CSS*/
-    font-family: 'Francois One', sans-serif;
-    background-color: #0D47A1; /*Blue*/
+    font-family: 'Francois One', sans-serif;    
     color: white;
     width: 200px; 
     border: none;    
@@ -20,6 +18,41 @@ body,html {
     border-radius: 10px;
   }
 
+.button1 {background-color: #0D47A1;} /* Blue*/
 .button2 {background-color: #F44336;} /* Red */
 .button3 {background-color: #4CAF50;} /* Green */ 
-.button4 {background-color: #FFEB3B} /* Yellow */ 
+.button4 {background-color: #FFEB3B;} /* Yellow /*
+
+
+/*If using this code use the everything below Line 36 on
+the HTML page associated with project 2
+/*Another way to do the same code*//*
+#buttons {
+  text-align: center;
+}
+
+.button {
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  font-family: 'Francois One', sans-serif;  
+  padding: 20px 100px;
+  border: none;
+  display: inline-block;
+}
+
+#blue {
+  background-color: #0d47a1;
+}
+
+#red {
+  background-color: #fa4336;
+}
+
+#green {
+  background-color: #4caf50;
+}
+
+#yellow {
+  background-color: #ffeb3b;
+}
