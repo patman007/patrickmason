@@ -1,6 +1,6 @@
-body, html {
+body,
+html {
   box-sizing: border-box;
-  margin: 0;  
   background: #eaf0f2;
   font-family: "Oswald", sans-serif;
 }
@@ -10,49 +10,46 @@ body, html {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
 }
 
-#logo /*ul li h1*/ {  
+#logo /*ul li h1*/ {
   padding: 1px;
-  line-break: 0px;
   overflow: hidden;
-}
-
-#news_label /*ul h1*/ {  
-  color: white;  
-  text-align: left;   
+  line-break: 0px;
 }
 
 /*Navigation Bar*/
-.links /*li*/ {  
+.links /*li*/ {
   float: left;
   color: white;
   font-size: 25px;
   /* The height cuts out the navbar at 75px */
-  /*height: 75px;*/    
-  background: #263238;  
+  line-height: 50px;
+  height: 95px;
+  background: #263238;
+  font: bold;
 }
 
 /*Dropdown menu All Sub menu and Top Menu*/
 li a {
   display: block;
   color: #eaf0f2;
-  padding: 0;
-  margin: 0;
   font-size: 25px;
-  width: 7em;
-  height: 45px;  
-  line-height: 45px;   
+  width: 10em;
+  height: 2em;
+  line-height: 45px;
   text-decoration: none;
   text-align: left;
-  font-family: "Oswald", sans-serif;
 }
 
 /*Hover over Navigation Bar*/
 /* Having issues using css id for hover
 /*#news_menus:hover*/
 li a:hover {
-  background: #546e7a;    
+  background: #546e7a;
 }
 
 #news_menus/*ul li a ul*/ {
@@ -64,11 +61,12 @@ li a:hover {
 }
 
 .submenu /*Submenu text properties*/ 
-/* ul li ul li*/{
-  list-style-type: none;  
+/* ul li ul li*/ {
+  list-style-type: none;
   vertical-align: auto;
   margin: 0;
   padding: 0;
+  float: left;
 }
 
 /* Having issues using css id for hover
@@ -77,15 +75,16 @@ li a ul li a {
   display: block;
   color: white;
   padding: 15px 20px;
-  margin: 0;  
   width: 45px;
   height: 45px;
   font-size: auto;
   text-decoration: none;
-  text-align: center;  
+  text-align: center;
   transition: 0.6s;
+  margin: 0;
+  padding: 15px 20px;
   font-family: "Oswald", sans-serif;
-  font: bold;  
+  font: bold;
 }
 
 /*Hover over Navigation Bar*/
@@ -96,68 +95,66 @@ li a ul li a {
 /* This will select ALL ul's that are desc of li's which are
   desc of  ul's */
 /* Having issues using css id for hover  
-/*#news_menus*/ 
+/*#news_menus*/
 ul li ul {
-    display: none;
-  }
+  display: none;
+}
 
- /* Then ask yourself, what are you 'hovering over?' */
- /* Having issues using css id for hover 
- /*#news_menu:hover ul*/ 
+/* Then ask yourself, what are you 'hovering over?' */
+/* Having issues using css id for hover 
+ /*#news_menu:hover ul*/
 ul li:hover ul {
-    display: initial; /* sets the value back to default */
-  }
+  display: initial; /* sets the value back to default */
+}
+
+#footer /*ul li ul li*/ {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  font: bold;
+  overflow: hidden;
+}
 
 #welcome /*ul h3*/ {
   font-size: 50px;
   text-align: left;
+  float: left;
 }
 
 /*Image*/
 #img /*ul h3 img*/ {  
-  padding: 1em;
-  width: 11em;
-  height: 5em
-  float: left; 
+  width: 14em;
+  height: 10em;
+  float: left;
 }
-
-#footer /*ul li ul li*/ {   
-  padding: 0;
-  margin: 0; 
-  list-style-type: none;  
-  text-align: center;  
-  font: bold;  
-  overflow: hidden;
-}
-
 
 /*Footer 1*/
-#news_labels/*ul li h4 li*/ {    
+#bottom_newslist/*ul li h4 li*/ {
+  padding-top: 65px;
   color: #cfd8dc;
-  height: 5%;   
-  width: 100%;   
-  background: #263238;  
-  text-align: center;    
+  height: 15%;
+  width: 100%;
+  background: #263238;
 }
 
 #bottom_title /*ul li h4 */ {
   font-size: 28px;
-  color:  #b0bec5;
-  padding-top: 50px; 
+  color: #b0bec5;
+  padding-top: 50px;
 }
 
-#hyperlinks /*ul li ul li*/ {   
-  text-align: center;    
+.newslink /*ul li ul li*/ {
   overflow: hidden;
   display: block;
+  list-style-type: none;
 }
 
 /*Hover over Navigation Bar*/
-.newslink:hover /*li ul li a:hover*/ {
-  background: #263238;  
-  color:#cfd8dc;  
-  display: inline-block;  
-  text-align: center;
+.newslink:hover  /*li ul li a:hover*/ {
+  background: #263238;
+  color: #cfd8dc;
+  display: block;
 }
 
 /* All below here is not displaying the 
@@ -167,17 +164,17 @@ selected hyperlinks when hovering over them
 desc of  ul's */
 .newslink /*ul li ul*/ {
   display: none;
-  }
+}
 
 /* Then ask yourself, what are you 'hovering over?' */
 .newslink:hover /*ul li:hover ul*/ {
-  display: initial; /* sets the value back to default */
-  }
+  display: initial;
+  /* sets the value back to default */
+}
 
 /*News Copyright 1983 part*/
-#news1983/*h4 ul li a*/ {  
+#news1983/*h4 ul li a*/ {
   font-size: 16px;
-  text-align: center;
   color: #b0bec5;
-  padding-bottom: 25px;   
+  padding-bottom: 25px;
 }
