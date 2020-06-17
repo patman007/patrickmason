@@ -1,0 +1,122 @@
+/*resets margins and padding to 0*/
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/*changes color of body*/
+body {
+    background-color: #eaf0f2;
+    color: #eaf0f2;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+
+
+nav {
+    background-color: #263238;
+    height: 75px;
+    font-size: 25px;
+    position: relative;
+}
+
+/*makes sure no styles are used for ul lists*/
+ nav ul {
+    list-style-type: none;
+}
+
+/*floats each of the list items to the left of the last item*/
+ nav li {
+    float: left;
+    text-align: center;  
+}
+
+/*sets css for each specific list item*/
+ nav li a {
+    display:inline-block;
+    color: white;
+    margin-top: 5px;
+    padding: 15px 35px;
+    text-align: left;
+    
+}
+
+#logo {
+    font-size: 42px;
+    padding: 15px 35px;
+    line-height: 35px;
+}
+
+.dropContent {
+    max-height: 0px;/*no height for content and allows submenu to collapse when not used*/
+    color: #eaf0f2;
+    position: absolute;
+    overflow: hidden;/*content will not be seen since max-height is zero*/
+    background-color: #f9f9f9;
+}
+
+.dropContent a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+}
+
+/*changes color of background when user hovers over top menu item*/
+.drop:hover {
+    background-color: #546E7A;
+}
+
+/*as user clicks on top menu, the contents of sub-menu will be displayed*/
+    /*NOTE: active MUST come aftter hover events!!!*/
+.drop:hover .dropContent {
+    display: block;/*display in block format*/
+    background-color: #263238;
+    max-height: 500px;/*IMPORTANT - this can be whatever px you want BUT it must be larger than largest submenu!!!*/
+    transition: max-height .6s;/*transition effect that "slides" sub-menu down over .6 seconds*/
+}
+
+/*changes clor of background when user hovers over sub-menu item*/
+.dropContent a:hover {
+    color: #CFD8DC;
+}
+
+/*changes color of background of id=logo but since it is same as existing bkgdcolr user will not see and causes
+    a seamless effect - easier than recoding HTML elements for navigation bar*/
+#logo:hover {
+    background-color: #263238;
+}
+
+/*set attributes for main*/
+main {
+    color: black;/*sets text color to black in order to override body text color of gray*/
+    padding-left: 35px;/*aligns text and image so it matches logo in nav bar*/
+}
+
+/*sets attributes for footer*/
+footer {
+    background-color: #263238;
+    font-size: 18px;
+    padding: 50px;
+    margin-top: 75px;
+    color: #B0BEC5;
+    text-align: center;
+}
+
+/*sets attributes for links BEFORE and AFTER they have been clicked. Otherwise, there would end up
+    three different colors for links in various stages of use*/
+#footLinks a:link, #footLinks  a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+/*sets color of text for link when user hovers over it*/
+#footLinks a:hover {
+    color: #CFD8DC;
+
+
+}
