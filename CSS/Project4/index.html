@@ -6,86 +6,91 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>The News</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
-        <!--Font Awesome code-->
-        <script src="https://kit.fontawesome.com/63582255f8.js" crossorigin="anonymous"></script>
-        <!--Google Fonts code-->
+        <!--Google Font-->
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/63582255f8.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="navbar">
-            <ul id="newsmain">                                       
-                <li class="links">The News  <i class="far fa-comment logo"></i></li>
+        <nav class="navigation">
+            The News <i class="far fa-comment"></i>
+                <ul class="navbar">
+                    <li><a href="#">Trending</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Entertainment</a></li>
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Education</a></li>
+                        </ul>                                                                 
+                    </li>
+                    <li><a href="#">Tech</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Latest</a></li>
+                            <li><a href="#">Programming</a></li>
+                            <li><a href="#">App Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Politics</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Headlines</a></li>
+                            <li><a href="#">The Facts</a></li>
+                            <li><a href="#">The Gossip</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Donate</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">FAQ</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our Policy</a></li>
+                            <li><a href="#">Careers</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our Policy</a></li>
+                            <li><a href="#">Careers</a></li>                            
+                        </ul>
+                    </li>
+                </ul>
+        </nav>
+        
+        <header class="header">
+            <h1>Welcome to the News</h1>
+        </header>
 
-                    
-                <li class="links"><a href="#">Trending</a>
-                    <ul>
-                        <li class="submenu"><a href="#">Entertainment</a></li><br>
-                        <li class="submenu"><a href="#">Travel</a></li><br>
-                        <li class="submenu"><a href="#">Education</a></li><br>
-                    </ul>
-                </li>    
-                </li>    
-                <li class="links"><a href="#">Tech</a>
-                    <ul>
-                        <li class="submenu"><a href="#">Latest</a></li><br>
-                        <li class="submenu"><a href="#">Programming</a></li><br>
-                        <li class="submenu"><a href="#">App Reviews</a></li><br>
-                    </ul>
-                </li>
-                <li class="links"><a href="#">Politics</a>
-                    <ul>
-                        <li class="submenu"><a href="#">Headlines</a></li><br>
-                        <li class="submenu"><a href="#">The Facts</a></li><br>
-                        <li class="submenu"><a href="#">The Gossip</a></li><br>                    
-                    </ul>
-                </li>
-                <li class="links"><a href="#">About</a>
-                    <ul>
-                        <li class="submenu"><a href="#">Our Story</a></li><br>
-                        <li class="submenu"><a href="#">Donate</a></li><br>
-                    </ul>
-                </li>
-                <li class="links"><a href="#">FAQ</a>
-                    <ul>
-                        <li class="submenu"><a href="#">Our Policy</a></li><br>
-                        <li class="submenu"><a href="#">Careers</a></li><br>
-                    </ul>
-                </li>
-                <li class="links"><a href="#">Contact</a>
-                    <ul>
-                        <li class="submenu"><a href="#">Email</a></li><br>
-                        <li class="submenu"><a href="#">Phone</a></li><br>                                        
-                    </ul>
-                </li>               
-            </ul>    
-        </div>
-        <div id="footer">
-            <ul id="newsfooter">
-                <h3 id="welcome">Welcome to the News<br>
-                    <img src="img/clifftop.jpg" id="img" alt="clifftop">            
-                </h3><br><br>             
-                
-                <li id="bottom_newslist"><h4 id="bottom_title">The News</i></h4><br><br><br><br>
-                    <ul id="hyperlinks">
-                        <li class="newslink"><a href="#">Home</a></li>
-                        <li class="newslink"><a href="#">Tech</a></li>
-                        <li class="newslink"><a href="#">Politics</a></li>
-                        <li class="newslink"><a href="#">About</a></li>
-                        <li class="newslink"><a href="#">FAQ</a></li>
-                        <li class="newslink"><a href="#">Contact</a></li>
-                    </ul>
-                    <h6 id="news1983">The News &copy; 1983</h6>
-                </li>               
-       
-            </ul>    
-        </div>
+        <section class="image">
+            <img src="img/clifftop.jpg" alt="clifftop">
+        </section>
+
+        <footer class="footer">
+            <h3>The News</h3><br>
+
+            <ul class="hyperlinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <h6>The News &copy; 1983</h6>
+
+        </footer>
+
+
+
+        
         <script src="" async defer></script>
     </body>
 </html>

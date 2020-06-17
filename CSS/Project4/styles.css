@@ -1,180 +1,126 @@
 body,
 html {
-  box-sizing: border-box;
-  background: #eaf0f2;
+  background-color: #eaf0f2;
   font-family: "Oswald", sans-serif;
+  max-height: 0px;
 }
 
-#newsmain /*ul*/ {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: 0;
+.navigation {
+  background-color: #263238;
+  height: 75px;
+  color: #eaf0f2;  
+}
+
+.navbar {
   width: 100%;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0 auto;
+  overflow: hidden;  
 }
 
-#logo /*ul li h1*/ {
-  padding: 1px;
-  overflow: hidden;
-  line-break: 0px;
-}
-
-/*Navigation Bar*/
-.links /*li*/ {
+.navbar li {
   float: left;
-  color: white;
-  font-size: 25px;
-  /* The height cuts out the navbar at 75px */
-  line-height: 50px;
-  height: 95px;
-  background: #263238;
-  font: bold;
+  text-align: center;     
 }
 
-/*Dropdown menu All Sub menu and Top Menu*/
-li a {
-  display: block;
+.navbar li a {
+  display: inline;
+  text-decoration: none;
   color: #eaf0f2;
-  font-size: 25px;
-  width: 10em;
-  height: 2em;
+  white-space: nowrap;  
   line-height: 45px;
-  text-decoration: none;
-  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;  
 }
 
-/*Hover over Navigation Bar*/
-/* Having issues using css id for hover
-/*#news_menus:hover*/
-li a:hover {
-  background: #546e7a;
+.navbar a:hover {
+  background-color: #546e7a;
+  color: #eaf0f2;  
 }
 
-#news_menus/*ul li a ul*/ {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: #eceff1;
-}
-
-.submenu /*Submenu text properties*/ 
-/* ul li ul li*/ {
-  list-style-type: none;
-  vertical-align: auto;
-  margin: 0;
-  padding: 0;
-  float: left;
-}
-
-/* Having issues using css id for hover
-/*Submenu Drop down*/
-li a ul li a {
-  display: block;
-  color: white;
-  padding: 15px 20px;
-  width: 45px;
-  height: 45px;
-  font-size: auto;
-  text-decoration: none;
-  text-align: center;
-  transition: 0.6s;
-  margin: 0;
-  padding: 15px 20px;
-  font-family: "Oswald", sans-serif;
-  font: bold;
-}
-
-/*Hover over Navigation Bar*/
-.submenu:hover/*li ul li a:hover*/ {
-  background: #cfd8dc;
-}
-
-/* This will select ALL ul's that are desc of li's which are
-  desc of  ul's */
-/* Having issues using css id for hover  
-/*#news_menus*/
-ul li ul {
-  display: none;
-}
-
-/* Then ask yourself, what are you 'hovering over?' */
-/* Having issues using css id for hover 
- /*#news_menu:hover ul*/
-ul li:hover ul {
-  display: initial; /* sets the value back to default */
-}
-
-#footer /*ul li ul li*/ {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  text-align: center;
-  font: bold;
-  overflow: hidden;
-}
-
-#welcome /*ul h3*/ {
-  font-size: 50px;
-  text-align: left;
-  float: left;
-}
-
-/*Image*/
-#img /*ul h3 img*/ {  
-  width: 14em;
-  height: 10em;
-  float: left;
-}
-
-/*Footer 1*/
-#bottom_newslist/*ul li h4 li*/ {
-  padding-top: 65px;
-  color: #cfd8dc;
-  height: 15%;
-  width: 100%;
-  background: #263238;
-}
-
-#bottom_title /*ul li h4 */ {
-  font-size: 28px;
-  color: #b0bec5;
-  padding-top: 50px;
-}
-
-.newslink /*ul li ul li*/ {
-  overflow: hidden;
-  display: block;
-  list-style-type: none;
-}
-
-/*Hover over Navigation Bar*/
-.newslink:hover  /*li ul li a:hover*/ {
-  background: #263238;
-  color: #cfd8dc;
-  display: block;
-}
-
-/* All below here is not displaying the 
-selected hyperlinks when hovering over them
- from Line 168 to the end of the CSS*/
-/* This will select ALL ul's that are desc of li's which are
-desc of  ul's */
-.newslink /*ul li ul*/ {
-  display: none;
-}
-
-/* Then ask yourself, what are you 'hovering over?' */
-.newslink:hover /*ul li:hover ul*/ {
+.navbar li:hover ul {
   display: initial;
-  /* sets the value back to default */
 }
 
-/*News Copyright 1983 part*/
-#news1983/*h4 ul li a*/ {
-  font-size: 16px;
+.dropdown {
+  display: none;
+}
+
+.dropdown li {
+  float: none;
+  text-align: center;
+  list-style-type: none;
+}
+
+.dropdown a {
+  display: block;
+  text-decoration: none;
+  color: #eaf0f2;
+  background-color: #263238;
+  height: 45px;
+  line-height: 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  transition-delay: 0.6s;  
+}
+
+.dropdown a:hover {
+  background-color: #cfd8dc;  
+}
+
+.image {
+  position: relative;
+  padding: 5px;
+  margin: 0;
+  z-index: -1;
+}
+
+.far fa-comment {
+  padding: 15px 35px;
+  line-height: 35px;
+}
+
+.footer {
+  position: relative;
+  text-align: center;
+  margin-top: 75px;
+  padding: 50px;
+  background-color: #263238;
+  font-size: 18px;
+}
+
+.footer h3 {
   color: #b0bec5;
-  padding-bottom: 25px;
+  font-size: 28px;
+}
+
+.hyperlinks li {  
+  text-align: center;
+  list-style-type: none;
+  display: inline;
+}
+
+.hyperlinks li a {  
+  text-decoration: none;
+  color: #eaf0f2;
+  white-space: nowrap;
+  line-height: 45px;
+  padding-top: 15px;  
+  padding-right: 20px;
+  padding-left: 20px;  
+}
+
+.hyperlinks a:hover {
+    background-color: #cfd8dc;    
+  }
+
+.footer h6 {
+  color: #b0bec5;
+  font-size: 16px;
 }
