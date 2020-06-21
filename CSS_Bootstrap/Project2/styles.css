@@ -1,0 +1,99 @@
+html, body { 
+    height: 100%
+}
+
+#background1 {
+    background: url('img/backgrounds/background1.jpg') center center no-repeat;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#background2 {
+    background: url('img/backgrounds/background2.jpg') center center no-repeat;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#background3 {
+    background: url('img/backgrounds/background3.jpg') center center no-repeat;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#pic1 {
+    width: 175%;
+    height: 100%;    
+}
+
+#pic2 {    
+    width: 300%;
+    height: 200%;
+    margin-left: 400px;
+    margin-top: -400px;           
+}
+
+#pic3 {
+    width: 175%;
+    height: 100%;
+}
+
+#message {
+    width: 900px;
+    /*automatically centers*/
+    margin: 0 auto;
+    text-align: center;
+}
+
+#message h1 {
+    font-size: 54px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;    
+}
+
+#the-footer {
+    background: #263238;
+    color: white;
+    padding: 20px 0px;
+    font-size: 15px;
+}
+
+#the-footer h6 {
+    color: #1e88e5;
+    text-transform: uppercase;
+    font-weight: bold;    
+}
+
+#the-footer a {
+    color: #cfd8dc;
+    font-weight: bold;    
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+/*About Page*/
+.section {
+    padding: 112px 0px;
+    overflow: hidden;
+}
+
+.middle {
+    background: #262f36;
+    color: white;
+}
+
+.middle h2 {
+    color: #cfd8dc;
+}
