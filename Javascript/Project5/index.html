@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Project5</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <!--CSS Stylesheet-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/63582255f8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav>
+                
+            <ul>
+                <li id="logo">The Desserts <i class="fas fa-utensils"></i></li>
+                <li class="drop"><a>Trending</a>
+                    <div class="dropContent">
+                        <a>Entertainment</a>
+                        <a>Travel</a>
+                        <a>Education</a>
+                    </div>
+                </li>
+                <li class="drop"><a>Tech</a>
+                    <div class="dropContent">
+                        <a>Latest</a>
+                        <a>Programming</a>
+                        <a>App Reviews</a>
+                    </div>
+                </li>
+                <li class="drop"><a>Politics</a>
+                    <div class="dropContent">
+                        <a>Headlines</a>
+                        <a>The Facts</a>
+                        <a>The Gossip</a>
+                    </div>
+                </li>
+                <li class="drop"><a>About</a>
+                    <div class="dropContent">
+                        <a>Our Story</a>
+                        <a>Donate</a>
+                    </div>
+                </li>
+                <li class="drop"><a>FAQ</a>
+                    <div class="dropContent">
+                        <a>Our Policy</a>
+                        <a>Careers</a>
+                    </div>
+                </li>
+                <li class="drop"><a>Contact</a>
+                    <div class="dropContent">
+                        <a>Email</a>
+                        <a href="#">Phone</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Image Gallery of your favorite treats</h1>
+            <img src="assets/1.jpg" alt="dessert" class="image">              
+            <button id="previous" onclick="prev()">Previous</button>
+            <button id="next" onclick="next()">Next</button>
+              
+        </main>        
+        <footer>
+            <p style="font-size: 28px">The News</p>
+            <div id="footLinks">
+                <a href="">Home</a>
+                <a href="">Tech</a>
+                <a href="">Politics</a>
+                <a href="">About</a>
+                <a href="">FAQ</a>
+                <a href="">Contact</a>
+            </div>
+            <p style="font-size: 16px">The News &copy; 1983</p>
+        </footer>        
+        <script src="script.js"></script>
+    </body>
+</html>
