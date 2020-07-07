@@ -6,13 +6,12 @@ body, ul, li, a {
 
 /*changes color of body*/
 body {
-    background-color: #eaf0f2;
+    /*background-color: #eaf0f2;*/
+    background-color: black;
     color: #eaf0f2;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
 }
-
-
 
 nav {
     background-color: #263238;
@@ -24,6 +23,8 @@ nav {
 /*makes sure no styles are used for ul lists*/
  nav ul {
     list-style-type: none;
+    position: relative;
+    z-index: 1;
 }
 
 /*floats each of the list items to the left of the last item*/
@@ -92,18 +93,13 @@ nav {
 
 /*set attributes for main*/
 main {
-    color: black;/*sets text color to black in order to override body text color of gray*/
+    color: white;/*sets text color to black in order to override body text color of gray*/
     padding-left: 35px;/*aligns text and image so it matches logo in nav bar*/
+    
 }
 
-/* Previous and Next button*/
-#previous {     
-    display: block;                   
-}
-
-#next {    
-    float: right;  
-    margin-right: 1000px; 
+.carouselExampleControls {
+    z-index: -1;
 }
 
 /*sets attributes for footer*/
