@@ -1,0 +1,80 @@
+body {   
+  display: flex;  
+  align-items: center;
+  justify-content: center;   
+  padding: 150px;  
+  animation: color 27s ease infinite;
+  font-family: 'Orbitron', sans-serif; 
+
+} 
+
+.clock { 
+  /* Relative for the clock hands*/
+  position: relative;
+  border: 22px solid white;  
+  border-radius: 250px;
+  height: 375px;
+  width: 375px;    
+}
+
+.hand {
+  /* Hands in Absolute relation to clock*/
+  position: absolute;
+  width: 4px;
+  height: 120px;
+  background-color: green;
+  bottom: 190px;
+  left: 180px;
+  transform: rotate(90deg);
+  /*transform origin 50% across 100% down*/
+  transform-origin: 50% 100%; 
+}
+
+.minute {
+  height: 140px;
+  background-color: yellow;   
+}
+
+.second {
+  height: 170px;
+  background-color: red; 
+  /*cubic bezier timer*/
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+/*Changing background Colors*/
+  @keyframes color {
+    0% {background-color: #4FC3F7;}
+    4% {background-color: #29B6F6;}
+    8% {background-color: #03A9F4;}
+   12% {background-color: #039BE5;}
+   15% {background-color: #0288D1;}
+   19% {background-color: #0277BD;}
+   22% {background-color: #01579B;}
+   26% {background-color: #9575CD;}
+   30% {background-color: #7E57C2;}
+   34% {background-color: #673AB7;}
+   38% {background-color: #5E35B1;}
+   42% {background-color: #512DA8;}
+   46% {background-color: #4527A0;}
+   50% {background-color: #311B92;}
+   54% {background-color: #7986CB;}
+   58% {background-color: #5C6BC0;}
+   62% {background-color: #3F51B5;}
+   66% {background-color: #3949AB;}
+   70% {background-color: #303F9F;}
+   74% {background-color: #283593;}
+   78% {background-color: #1A237E;}
+   82% {background-color: #64B5F6;}
+   86% {background-color: #42A5F5;}
+   90% {background-color: #2196F3;}
+   94% {background-color: #1E88E5;}
+   98% {background-color: #1976D2;}
+   98% {background-color: #1565C0;}
+   100% {background-color: #0D47A1;}
+  }
+
+
+
+ 

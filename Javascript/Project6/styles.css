@@ -7,8 +7,16 @@ body {
   font-family: 'Orbitron', sans-serif;    
 }
 
+#clock { 
+  /*position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);*/  
+  color: white;
+  font-size: 96px;  
+}
 
-
+/*Changing background Colors*/
  @keyframes color {
   0% {background-color: #4FC3F7;}
   4% {background-color: #29B6F6;}
@@ -41,14 +49,7 @@ body {
 } 
 
 
-#clock { 
-  /*position: absolute;  
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);*/  
-  color: white;
-  font-size: 96px;  
-}
+
 
 
 

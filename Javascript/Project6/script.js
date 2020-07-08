@@ -3,12 +3,12 @@ function getFormattedTime() {
     var hours = dateTime.getHours(); // 0 -23 hours
     var minutes = dateTime.getMinutes(); //0-59 minutes
     var seconds = dateTime.getSeconds(); //0-59 seconds
-    var session = "AM";
+    /*var session = "AM";*/
 
     //Hours    
     if(hours > 12) {
         hours = hours - 12;
-        session = "PM";
+        /*session = "PM";*/
     }
 
     //Minutes    
@@ -21,7 +21,7 @@ function getFormattedTime() {
         seconds = "0" + seconds;
     }
     
-    var time = hours + ":" + minutes + ":" + seconds + " " + session;
+    var time = hours + ":" + minutes + ":" + seconds;
 
     //Display Time
     document.getElementById("clock").innerHTML = time;
