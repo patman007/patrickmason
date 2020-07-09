@@ -1,4 +1,5 @@
 //Form Event Javascript  Way 1
+//Email Variables
 var theEmail = document.getElementById("email");
 var warning = document.getElementById("theForm");
 
@@ -8,21 +9,21 @@ theEmail.addEventListener("focus", function() {
 });
 
 
-//Appears when I use Bootstrap
+//Blur Event Email
 theEmail.addEventListener("blur", function() {
     if (theEmail.value == "") {
         alert("Please Check the fields and make sure they are not blank");
     } else {
-        warning.textContent = "";
-        console.log("Clear"); // I do not see this message in the console
+        warning.textContent = "";        
     }
 });
 
 
+//Password Variables
 var thePassword = document.getElementById("password");
 var warning1 = document.getElementById("theForm");
 
-//Does not Appear when I use Bootstrap
+//Focus Event Password
 thePassword.addEventListener("focus", function() {
     warning1.textContent = "Please enter a valid password."
 });
@@ -33,16 +34,16 @@ thePassword.addEventListener("blur", function() {
     if (thePassword.value == "") {
         alert("Please Check the fields and make sure they are not blank");
     } else {
-        warning.textContent = "";
-        console.log("Clear"); // I do not see this message in the console
+        warning.textContent = "";        
     }
 });
 
+
 /////////////////////////////////////////////////////////////////////////////////
 
-// // Form Event Javascript Way 2
-// // Use of calling a function instead 
-// //Email Variables
+// // Form Event Javascript 2 for Bootsratp Method rough draft
+// // Use of calling a function instead of doing 
+// // Email Variables
 // var warning = document.getElementById("theForm");
 // var theEmail = document.getElementById("email");
 
@@ -65,7 +66,7 @@ thePassword.addEventListener("blur", function() {
 //         console.log("Clear"); // I do not see this message in the console            
 //     }
 // };
-// /////////////////////////////////////////////////////////////////////////////////
+
 
 
 // ///Password Variables
@@ -81,16 +82,16 @@ thePassword.addEventListener("blur", function() {
 // };
 
 
-thePassword.addEventListener("blur", displayPassword1);
-//Password Function 2
-function displayPassword1() {
-    if (thePassword.value == "") {
-        alert("Please Check the fields and make sure they are not blank");
-    } else {
-        warning.textContent = "";
-        console.log("Clear"); // I do not see this message in the console            
-    }
-};
+// thePassword.addEventListener("blur", displayPassword1);
+// //Password Function 2
+// function displayPassword1() {
+//     if (thePassword.value == "") {
+//         alert("Please Check the fields and make sure they are not blank");
+//     } else {
+//         warning.textContent = "";
+//         console.log("Clear"); // I do not see this message in the console            
+//     }
+// };
 
 
 

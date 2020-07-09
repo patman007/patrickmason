@@ -1,0 +1,15 @@
+form, h1 {
+    padding-left: 20px;   
+} 
+
+fieldset.form-border {
+    border: 1px groove black;
+    width: 65%;
+    padding: 0px 35px;
+    margin: 15px;
+}
+
+legend.w-auto {      
+    width: auto;    
+}
+
