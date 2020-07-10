@@ -26,8 +26,9 @@ function runClock() {
     minHand.style.transform = "rotate(" + minRotation + "deg)";
     secHand.style.transform = "rotate(" + secRotation + "deg)";    
    
-    requestAnimationFrame(runClock);
+    //If we want clock to make go smoothly go around 360 degrees of the clock uncomment Line 30
+    //requestAnimationFrame(runClock);
 }
 
 //Call or invoke the function
-runClock();
+setInterval(runClock, 1000);

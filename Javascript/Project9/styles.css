@@ -1,0 +1,55 @@
+html, body {
+    background-color: #d2b48c;
+    padding: 0;
+    margin: 0;
+    text-align: center;    
+}
+
+#click {    
+    background-color: #491818;
+    border-radius: 100px;   
+    font-size: 25px;
+    color: #d2b48c; 
+    padding: 8px;         
+}
+
+.fieldset-border {
+    
+    border: 18px groove  #491818; 
+    width: 65%;   
+    padding: 10px;     
+    margin: auto;  
+    font-size: 32px;      
+} 
+
+.fieldset-legend {      
+    background-color: #491818;
+    font-size: 32px;    
+}
+
+ul {
+    list-style: disc inside;
+}
+
+li {
+    margin-left: 200px;
+    display: block;    
+} 
+
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    color: #491818;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+

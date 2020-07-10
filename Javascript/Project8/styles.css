@@ -5,7 +5,6 @@ body {
   padding: 150px;  
   animation: color 27s ease infinite;
   font-family: 'Orbitron', sans-serif; 
-
 } 
 
 .clock { 
@@ -28,6 +27,9 @@ body {
   transform: rotate(90deg);
   /*transform origin 50% across 100% down*/
   transform-origin: 50% 100%;
+   /*cubic bezier timer*/
+   transition: all 0.50s;
+   transition-timing-function: cubic-bezier(0.3, 2.7, 0.58, 1); 
 }
 
 .minute {
@@ -38,11 +40,7 @@ body {
 .second {
   height: 170px;
   background-color: red; 
-  /*cubic bezier timer*/
-  transition: 2s;
-  transition-timing-function: cubic-bezier(0.3, 2.7, 0.58, 1); 
 }
-
 
 /*Changing background Colors*/
   @keyframes color {
@@ -75,7 +73,4 @@ body {
    98% {background-color: #1565C0;}
    100% {background-color: #0D47A1;}
   }
-
-
-
  
