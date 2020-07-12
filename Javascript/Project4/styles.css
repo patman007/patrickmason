@@ -1,17 +1,14 @@
 /* Container holding the image and the text */
 .textoverlay {
   position: relative;
-  text-transform: uppercase;
-  /*display: table;*/
-      
+  text-transform: uppercase;     
 }
 
 /*Having two different positions for relative and absolute gives
 us the ability to move the text in the picture*/
 .text-block {   
   position: absolute; 
-  color: white;
-  /*display: table-cell;*/
+  color: white;  
   vertical-align: middle;  
   text-align: center;
   top: 20%;  
@@ -20,17 +17,3 @@ us the ability to move the text in the picture*/
   padding-right: 400px;  
   font-family: Oswald;
 }
-
-/* Where would the text width go that is 900px since it is a requirement?
-
-/* How would a flex box be used here?
-What I tried was 
-display: flex;
-justify-content: center;
-align-items: center;
-
-/* Is the padding a wise move to center it or should the display: table and display: table-cell be used?
-
-
-I tried to get the background to span the whole width and I have tried other codes, but it seems to not do the trick. This may go back to my flex box questi
-

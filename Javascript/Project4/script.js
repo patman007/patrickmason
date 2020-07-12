@@ -5,7 +5,8 @@ function rotateImagebackground() {
     document.querySelector("img").setAttribute("src", imageArray [index]);
     index++;
     if (index >= imageArray.length) {
-        index = 0;
+        //index not there needed why
+        index= 0;
     }
 }
 

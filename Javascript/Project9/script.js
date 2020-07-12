@@ -16,7 +16,6 @@ function Serves(number) {
     var number = parseInt(prompt("Please ente the amount of servings: "));
     if (number !== null) {        
         console.log("Serves: " + number);
-
         document.getElementById("serves").innerHTML = "Serves: " + number;
     } 
     if (isNaN(number)) {
@@ -30,9 +29,8 @@ Serves("");
 function Ingredients(arr) {
     //Local Variable
     var arr = []; 
-    //Convert all letters to uppercase
-    // var arr1 = arr.toUpperCase();?????????
-    for (var i = 0; i < 5; i++) {           
+    //Empty array to plug indexes in for loop
+    for (var i = 0; i <= 5; i++) {           
         arr[i] = prompt("Enter your ingredient: " + arr); 
         console.log(arr)
         document.getElementById("ingredients").innerHTML = "Ingredients: " + arr;
@@ -42,24 +40,19 @@ function Ingredients(arr) {
 Ingredients("");
 
 //Directions Function
+//Function is no longer working for the output for the directions
 function Directions(dir) {
     //Local Variable
     var dir = []; 
-    //Convert all letters to uppercase
-    // var dir1 = dir.toUpperCase();???????
-    for (var i = 0; i < 5; i++) {           
-        dir[i] = prompt("Enter your direction: " + dir); 
+    //Empty array to plug indexes in for loop
+    for (var i = 0; i <= 5; i++) {           
+        dir[i] = prompt("Enter your direction: " + dir.toUpperCase); 
         console.log(dir)
-        document.getElementById("directions").innerHTML = "Directions: " + dir; 
+        document.getElementById("directions").innerHTML = "Directions: " + dir.toUpperCase(); 
     }       
 }
 
 Directions("");
 
-//Click button reset form function??????????????
-function myFunction() {
-    document.getElementById("click").reset();
-  }
 
-  myFunction("");
 

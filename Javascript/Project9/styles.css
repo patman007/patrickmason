@@ -5,14 +5,16 @@ html, body {
     text-align: center;    
 }
 
+/*Click button */
 #click {    
     background-color: #491818;
     border-radius: 100px;   
     font-size: 25px;
     color: #d2b48c; 
-    padding: 8px;         
+    padding: 8px;             
 }
 
+/*border*/
 .fieldset-border {
     
     border: 18px groove  #491818; 
@@ -22,25 +24,26 @@ html, body {
     font-size: 32px;      
 } 
 
+/*Legend inside border*/
 .fieldset-legend {      
     background-color: #491818;
-    font-size: 32px;    
+    font-size: 32px;
 }
 
-ul {
-    list-style: disc inside;
+/*Servings, Ingredients, Directions*/
+.items {    
+    padding: 5px;    
+    display: block; 
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-li {
-    margin-left: 200px;
-    display: block;    
-} 
-
-
+/*Recipe*/
 h1 {
     font-size: 50px;
 }
 
+/*recipe id*/
 h3 {
     color: #491818;
     font-size: 40px;
