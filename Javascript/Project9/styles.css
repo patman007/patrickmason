@@ -15,10 +15,9 @@ html, body {
 }
 
 /*border*/
-.fieldset-border {
-    
+.fieldset-border {    
     border: 18px groove  #491818; 
-    width: 65%;   
+    width: 75%;   
     padding: 10px;     
     margin: auto;  
     font-size: 32px;      
@@ -49,10 +48,3 @@ h3 {
     font-size: 40px;
     text-transform: uppercase;
 }
-
-
-
-
-
-
-
