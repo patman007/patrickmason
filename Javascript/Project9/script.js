@@ -39,20 +39,3 @@ function Ingredients(arr) {
 //Invoke Function
 Ingredients("");
 
-// //Directions Function
-// //Function is no longer working for the full for loop for the directions
-function Directions(dir) {
-    //Local Variable
-    var dir = []; 
-    //Empty array to plug indexes in for loop
-    for (var i = 0; i < 5; i++) {           
-        dir[i] = prompt("Enter your direction: " + dir); 
-        console.log(dir)
-        document.getElementById("directions").innerHTML = "Directions: " + dir; 
-    }       
-}
-//Invoke Function
-Directions("");
-
-
-
