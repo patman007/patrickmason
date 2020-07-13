@@ -72,7 +72,6 @@ var books = [
         alreadyRead: false,
     }
 ] 
-
  
 //For Loop
 function Reading() {
@@ -83,14 +82,12 @@ function Reading() {
         var bookInfo = book.title + ' by ' + book.author;            
         if (book.alreadyRead) {            
             console.log('You already read ' + bookInfo); 
-            // document.write('You already read ' + booksInfo[i]);                                
+            document.getElementById("already").innerhtml += bookInfo;                                
         } else {
             console.log('You still need to read ' + bookInfo);
-            // document.write('You still need to read ' + booksInfo[i]);           
+            document.getElementById("need").innerhtml += bookInfo;           
         }       
     }
 }
 
 Reading();
-
-
