@@ -82,9 +82,11 @@ function Reading() {
         //Local Variable                
         var bookInfo = book.title + ' by ' + book.author;            
         if (book.alreadyRead) {            
-            console.log('You already read ' + bookInfo);                                 
+            console.log('You already read ' + bookInfo); 
+            // document.write('You already read ' + booksInfo[i]);                                
         } else {
-            console.log('You still need to read ' + bookInfo);           
+            console.log('You still need to read ' + bookInfo);
+            // document.write('You still need to read ' + booksInfo[i]);           
         }       
     }
 }

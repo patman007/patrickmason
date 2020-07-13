@@ -1,0 +1,36 @@
+html { /*add this everytime to reset and establish size, otherwise, lots of weird behaviors*/
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+   background-image: url("img/background1.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height:100%;
+} 
+
+.navbar-form {
+   margin-bottom: 0;
+}
+
+.navbar-brand {
+   padding-top: 25px;
+}
+
+.main-text {
+   position: relative;
+   top: 40%;
+   color: white;
+}
+
+.main-text h1 {
+   font-size: 3em;
+}
+
+#btn-signup {
+  text-align: center;
+}

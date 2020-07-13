@@ -1,7 +1,7 @@
 
 //First Number
 var num1 = parseInt(prompt("Give me a number: "));
-document.write("<div>First Number: " + num1 + "</div>");
+document.write("<div>First Number is: " + num1 + "</div>");
 console.log("First Number: " + num1);
 
 //Second Number
@@ -17,7 +17,7 @@ console.log("Third Number: " + num3);
 //For Loop Function
 var sum = [parseInt(num1, 10) + parseInt(num2, 10) +parseInt(num3, 10)];
 for (var i = 0; i < sum.length; i++) {
-	document.write("<div> The sum of all your numbers is " + sum[i] + "</div>");
+	document.write("<div> The sum of all your numbers is: " + sum[i] + "</div>");
 	console.log("The sum of all your numbers is " + sum[i]);
 }
 

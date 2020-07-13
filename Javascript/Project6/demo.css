@@ -1,0 +1,9 @@
+body {
+    background: #4FC3F7;
+}
+
+#localTime {
+    color: white;
+    font-size: 112px;
+    margin: 20% 36%;
+}

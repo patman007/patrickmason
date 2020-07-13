@@ -1,0 +1,12 @@
+body {
+    font-size: 54px; 
+    width: 900px; 
+    color: white; 
+    text-align: center; 
+    margin: 15% auto; /* centers text in middle of page*/
+}
+
+/* sets first image for the background as background1.jpg */
+#picRotation { 
+    background-image: url("assets/background1.jpg");
+}

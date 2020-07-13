@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Social - Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+         <!-- Latest jQuery -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="demo.css">
+    </head>
+
+    <body id="contact-page">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <!-- creates the small menu icon when re-sized -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- needs new css rules to "resize" the image -->
+                <a class="navbar-brand" href="index_demo.html"><img src="img/logo/logoblack.png" alt="smiley logo"></a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="mynavbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="index_demo.html">Home </a></li>
+                  <li><a href="about_demo.html">About</a></li>
+                  <li class="active"><a href="#">Contact</a></li>
+                </ul>
+
+                <!-- creates the input forms in navbar -->
+                <form class="navbar-form navbar-right">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-default">Login</button>
+                  <button type="submit" class="btn btn-default">Register</button>
+                </form>
+
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <main id="contact-main__img">
+                <div class="text-uppercase main-text">
+                        <h1 class="text-center">Wisdom through adversity.
+                            <br>Unity through purpose.</h1>
+                </div>
+        </main>
+        <div class="container-fluid form-div__contact">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label><br>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" name="name">
+                            <br>
+                            <label for="email">Email address</label><br>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                <span class="help-block">We'll never share your email with anyone else</span>
+                                
+                            <label for="comments">What would you like to share with us?</label><br>
+                            <textarea class="form-control" name="comments" id="comments"></textarea>
+                            <br>
+                            <label for="get-file">File input</label><br>
+                            <input type="file" name="get-file" id="get-file">
+                            <span class="help-block">You can upload images of PDF files if necessary</span>
+                            <h4 id="current-user">Are you a current user?</h4>
+                            <div class="radio">
+                                <label><input type="radio" name="file-radio" id="user-yes" value="true" checked>Yes, I am.</label>  
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="file-radio" id="user-no" value="false">Not yet, but I will be soon. I promise.</label>
+                            </div>
+                            <div class="checkbox">
+                                <br>
+                                <label><input type="checkbox" value="true">I am not a robot.</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!--end of .form-group -->
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h2>We really want to hear from you.
+                        <br><small>Your feedback is important to us. We are continuously improving our products, and your data 
+                            helps us make those improvements.</small>
+                    </h2>
+                    <h3><small>Please be patient with us as we are currently revamping our system. If you do not receive a response
+                            within 48 hours, it means we are too busy to replay to your complaints.</small>   
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <footer>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-3 col-sm-12">
+                        <a href="index_demo.html"><img src="img/logo/logowhite.png" alt="smiley logo" class="white-logo"></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 footer-text">
+                            <p class="text-uppercase footer-text__header">Our App</p>
+                            <ul>
+                              <li><a href="#">News Feed</a></li>
+                              <li><a href="#">Messenger</a></li>
+                              <li><a href="#">Profile</a></li>
+                              <li><a href="#">Photos</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-12 footer-text">
+                              <p class="text-uppercase footer-text__header">How To</p>
+                              <ul>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Privacy Basics</a></li>
+                                <li><a href="#">Create a Page</a></li>
+                                <li><a href="#">Create an Ad</a></li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 footer-text">
+                                <p class="text-uppercase footer-text__header">Menu</p>
+                                <ul>
+                                  <li><a href="index_demo.html">Home</a></li>
+                                  <li><a href="about_demo.html">About</a></li>
+                                  <li><a href="contact_demo.html">Contact</a></li>
+                                </ul>
+                              </div>
+                  </div>
+    
+                </div>
+              </footer>
+    
+    </body>
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Project 9</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="demo.css">
+        <script src="demo.js"></script>
+        
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="recipeDiv">
+            <h1>Recipe</h1>
+            <button onclick="recipeConstructor()">Click</button>
+            <div class="div-container">
+                <p id="titleDisplay"></p>
+                <p id="servingsDisplay"></p>
+                <p id="ingredientsDisplay"></p>
+                <ul id="ingredientsItems">
+                    <!-- display ingredients as list here -->
+                </ul>
+            </div>
+
+        </div>
+        <div id="bookDiv">
+            <h1>Books</h1>
+            <button onclick="displayBooks()">Click</button>
+            <div class="div-container">
+                <h2>Need to read:</h2>
+                <ul id="bookDisplayNeed">
+                    <!-- displays bookData on books need to be read -->
+                </ul>
+                <h2>Already Read:</h2>
+                <ul id="bookDisplayRead">
+                    <!-- displays bookData on books already read -->
+                </ul>
+            </div>
+
+        </div>
+        
+    </body>
+</html>

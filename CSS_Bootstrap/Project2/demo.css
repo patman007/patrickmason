@@ -1,0 +1,140 @@
+html, main, body, footer {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#index-main__img {
+    position: relative;
+    margin-top: -20px;
+    background-image: url("img/backgrounds/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.navbar-brand img {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    max-width: 150px;
+}
+
+.main-text {
+    position: relative;
+    color: white;
+    top: 40%;
+}
+
+.main-text h1 {
+    font-size: 350%;
+    text-align: center;
+}
+
+#btn-signup {
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    top: 0;
+    max-height: 600px;
+    height: auto;
+    background: #2f3636;
+}
+
+footer img {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    max-width: 200px;
+    width: auto; 
+} 
+
+footer .row > div {
+    padding: 20px;
+}
+
+.white-logo {
+    padding-left: 50px;
+}
+
+.footer-text ul {
+    list-style-type: none;
+}
+
+.footer-text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: darkgrey;
+}
+
+.footer-text__header {
+    color: #0000ffe1;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+/*contact.html page specific css*/
+#contact-main__img {
+    position: relative;
+    margin-top: -20px;
+    background-image: url("img/backgrounds/background3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.form-div__contact {
+    position: relative;
+    top: 0;
+    margin: 25px;
+}
+
+
+#current-user {
+    border-bottom: 1px solid;
+}
+
+/* about.html page specific css */
+#about-main__img {
+    position: relative;
+    margin-top: -20px;
+    background-image: url("img/backgrounds/background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.about-row2 {
+    background: #2f3636;
+    color: white;
+}
+
+.img-row1,
+.img-row2,
+.img-row3 {
+    padding: 50px;
+    width: 100%;
+    /* max-height: 350px; */
+}
+
+.text-row1,
+.text-row2,
+.text-row3 {
+    padding: 50px;
+    width: 50%;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+/* .btn {
+    background: linear-gradient(red, yellow);
+} */
