@@ -1,5 +1,5 @@
 
-//Global Variable
+//Global Variables in an Array of listed Books
 var books = [
     {
         title: "Winter People",
@@ -81,13 +81,15 @@ function Reading() {
         //Local Variable                
         var bookInfo = book.title + ' by ' + book.author;            
         if (book.alreadyRead) {            
-            console.log('You already read ' + bookInfo); 
-            document.getElementById("already").innerhtml += bookInfo;                                
+            console.log('You already read ' + bookInfo);                        
+            document.getElementById("already").innerHTML += " "
+            + bookInfo + ", ";                                                        
         } else {
-            console.log('You still need to read ' + bookInfo);
-            document.getElementById("need").innerhtml += bookInfo;           
+            console.log('You still need to read ' + bookInfo);                                    
+            document.getElementById("need").innerHTML += " " 
+            + bookInfo + ", ";                                   
         }       
     }
 }
-
+//Invoking the function
 Reading();
