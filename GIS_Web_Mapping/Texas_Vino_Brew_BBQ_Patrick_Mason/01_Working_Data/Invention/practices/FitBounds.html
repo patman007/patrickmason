@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        var TexasSW = new google.maps.LatLng(25.554, -106.797);
+        var TexasNE = new google.maps.LatLng(36.872,-93.133);
+        var TexasBounds = new google.maps.LatLngBounds(TexasSW, TexasNE);
+
+        var BrazosSW = new google.maps.LatLng(30.283, -97.781);
+        var BrazosNE = new google.maps.LatLng(31.913, -95.640);
+        var BrazosBounds = new google.maps.LatLngBounds(BrazosSW, BrazosNE);
+
+        var ForestSW = new google.maps.LatLng(30.168, -95.757);
+        var ForestNE = new google.maps.LatLng(33.547, -94.072);
+        var ForestBounds = new google.maps.LatLngBounds(ForestSW, ForestNE);
+
+        var FortsSW = new google.maps.LatLng(30.806, -100.916);
+        var FortsNE = new google.maps.LatLng(33.395, -98.041);
+        var FortsBounds = new google.maps.LatLngBounds(FortsSW, FortsNE);
+
+        var HillCountrySW = new google.maps.LatLng(28.698, -100.308);
+        var HillCountryNE = new google.maps.LatLng(31.306, -97.762);
+        var HillCountryBounds = new google.maps.LatLngBounds(HillCountrySW, HillCountryNE);
+
+        var IndependenceSW = new google.maps.LatLng(28.087, -98.386);
+        var IndependenceNE = new google.maps.LatLng(30.433, -93.732);
+        var IndependenceBounds = new google.maps.LatLngBounds(IndependenceSW, IndependenceNE);
+
+        var LakesSW = new google.maps.LatLng(31.793, -99.647);
+        var LakesNE = new google.maps.LatLng(35.150, -94.580);
+        var LakesBounds = new google.maps.LatLngBounds(LakesSW, LakesNE);
+
+        var MountainSW = new google.maps.LatLng(29.178, -106.630);
+        var MountainNE = new google.maps.LatLng(31.939, -104.076);
+        var MountainBounds = new google.maps.LatLngBounds(MountainSW, MountainNE);
+
+        var PecosSW = new google.maps.LatLng(28.960, -103.615);
+        var PecosNE = new google.maps.LatLng(32.317, -100.171);
+        var PecosBounds = new google.maps.LatLngBounds(PecosSW, PecosNE);
+
+        var PlainsSW = new google.maps.LatLng(32.576, -103.029);
+        var PlainsNE = new google.maps.LatLng(36.450, -100.069);
+        var PlainsBounds = new google.maps.LatLngBounds(PlainsSW, PlainsNE);
+
+        var TropicalSW = new google.maps.LatLng(26.443, -99.061);
+        var TropicalNE = new google.maps.LatLng(28.424, -96.848);
+        var TropicalBounds = new google.maps.LatLngBounds(TropicalSW, TropicalNE);
+
+
+
+        //Zoom to centroid of Texas or selected region
+        function ZoomRegion() {
+            var option = document.getElementById('region').value;
+            if (option=="Texas") {map.setCenter(TexasBounds);
+                map.setZoom(5);
+                return}
+            else if (option=="Brazos") {map.fitBounds(BrazosBounds)}
+            else if (option=="Forest") {map.fitBounds(ForestBounds)}
+            else if (option=="Forts") {map.fitBounds(FortsBounds)}
+            else if (option=="HillCountry") {map.fitBounds(HillCountryBounds)}
+            else if (option=="Independence") {map.fitBounds(IndependenceBounds)}
+            else if (option=="Lakes") {map.fitBounds(LakesBounds)}
+            else if (option=="Mountain") {map.fitBounds(MountainBounds)}
+            else if (option=="Pecos") {map.fitBounds(PecosBounds)}
+            else if (option=="Plains") {map.fitBounds(PlainsBounds)}
+            else if (option=="Tropical") {map.fitBounds(TropicalBounds)}
+            map.setZoom (6);
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Untitled map</name>
+		<description><![CDATA[]]></description>
+		<Folder>
+			<name>Attractions.xlsx</name>
+			<Placemark>
+				<name>Oahu Catamarans</name>
+				<description><![CDATA[X: 21.292856<br>Y: -157.855062]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.292856</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.855062</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.855062,21.292856,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Makani Catamaran</name>
+				<description><![CDATA[X: 21.294449<br>Y: -157.857278]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.294449</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.857278</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.857278,21.294449,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sashimi Fun Fishing</name>
+				<description><![CDATA[X: 21.293944<br>Y: -157.856257]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.293944</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.856257</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.856257,21.293944,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Maggie Joe Sport Fishing</name>
+				<description><![CDATA[X: 21.294207<br>Y: -157.856483]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.294207</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.856483</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.856483,21.294207,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Xtreme Parasail</name>
+				<description><![CDATA[X: 21.293659<br>Y: -157.855545]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.293659</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.855545</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.855545,21.293659,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Surf HNL</name>
+				<description><![CDATA[X: 21.29118<br>Y: -157.854747]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.29118</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.854747</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.854747,21.29118,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tradewind Charters</name>
+				<description><![CDATA[X: 21.292766<br>Y: -157.855127]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.292766</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.855127</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.855127,21.292766,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Living Ocean Scuba</name>
+				<description><![CDATA[X: 21.291623<br>Y: -157.857074]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.291623</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.857074</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.857074,21.291623,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hawaiian Diving Adventures, LLC</name>
+				<description><![CDATA[X: 21.292317<br>Y: -157.855539]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.292317</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.855539</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.855539,21.292317,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kakaako Waterfront Park</name>
+				<description><![CDATA[X: 21.293709<br>Y: -157.864009]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.293709</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.864009</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.864009,21.293709,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bevy's Cocktail Bar</name>
+				<description><![CDATA[X: 21.298745<br>Y: -157.861334]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.298745</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.861334</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.861334,21.298745,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Honolulu Beerworks</name>
+				<description><![CDATA[X: 21.297126<br>Y: -157.860433]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.297126</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.860433</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.860433,21.297126,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>The Brewseum</name>
+				<description><![CDATA[X: 21.298878<br>Y: -157.853763]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.298878</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.853763</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.853763,21.298878,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cafe Duck Butt</name>
+				<description><![CDATA[X: 21.298436<br>Y: -157.854244]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.298436</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.854244</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.854244,21.298436,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>REAL a gastropub</name>
+				<description><![CDATA[X: 21.294706<br>Y: -157.85455]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.294706</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.85455</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.85455,21.294706,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hawaiin Islands Brewing Company</name>
+				<description><![CDATA[X: 21.292733<br>Y: -157.852847]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.292733</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.852847</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.852847,21.292733,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>M Nightclub</name>
+				<description><![CDATA[X: 21.300822<br>Y: -157.862668]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.300822</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.862668</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.862668,21.300822,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Row Bar</name>
+				<description><![CDATA[X: 21.301334<br>Y: -157.86262]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.301334</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.86262</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.86262,21.301334,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Iolani Palace</name>
+				<description><![CDATA[X: 21.306765<br>Y: -157.858754]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='X'>
+						<value>21.306765</value>
+					</Data>
+					<Data name='Y'>
+						<value>-157.858754</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-157.858754,21.306765,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-1899-0288D1-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1899-0288D1-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1899-0288D1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1899-0288D1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>

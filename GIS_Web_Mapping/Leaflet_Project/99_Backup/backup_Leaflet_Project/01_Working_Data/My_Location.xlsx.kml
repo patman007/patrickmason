@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>My_Location.xlsx</name>
+		<Placemark>
+			<name>FreeMason Pedaling</name>
+			<description><![CDATA[X: 21.293926<br>Y: -157.858763]]></description>
+			<styleUrl>#icon-1899-E65100</styleUrl>
+			<ExtendedData>
+				<Data name='X'>
+					<value>21.293926</value>
+				</Data>
+				<Data name='Y'>
+					<value>-157.858763</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>-157.858763,21.293926,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-1899-E65100'>
+			<IconStyle>
+				<color>ff0051E6</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+	</Document>
+</kml>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+
+        <!--Texas Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(25.554, -106.797),
+                new google.maps.LatLng(36.872,-93.133))
+        );
+
+       <!--Brazos Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(30.516, -97.846),
+                new google.maps.LatLng(31.965, -96.090))
+        );
+
+        <!--Forest Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(30.168, -95.757),
+                new google.maps.LatLng(33.547, -94.072))
+        );
+
+        <!--Forts Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(30.806, -100.916),
+                new google.maps.LatLng(33.395, -98.041))
+        );
+
+        <!--HillCountry Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(28.471, -100.069),
+                new google.maps.LatLng(30.416, -97.470))
+        );
+
+        <!--Independence Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(28.255, -97.727),
+                new google.maps.LatLng(30.454, -94.796))
+        );
+
+        <!--Lakes Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(31.793, -99.647),
+                new google.maps.LatLng(35.150, -94.580))
+        );
+
+        <!--Mountain Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(29.178, -106.630),
+                new google.maps.LatLng(31.939, -104.076))
+        );
+
+        <!--Pecos Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(28.960, -103.615),
+                new google.maps.LatLng(32.317, -100.171))
+        );
+
+        <!--Plains Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(32.576, -103.029),
+                new google.maps.LatLng(36.450, -100.069))
+        );
+
+        <!--Tropical Region-->
+        map.fitBounds(new google.maps.LatLngBounds(
+                new google.maps.LatLng(26.443, -99.061),
+                new google.maps.LatLng(28.424, -96.848))
+        );
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ8URqRoCemmyfR7tH3a8NkC3WRF7JLiM&callback=initMap"
+        async defer></script>
+</body>
+</html>
