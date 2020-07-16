@@ -1,0 +1,21 @@
+OBJECTID,STATE,NUMBER,NAME,ELEVATION,TYPE,KNOWN_ERUP
+1,AK,1101-07-,Gareloi,1573,Stratovolcano,12
+2,AK,1101-29-,Okmok,1073,Shield volcano,16
+3,AK,1101-31-,Makushin,2036,Stratovolcano,12
+4,AK,1101-32-,Akutan,1303,Stratovolcano,36
+5,AK,1101-36-,Shishaldin,2857,Stratovolcano,29
+6,AK,1103-03-,Redoubt,3108,Stratovolcano,14
+7,AK,1102-03-,Pavlof,2519,Stratovolcano,35
+8,AK,1103-01-,Augustine,1252,Lava domes,13
+9,AK,1102-07-,Veniaminof,2507,Stratovolcano,13
+10,AK,1102-16-,Trident,1864,Stratovolcano,15
+11,WA,1201-01=,Baker,3285,Stratovolcano,13
+12,WA,1201-05-,St. Helens,2549,Stratovolcano,36
+13,OR,1202-11-,Newberry Volcano,2434,Shield volcano,11
+14,CA,1203-01-,Shasta,4317,Stratovolcano,23
+15,CA,1203-12-,Mono Craters,2796,Lava domes,11
+16,HI,1302-06-,Haleakala,3055,Shield volcano,11
+17,HI,1302-04-,Hualalai,2523,Shield volcano,21
+18,HI,1302-02=,Mauna Loa,4170,Shield volcano,109
+19,HI,1302-01-,Kilauea,1222,Shield volcano,86
+20,WA,1201-03-,Rainier,4392,Stratovolcano,12

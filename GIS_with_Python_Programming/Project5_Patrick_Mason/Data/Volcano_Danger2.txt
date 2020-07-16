@@ -1,0 +1,15 @@
+OBJECTID,STATE,NUMBER,NAME,ELEVATION,TYPE,STATUS,TIME_CODE,KNOWN_ERUP,MAX_VEI
+1,AK,1101-29-,Okmok,1073,Shield volcano,Historical,D1,16,6
+2,AK,1101-32-,Akutan,1303,Stratovolcano,Historical,D1,36,5
+3,AK,1101-36-,Shishaldin,2857,Stratovolcano,Historical,D1,29,3
+4,AK,1103-03-,Redoubt,3108,Stratovolcano,Historical,D1,14,3
+5,AK,1102-03-,Pavlof,2519,Stratovolcano,Historical,D1,35,3
+6,AK,1103-01-,Augustine,1252,Lava domes,Historical,D1,13,4
+7,AK,1102-07-,Veniaminof,2507,Stratovolcano,Historical,D1,13,6
+8,AK,1102-16-,Trident,1864,Stratovolcano,Historical,D1,15,3
+9,WA,1201-01=,Baker,3285,Stratovolcano,Historical,D3,13,4
+10,WA,1201-05-,St. Helens,2549,Stratovolcano,Historical,D1,36,6
+11,CA,1203-01-,Shasta,4317,Stratovolcano,Historical,D4,23,4
+12,HI,1302-04-,Hualalai,2523,Shield volcano,Historical,D3,21,2
+13,HI,1302-02=,Mauna Loa,4170,Shield volcano,Historical,D1,109,2
+14,HI,1302-01-,Kilauea,1222,Shield volcano,Historical,D1,86,4
