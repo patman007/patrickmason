@@ -1,0 +1,10 @@
+body {
+    background: #4FC3F7;
+}
+
+#clock {
+    color: white;
+    font-size: 112px;
+    margin: 20% 36%;
+    font-family: 'Noto Sans', sans-serif;
+}
