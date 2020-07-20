@@ -20,6 +20,22 @@ function next() {
     );
 }
 
+// //Next Button
+// const next = () => { 
+//     index++;
+//     //Use the .length property to call the array for the if statement
+//     if (index === imageArray.length) {
+//         index = 0;
+//     } 
+//     console.log('Pressed next, index is : ' + index);
+//     //Selecting the image with img src in HTML      
+//     document.querySelector("img").setAttribute(
+//         "src", 
+//         imageArray [index]
+//     );    
+// }
+
+
 function prev() {
     index--;
     if (index < 0) {
@@ -32,6 +48,22 @@ function prev() {
         imageArray [index]
     );
 }
+
+// //Previous Button
+// const prev = () => {
+//     index--;
+//     if (index < 0) {
+//         //Too call the last image do the length property - 1
+//         index = imageArray.length - 1;
+//     }   
+
+//     console.log('Pressed prev, index is: ' + index)
+//     //Selecting the image with img src in HTML
+//     document.querySelector("img").setAttribute(
+//         "src", 
+//         imageArray [index]
+//     );
+// }
 
 
 

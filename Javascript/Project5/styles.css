@@ -96,15 +96,6 @@ main {
     padding-left: 35px;/*aligns text and image so it matches logo in nav bar*/
 }
 
-/* Previous and Next button */
-/* #previous {     
-    display: block;                   
-}
-
-#next {       
-    float: right;  
-    margin-right: 1000px; 
-} */
 
 .imageBox {
     display: block;

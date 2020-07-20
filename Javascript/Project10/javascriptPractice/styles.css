@@ -1,0 +1,23 @@
+input[type='button'] {
+    background-color: green;
+    color: white;
+    height: 100px;
+    width: 150px;
+    margin: 25px auto;
+    border-radius: 25px;
+    font-size: 1.5em;
+ }
+ p {
+    font-size: 2em;
+    margin: 0;
+ }
+ div,
+ table {
+    margin: 25px auto;
+    border: darkblue ridge 10px;
+    text-align: center;
+    width: 50%;
+    font-weight: bold;
+    font-size: 1em;
+ }
+ 
