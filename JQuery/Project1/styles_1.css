@@ -1,0 +1,82 @@
+/* Part of Particle.js CSS Style*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /*Google Font*/
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Part of Particle.js CSS Style*/
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Part of the Parallax.js CSS Style*/ 
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+}
+
+
+/* Actual CSS Start*/
+/*top of the page section*/
+.top-of-page {
+    text-align: center;
+    text-transform: uppercase;    
+    padding: 210px;
+    height: 100%;
+}
+
+h1 {
+    font-size: 66px;
+    color: white;     
+}
+
+h6 {
+    font-size: 21px;
+}
+
+/* second section without images
+third section without images
+fourth section without images 
+including the p sections*/
+.col {
+    text-align: center;    
+    background-color: white;    
+    font-size: 17px;    
+}
+
+/*All h3 elements in all sections*/
+h3 {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+ 
+/*Font Awesome images*/
+i {   
+    font-size: 78px;
+}
+
+/*JQUERY CSS CLASSES*/
+
+/*When the Sign Up Button is clicked
+from the Jquery*/
+.red{
+    background-color:red;
+}
+
+/*When the Sign Up Button is clicked
+from the Jquery*/
+.bordered {
+    border: 6px solid blue;
+}
+
+.highlight {
+    color: limegreen;
+    background-color: black;
+}
