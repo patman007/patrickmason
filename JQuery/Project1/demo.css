@@ -1,0 +1,49 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Anton', sans-serif;
+    background: #ebe8e8;
+}
+
+hr {
+    width: 33%;
+    height: 2px;
+    border-top: 1px solid black;
+}
+
+.svg-inline--fa {
+    margin: 0 100px; /* space between the icons*/
+}
+
+#particles {
+    width: 90%;
+    height: 500px;
+    margin: 10px auto;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+#particles h1 {
+    padding-top: 200px;
+}
+
+.background {
+    position: relative;
+    top: -333px;
+    max-height: 500px;
+}
+
+.para-spacing {
+    padding: 100px 0;
+}
+
+.parallax-window {
+    min-height: 300px;
+    background: transparent;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Parallax.js and Particles.js</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- calls parallax -->
+    <script src="parallax.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- download Anton font family -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton"
+      rel="stylesheet"
+    />
+
+    <!-- allows use of special icons from font awesome -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+      integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- links to styles.css in public folder -->
+    <link rel="stylesheet" href="demo.css" />
+
+    <!-- particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  </head>
+
+  <body>
+    <div class="text-center">
+      <div id="particles">
+        <h1 class="text-uppercase">
+          Sell your products with ease. <br />Welcome to the future of sales.
+        </h1>
+        <button type="submit" class="btn btn-lg btn-success">Sign up</button>
+        <canvas class="background"></canvas>
+      </div>
+
+      <div class="para-spacing">
+        <h1 class="text-uppercase">Selling is hard. We make it easy.</h1>
+        <br />
+        <p>
+          Ready to get serious about the sales of your products? <br /><br />We
+          invite you to our 8 week sales bootcamp. You will learn everything you
+          need to know in order to become the world's greatest salesperson
+          <br />Our course includes live sessions with experts, access to
+          mentorsm ans a plce to network with peers.
+        </p>
+      </div>
+
+      <div>
+
+        <div
+          class="parallax-window"
+          data-parallax="scroll"
+          data-image-src="assets/1.jpg"
+          data-ios-fix="true"
+          data-speed=".2"
+          data-bleed="50"
+        ></div>
+      </div>
+
+      <div class="para-spacing">
+        <h1 class="text-uppercase">
+          Nothing matters more than the bottom line.
+        </h1>
+        <br />
+        <hr />
+
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <i class="fas fa-chart-bar fa-5x"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="far fa-credit-card fa-5x"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-chart-pie fa-5x"></i>
+          </li>
+        </ul>
+
+        <br />
+        <p>
+          It doesn't matter if you have the greatest products in the world. If
+          you're not selling, your business is nonexistent. <br />You can't pay
+          your bills with the compliments of your customers. You need their
+          credit cards!
+        </p>
+      </div>
+
+      <div>
+        <div
+          class="parallax-window"
+          data-parallax="scroll"
+          data-image-src="assets/2.jpg"
+          data-ios-fix="true"
+          data-speed=".2"
+          data-bleed="50"
+        ></div>
+      </div>
+
+      <div class="para-spacing">
+        <h1 class="text-uppercase">Faq</h1>
+
+        <hr />
+        <h3>Who should take this sales bootcamp?</h3>
+        <br />
+        <h4>
+          Anyone and everyone! The skills that you gain from our course will not
+          <br />only instill you with confidence and knowledge that you need to
+          <br />completely dominate your industry, you'll also learn how to live
+          a <br />happier life as well.
+        </h4>
+        <hr />
+        <h3>What can I expect to learn from this course?</h3>
+        <br />
+        <h4>
+          Nothing less than the finest sales tactics. You will become a lean
+          <br />mean, persuassion machine. We will teach you how to get into the
+          right <br />mindset and see every person as a walking money bag.
+          Everyone has a <br />price!
+        </h4>
+        <hr />
+        <h3>Is there a refund if I am not satisfied after I take the class?</h3>
+        <br />
+        <h4>
+          You won't need a refund because we know for a fact that you'll be
+          <br />completely satisifed with our course. So sign up today!
+        </h4>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        Particles.init({
+          // must be a <canvas> element
+          selector: ".background",
+          // must use #hex for colors or the particles will look like little balls.
+          color: ["#5e5eb9", "#ffffff"],
+          connectParticles: true,
+          minDistance: "150",
+        });
+      };
+    </script>
+  </body>
+</html>
