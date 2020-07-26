@@ -16,30 +16,25 @@
   </head>
   <body>
     <div class="heading">
-        <h1>Welcome to the Bank</h1><br>
+        <h1>Welcome to the Bank</h1>
         <h3>Login to see your payroll account</h3>
-      </div>
-      
-      <form class="form">
+      </div>      
+      <form class="form" novalidate>
         <div class="form-group">
-          <label for="exampleInputEmail1"><strong>Email address</strong></label>
-          <input type="email" class="form-control" id="exampleInputEmail1"
-          placeholder="Email" required aria-describedby="emailHelp">
-        </div>
+          <label for="exampleInputEmail1"><strong>Email address</strong></label><br>
+          <input type="email" class="form-control" id="email" 
+          placeholder="Email" required aria-describedby="emailHelp" novalidate>
+        </div><br>
         <div class="form-group">
-          <label for="exampleInputPassword1"><strong>Password</strong></label>
-          <input type="password" class="form-control" id="exampleInputPassword1"
-          placeholder="Password" required min="6" max="10">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+          <label for="exampleInputPassword1"><strong>Password</strong></label><br>
+          <input type="password" class="form-control" id="password" 
+           placeholder="Password" required >
+        </div><br>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
         <br><br>
         <p id="displayMessage"></p>
-      </form>
-
-     
+      </form>    
     </div>  
-   
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

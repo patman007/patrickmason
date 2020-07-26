@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form Validator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="demo.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    </head>
+
+    <body>
+        <div class="text-center">
+            <div class="well text-left" id="well-text">
+                 <h1>Welcome to the Bank</h1>
+                 <h4>Login to see your payroll account</h4>
+            </div>
+
+            <div id="form-container">
+                <div class="alert alert-success" id="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Successfully submitted!</strong> The form is valid.
+                </div>
+                <form id="form-submit" class="text-left">
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <br>
+                        <input type="text" name="email" id="email" class="form-control" value="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <br>
+                        <input type="text" name="password" id="password" class="form-control"  value="Password">
+                        <br>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </form>
+
+                <div class="text-left">
+                        <p id="validEmailDisplay"></p>
+                        <p id="validPasswordDisplay"></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+        </script>
+        
+        <script src="demo.js"></script>
+    </body>
+</html>

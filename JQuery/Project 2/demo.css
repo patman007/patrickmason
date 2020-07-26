@@ -1,0 +1,37 @@
+body,
+html {
+    margin:0;
+    padding: 0;
+    width: 100%;
+}
+
+#well-text h1 {
+    font-size: 4em;
+}
+
+.well {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#form-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#well-text {
+    padding: 80px 0 20px 80px;
+}
+
+input[value] {
+    color: grey;
+}
+
+.red  {
+    color: red;
+    font-size: .9em;
+}
+
+.alert {
+    display: none;
+}
