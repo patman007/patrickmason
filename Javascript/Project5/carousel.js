@@ -1,3 +1,4 @@
+//Project 5 Boostrap with Carousel
 var imageArray = [
     "assets/1.jpg", 
     "assets/2.jpg", 
@@ -6,9 +7,15 @@ var imageArray = [
     "assets/5.jpg", 
     "assets/6.jpg"
 ];
+
+
 var index = 0;
 
-function next() { 
+
+//FUNCTION NEXT BUTTON
+//Make a function called prev() that calls on the 
+//Previous button whenever it is clicked by the user 
+const next = () => { 
     index++
     if (index === imageArray.length) {
         index = 0;
@@ -20,7 +27,12 @@ function next() {
     );
 }
 
-function prev() {
+
+
+//FUNCTION PREVIOUS BUTTON
+//Make a function called prev() that calls on the 
+//Previous button whenever it is clicked by the user  
+const prev = () => {
     index--;
     if (index < 0) {
         index = imageArray.length - 1;

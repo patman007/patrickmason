@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    -->
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    -->
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-   <!-- Latest compiled JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- Latest compiled JavaScript
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     
     <!--CSS Style-->
     <link rel="stylesheet" href= "formvalid_plugin.css">
@@ -25,21 +25,22 @@
         <h1>Welcome to the Bank</h1>
         <h3>Login to see your payroll account</h3>
       </div>      
-      <form class="form">
+      <form class="form" >
         <div class="form-group">
           <label for="exampleInputEmail1"><strong>Email address</strong></label><br>
-          <input type="email" class="form-control" id="email" novalidate
-          placeholder="Email" required aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="email" 
+          placeholder="Email" aria-describedby="emailHelp">
         </div><br>
         <div class="form-group">
           <label for="exampleInputPassword1"><strong>Password</strong></label><br>
           <input type="password" class="form-control" id="password" 
-           placeholder="Password" required min="6" >
+           placeholder="Password" >
         </div><br>
         <button type="submit" id="submit" class="btn btn-primary">Submit</button>
         <br><br>
-        <p id="displayEmailMessage"></p>
-        <p id="displayPasswordMessage"></p>
+        <p class="warning"></p>
+        <!-- <p id="displayEmailMessage" ></p>
+        <p id="displayPasswordMessage"></p> -->
       </form>    
     </div>  
    
