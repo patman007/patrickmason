@@ -1,5 +1,5 @@
-//Form Event Javascript  Way 1
-//Email Variables
+// Project 7 Form Event Javascript  Way 2
+// Email Variables
 var theEmail = document.getElementById("email");
 var warning = document.getElementById("theForm");
 
@@ -34,7 +34,7 @@ thePassword.addEventListener("blur", function() {
     if (thePassword.value == "") {
         alert("Please Check the fields and make sure they are not blank");
     } else {
-        warning.textContent = "";        
+        warning.textContent = "Stop";        
     }
 });
 

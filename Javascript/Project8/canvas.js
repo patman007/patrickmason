@@ -63,3 +63,35 @@ function runClock() {
 //Call or invoke the function wit a set interval of 1 second to run the runclock function
 //for each second that passes in real time. 
 setInterval(runClock, 1000); // 1000ms = 1 second
+
+
+
+//Attempt 2
+// setInterval(setClock, 1000)
+
+
+// const hourHand = document.querySelector('[data-hour-hand]')
+// const minuteHand = document.querySelector('[data-minute-hand]')
+// const secondHand = document.querySelector('[data-second-hand]')
+
+// function setClock() {
+//     const currentDate = new Date()
+//     const secondsRatio = currentDate.getSeconds() / 60
+//     // const minutesRatio = currentDate.getMinutes() /60
+//     const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
+
+
+//     const hoursRatio = (minutesRatio + currentDate.getHours()) / 12
+
+//     setRotation(secondHand, secondsRatio)
+//     setRotation(minuteHand, minutesRatio)
+//     setRotation(hourHand, hoursRatio)
+// }
+
+
+// function setRotation(element, rotationRatio) {
+//     element.style.setProperty('--rotation', rotationRatio * 360)
+
+// }
+
+// setClock();

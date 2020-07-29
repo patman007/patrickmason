@@ -1,79 +1,72 @@
-//Attempt 1
-// displayBirthMonth = () => {    
-//     //Array of listed Months and Names
-//     //sets variable
-//     const monthx = [
-//         {
-//             month: "January",
-//             name: "Julia", 
-//             number: 1               
-//         },
-//         {
-//             month: "February",
-//             name: "Fergie",
-//             number: 1        
-//         },
-//         {
-//             month: "March",
-//             name: "Matt", 
-//             number: 1       
-//         },
-//         {
-//             month: "April",
-//             name: "Jennie", 
-//             number: 1        
-//         },
-//         {
-//             month: "May",
-//             name: "Jim", 
-//             number: 1        
-//         },
-//         {
-//             month: "June",
-//             name: "Joesph",
-//             number: 1         
-//         },
-//         {
-//             month: "July",
-//             name: "Nicole", 
-//             number: 1        
-//         },
-//         {
-//             title: "August",
-//             name: "Stephen", 
-//             number: 1        
-//         },
-//         {
-//             title: "September",
-//             name: "Jon", 
-//             number: 1        
-//         },
-//         {
-//             title: "October",
-//             name: "George", 
-//             number: 1        
-//         },
-//         {
-//             title: "November",
-//             name: "Robert", 
-//             number: 1        
-//         },
-//         {
-//             title: "December",
-//             name: "Tasha", 
-//             number: 1        
-//         }
-//     ]  
-//     const iterator = monthx.keys();
- 
-//     //For Loop
-//     for (const key of iterator) { 
-//         if(key == {number: 1} || !iterator.hasOwnProperty(key));
-//             let value = [key];           
-//             console.log(value);  
-//             console.log(key);                 
-//     } 
-// }  
+// //Attempt 1
+// displayBirthMonth = () => { 
+
+//     let monthx = [
+//                {
+//                    month: "January",
+//                    name: "Julia"                               
+//                },
+//                {
+//                    month: "February",
+//                    name: "Fergie"                        
+//                },
+//                {
+//                    month: "March",
+//                    name: "Matt"                        
+//                },
+//                {
+//                    month: "April",
+//                    name: "Jennie"                            
+//                },
+//                {
+//                    month: "May",
+//                    name: "Jim"                           
+//                },
+//                {
+//                    month: "June",
+//                    name: "Joesph"                           
+//                },
+//                {
+//                    month: "July",
+//                    name: "Nicole"                          
+//                },
+//                {
+//                    month: "August",
+//                    name: "Stephen"                           
+//                },
+//                {
+//                    month: "September",
+//                    name: "Jon"                          
+//                },
+//                {
+//                    month: "October",
+//                    name: "George"                           
+//                },
+//                {
+//                    month: "November",
+//                    name: "Robert"                         
+//                },
+//                {
+//                    month: "December",
+//                    name: "Tasha"                          
+//                }
+
+//     ]          
+//                 let iterator = monthx.values();
+                 
+//                 for(let monthx of iterator) {
+//                     iterator += + " " + [monthx] + "<br>";
+//                     console.log(monthx);  
+//                     document.getElementById("month1Display").innerHTML += monthx["month"] + "\t";
+//                     document.getElementById("month1Display").innerHTML += monthx["name"] + "\t" + "<br>";                         
+                                                                            
+//                 } 
+//                 iterator += '';                
+//                 return iterator;   
+
+// }
+
+
 
 
 function displayBirthMonth() { //creates birthMonth object
