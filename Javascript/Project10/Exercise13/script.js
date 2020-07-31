@@ -55,15 +55,18 @@ displayBirthMonth = () => {
                 let iterator = monthx.values();
                  
                 for(let monthx of iterator) {
-                    iterator += + " " + [monthx] + "<br>";
-                    console.log(monthx);  
-                    document.getElementById("month1Display").innerHTML += monthx["month"] + ": ";
-                    document.getElementById("month1Display").innerHTML += monthx["name"] + "\t" + "<br>";                         
+                    iterator += + " " + [monthx] + "<br>"; 
+                    // console.log(monthx);                    
+                    document.getElementById("month1Display").innerHTML +=
+                     `${monthx["month"]}: `;
+                    document.getElementById("month1Display").innerHTML +=
+                     `${monthx["name"]} \t<br>`;   
+                     
+                     console.log(`${monthx["month"]}:${monthx["name"]}`);
                                                                             
                 } 
-                iterator += '';                
-                return iterator;   
-
+                iterator += '';
+                return iterator; 
 }
 
 

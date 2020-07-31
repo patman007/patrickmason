@@ -63,105 +63,27 @@ displaySelectMonths = () => {
                    number: 1        
                }
     ]          
-
                 
-                // let iterator = monthx.values();
+               let i = 0;  
+               let arrayLength =  monthx.length;              
                  
-                // for(let monthx of iterator) {
-                //     iterator += + " " + [monthx] + "<br>";
-                //     console.log(monthx);  
-                //     document.getElementById("birthMonth1").innerHTML += monthx["month"] + "\t";
-                //     document.getElementById("birthMonth1").innerHTML += monthx["name"] + "\t";
-                //     document.getElementById("birthMonth1").innerHTML += monthx["number"] + "\t" + "<br>";     
+                while (i < arrayLength) {
+                    let val = monthx[i];
+                    i++; 
+                    // console.log(val)                                                               
+                     document.getElementById("birthMonth1").innerHTML += 
+                     `${val["month"]}: \t`;                     
+                     document.getElementById("birthMonth1").innerHTML += 
+                     `${val["name"]} \t :\t`;
+                     document.getElementById("birthMonth1").innerHTML += 
+                     `${val["number"]}\t<br>`;   
+                     
+                     console.log(`${val["month"]} : ${val["name"]} : 
+                     ${val["number"]}`);
                                                                             
-                // } 
-                // iterator += '';                
-                // return iterator;   
+                }                  
 
 }
-
-
-//Attempt 1
-// displaySelectMonths = () => { 
-
-//     let monthx = [
-//                {
-//                    month: "January",
-//                    name: "Julia", 
-//                    number: 1               
-//                },
-//                {
-//                    month: "February",
-//                    name: "Fergie",
-//                    number: 1        
-//                },
-//                {
-//                    month: "March",
-//                    name: "Matt", 
-//                    number: 1       
-//                },
-//                {
-//                    month: "April",
-//                    name: "Jennie", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "May",
-//                    name: "Jim", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "June",
-//                    name: "Joesph",
-//                    number: 1         
-//                },
-//                {
-//                    month: "July",
-//                    name: "Nicole", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "August",
-//                    name: "Stephen", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "September",
-//                    name: "Jon", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "October",
-//                    name: "George", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "November",
-//                    name: "Robert", 
-//                    number: 1        
-//                },
-//                {
-//                    month: "December",
-//                    name: "Tasha", 
-//                    number: 1        
-//                }
-//     ]          
-//                 let iterator = monthx.values();
-                 
-//                 for(let monthx of iterator) {
-//                     iterator += + " " + [monthx] + "<br>";
-//                     console.log(monthx);  
-//                     document.getElementById("birthMonth1").innerHTML += monthx["month"] + "\t";
-//                     document.getElementById("birthMonth1").innerHTML += monthx["name"] + "\t";
-//                     document.getElementById("birthMonth1").innerHTML += monthx["number"] + "\t" + "<br>";     
-                                                                            
-//                 } 
-//                 iterator += '';                
-//                 return iterator;   
-
-// }
-
-
 
 
 
