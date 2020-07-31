@@ -6,7 +6,7 @@ html, body {
 }
 
 /*Click button */
-#click {    
+.click {    
     background-color: #491818;
     border-radius: 100px;   
     font-size: 25px;
