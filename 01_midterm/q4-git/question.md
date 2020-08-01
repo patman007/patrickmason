@@ -11,5 +11,14 @@
 ### transfering and brings the changes done from the latest
 ### edits/changes from the remote repository.
 
-### 1. Why is the "index" or "staging area" needed in git? 
+### Answer
+### Why is the "index" or "staging area" needed in git? 
 ### Put another way, why do you use the command `git add`?
+### An index is needed in git to build sets of changes/edits
+### the developer wants to commit together. The staging area 
+### is between the working directory and the developer
+### repository and without it we could not have the directories
+### communicate to each other. The git add command uses the 
+### staging area to add changes in the developer working
+### directory to select what the developer wants in the index
+### in git.
