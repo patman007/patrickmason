@@ -17,3 +17,19 @@ Now wrap the functionality into a function that takes appropriate inputs as argu
 
 ### Your Answer: may be provided as a code file with single function within it.
 
+const Loop = (5, 15) => { //object
+     var numbers = {
+             1: "odd", 
+             2: "even", 
+             3: "odd", 
+             4: "even",
+             5: "odd"
+          };
+           var txt = '';//empty string
+              for (var i = 0 ; i < 6; i++) {//assign "i" value for numbers 
+                 txt += i + [i] + "<br>"; 
+                 // concate() i value with object in position 
+                    //and sets to the txt 
+                 }
+              ("p").innerHTML += txt;//displays txt variable in a p element on a HTML page
+  } 
