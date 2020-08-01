@@ -7,5 +7,5 @@
 5. None of the above
 
 
-### Answer:
+### Answer: 3, `h1 {background-color: #FFF}`
 

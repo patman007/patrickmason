@@ -6,5 +6,5 @@
 4. `<img href="image.gif" alt="dog">`
 
 
-### Answer:
+### Answer: 2, <img src="image.gif" alt="dog">`
 

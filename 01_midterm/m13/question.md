@@ -5,5 +5,5 @@
 3. generally avoided
 3. used only in a paragraph element
 
-### Answer:
+### Answer(s): 1, normally started without starting a new line. and Answer 3, generally avoided
 
