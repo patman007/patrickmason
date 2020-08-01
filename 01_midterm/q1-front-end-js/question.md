@@ -8,3 +8,5 @@ Explanation or comments are not needed for this question.
 
 
 ### Your Answer:
+### Skipped
+### Multiply identifier has been already declared in another function, which it does not work. One of the functions has to be renamed something else.
