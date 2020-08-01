@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/mint-choc/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>jQuery</title>
+  </head>
+  <body>
+
+    <h2>Metric Converter</h2>    
+
+    <p>
+      <label>Miles</label><br>
+      <input id="inputMiles" type="number"
+      oninput="kmInput(this.value)" onchange="kmInput(this.value)">
+      <small id="emailHelp" class="form-text ">
+        Enter a value in Miles.</small>
+    </p>
+    <p>Km: <span id="outputKilometers"></span></p>    
+    
+
+    <p>
+      <label>Pounds</label><br>
+      <input id="inputPounds" type="number" 
+      oninput="milesInput(this.value)" onchange="milesInput(this.value)">
+      <small id="emailHelp" class="form-text" >
+        Enter a value in Pounds</small>
+    </p>
+    <p>Kg: <span id="outputKilograms"></span></p>
+
+    <!--Jquery i this order with UI-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

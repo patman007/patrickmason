@@ -1,0 +1,12 @@
+body, html {
+    text-align: center;
+    padding-top: 40px;  
+    background-color: darkblue;
+    color: white;
+    font-size: 35px;     
+}
+
+h2 {
+    font-size: 56px;
+}
+
