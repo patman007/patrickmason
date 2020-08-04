@@ -1,3 +1,4 @@
+/* Styling for the body and html */
 body, html {
     text-align: center;
     padding-top: 40px;  
@@ -6,6 +7,7 @@ body, html {
     font-size: 35px;     
 }
 
+/* Styling for the title of the page */
 h2 {
     font-size: 56px;
 }

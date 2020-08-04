@@ -15,5 +15,5 @@ var myArray = [1, 2, 3, 4, 5]      // it may have any number of elements
 
     myArray = []    // will replace the original myArray with an empty array
 
-### Your answers: ##Skipped
+### Your answers: Skipped
 
