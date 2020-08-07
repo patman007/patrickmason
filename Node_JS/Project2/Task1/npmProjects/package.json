@@ -1,0 +1,21 @@
+{
+  "name": "npm",
+  "version": "2.9.0",
+  "description": "This is a test for Task 1.",
+  "main": "This is my first entry point",
+  "scripts": {
+    "test": "npm init was my first test command",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "patrickmason folder"
+  },
+  "keywords": [
+    "patrick",
+    "mason",
+    "github"
+  ],
+  "author": "Patrick Mason",
+  "license": "ISC"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "npmprojects2",
+  "version": "1.2.1",
+  "description": "This is my second task in Task 1",
+  "main": "This is my second entry point",
+  "scripts": {
+    "test": "npm init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "patrickmason github"
+  },
+  "keywords": [
+    "patrick",
+    "mason",
+    "github"
+  ],
+  "author": "Patrick Mason",
+  "license": "ISC"
+}
