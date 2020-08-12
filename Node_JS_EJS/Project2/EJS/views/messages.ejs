@@ -1,0 +1,9 @@
+<h1>Welcome to the Message</h1>
+
+<% messages.forEach(el => { %>
+    <% let {name, message} = el %>
+    <%console.log(el)%>
+    <p>
+        Hi, my name is <%=el.name%>. <%=el.message%>
+    </p>
+<% }) %>
