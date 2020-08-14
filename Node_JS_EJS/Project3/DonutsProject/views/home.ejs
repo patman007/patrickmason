@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<% include('partials/header', {title: 'Home'}) %>
+<%- include('partials/header', {title: 'Home'}) %>
+
 
     <body>
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your 
+                browser</a> to improve your experience.</p>
         <![endif]-->
 
         <div class="jumbotron">
-            <h1 class="display-4">Welcome to the Donut Shop</h1>
-            <p class="lead">We bake the hottest, frshest donuts that you can imagine. You want donuts? We got it.</p>            
+            <div class="mx-auto" style="width: 800px;">
+                <h1 class="display-">Welcome to the Donut Shop</h1>
+                <p class="lead">We bake the hottest, frshest donuts that you can imagine. You want donuts? We got it.</p>  
+            </div>          
         </div>
-
         
-<%include('partials/footer')%>
+<%- include('partials/footer')%>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
