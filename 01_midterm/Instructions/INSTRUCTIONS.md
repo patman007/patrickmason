@@ -96,3 +96,74 @@ Remember this review is a test of how well prepared you are. You need a honest a
 
 1. Do attempt the practical portion and push it, even if it doesn't work. Even non-working practical portion may attract enough credit to put you over the 70% mark.
 
+### SCORE
+
+m1 - 2/2 points
+
+m2 - 2/2 points
+
+m3 - 2/2 points
+
+m4 - 2/2 points
+
+m5 - 2/2 points
+
+m6 - 2/2 points
+
+m7 - 2/2 points
+
+m8 - 2/2 points
+
+m9 - 2/2 points
+
+m10 - 2/2 points
+
+m11 - 0/2 points. Correct answer is 5. None of the Above and 3. Can be used in a browser as well as on a server
+
+m12 - 2/2 points
+
+m13 - 2/2 points
+
+m14 - 2/2 points
+
+m15 - 2/2 points
+
+m16 - 2/2 points
+
+m17 - 2/2 points
+
+m18 - 2/2 points
+
+m19 - 1/2 points. The correct answers are 3 and 4.
+
+m20 - 1/2 points. The correct answers are 1, 2, and 3.
+
+q1 - s
+
+q2 - 3/3 points
+
+q3 - 3/3 points
+
+q4 - 3/3 points
+
+q5 - 3/3 points
+
+q6 - 3/3 points
+
+q7 - s
+
+q8 - 3/3 points
+
+q9 - 3/3 points
+
+q10 - 3/3 points
+
+q11 - 1/3 points. The question asked for alternate paragraphs, thereofore the code would like this: $("p:odd").css("background-color", "#ddd");
+
+q12 - 3/3 points.
+
+Practial - 29/30 points
+
+Notes: Overall solid practical. Functionally works, and the code follows the directions. I noticed you included Bootstrap, but didn't use any of the components. That would have been nice to see in the UI.
+
+Total: 93
