@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+h1 {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card_container {
+  width: 75%;
+  margin: 3% auto;
+  text-align: center;
+}
+
+.card_container h2,
+.card_container p {
+  margin: 2% 0;
+}
+
+.card {
+  border: grey solid 1px;
+  width: 25%;
+  height: 25vh;
+  display: inline-block;
+  box-shadow: 3px 3px 10px grey;
+}

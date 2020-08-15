@@ -1,0 +1,9 @@
+<%- include('partials/header', {title: 'About'})%>
+<h1> I am the about page</h1>
+
+<% zoo.forEach(el => { %>
+    <% let {name, size, breed, country} = el %>
+    <% console.log(el) %>
+    <p><%=el.name %> is a(n) <%= el.size %> <%= el.breed %> from <%= el.country %></p> 
+<% }) %>
+

@@ -1,0 +1,11 @@
+
+<%- include('partials/header')%>
+<%- include('partials/navbar')%>
+
+<h1> I am the contact page</h1>
+
+<%zoo.forEach(el => { %>
+    <% let {name, owner} = el %>
+    <%console.log(el) %>
+    <p><%=el.name %> : <%=el.owner.fname %> <%=el.owner.lname %> : <strong>phone:<%=el.owner.phone %></strong></p>
+<% }) %>
