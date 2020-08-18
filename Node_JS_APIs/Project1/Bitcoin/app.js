@@ -13,25 +13,26 @@ const PORT = process.env.PORT || 3000
 //Route Handlers
 
 //Consume an endpoint for the API
-//https://www.coindesk.com/coindesk-api
-let endpoint = 'https://www.coindesk.com/coindesk-api'
+let endpoint = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 //Coindesk price index page
-//https://www.coindesk.com/price/bitcoin
 
+//Route Handlers
 
-//Route route Handler
-app.get('/', (req, res) => {
+//Index ejs Handler
+app.get('/index', (req, res) => {
     // res.send('I am the Route route')
-    console.log('I am the route route')
-    // res.render('index.ejs')
+    console.log('I am the index route')
+    res.render('index.ejs')
 })
 
-app.get('/index', (req, res ) => {
-    // https://www.coindesk.com/price/bitcoin
-    //confused here
-    let url = `${endpoint}/${req.query.text}`
+//Results ejs Handler
 
+app.get('/results', (req, res ) => {
+    //Endpoint let endpoint = 'https://api.coindesk.com/v1/bpi/currentprice.json'
+    let url = `${endpoint}`
+    console.log("I am the app.js, url is: ", url)
     //Fetch Url statements
+    //url
     fetch(url)
     .then(res => {
         if(!res.ok) {
@@ -43,16 +44,14 @@ app.get('/index', (req, res ) => {
         //json does parsing and returns a string
         return res.json()
     })
-
     .then(data => {
-        console.log(data)
-        //confused here
-        res.render('index.ejs', {data})
+        console.log(data)        
+        res.render('results.ejs', {data})
     })
 
     //Catch error will only show connection error
-    .catch(err => console.log('I am the error: ', err))    
+    .catch(err => console.log('I am the error: ', err));     
 })
 
 //Listener
-app.listen(PORT, () => console.log(`App listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
