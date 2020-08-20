@@ -1,0 +1,6 @@
+<h1>The weather in San Francisco</h1>
+<%# let {humidity, min_temp, max_temp, max_temp, weather_state_name} = data.consolidated_weather[0]  data destructor#%>
+<p> The humidity is: <%= data.consolidated_weather[0].humidity%> <%#humdity #%></p>
+<p> The low temp is: <%= data.consolidated_weather[0].min_temp%></p><%#min_temp #%>
+<p> The high temp is: <%= data.consolidated_weather[0].max_temp%></p><%#max_temp #%>
+<p> The forecast is: <%= data.consolidated_weather[0].weather_state_name%></p><%#weather_state_name #%>
