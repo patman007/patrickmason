@@ -1,9 +1,10 @@
-<p>The is the current price</p>
+<%- include('partials/header') %>
+<%- include('index') %>
 
 <div class="container well" >
-    <p><%= data.bpi.USD.rate_float.toFixed(2) %></p>
-    <p><%= data.bpi.GBP.rate_float.toFixed(2) %></p>
-    <p><%= data.bpi.EUR.rate_float.toFixed(2) %></p>
+    <p>USD: <%= data.bpi.USD.rate_float.toFixed(2) %></p>
+    <p>GBP: <%= data.bpi.GBP.rate_float.toFixed(2) %></p>
+    <p>EUR: <%= data.bpi.EUR.rate_float.toFixed(2) %></p>
 </div>
 
- 
+<%- include('partials/footer') %>

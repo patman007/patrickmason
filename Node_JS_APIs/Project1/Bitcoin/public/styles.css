@@ -1,5 +1,31 @@
 body, html {    
     background-color: lightblue;
     text-align: center;
-    margin-bottom: 50px;     
+    margin: 20px;     
+}
+
+.btn-primary {
+    padding: 70px;
+    font-weight: bold;
+    border-radius: 75px;
+    background-color: darkblue;
+    font-size: 25px;
+}
+
+h1 {
+    font-size: 45px;     
+}
+
+.form-check {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 35px;
+    font-weight: bold;    
+}
+
+a {
+    font-size: 25px;
 }
