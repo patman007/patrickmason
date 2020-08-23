@@ -45,12 +45,14 @@ app.get('/todos', (req, res) => {
     res.json(toDoArray);
 })
 
+let count = 4
+
 //CREATE data POST
 app.post('/todos', (req, res) => {
     //array hard coded data for testing purposes
     let newTodo = {
-        id: 4,
-        description: "Buy more stuff",
+        id: count++,
+        description: req.body.description,
         isComplete: false
     }
 

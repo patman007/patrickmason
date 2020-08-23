@@ -1,0 +1,55 @@
+//oundation
+const express = require('express')
+
+const app = express()
+const request = require('request')
+
+app.use(express.static('public'));
+
+const PORT = process.env.PORT || 3000
+
+//Route Handlers
+//Home.ejs
+app.get('/', (req, res) => {
+    console.log('I am home ejs')
+    res.render('home.ejs')
+})
+
+//Results
+//API address
+app.get('/results', (req, res) => {
+    console.log("I am the results ejs")
+
+    //make the API call: https://api.themoviedb.org/3/authentication/token/new?api_key=pmason007
+    //The token below is temporary and will need to be changed to access again
+    let url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=23dc5ffbe5f36f742c01757c0a8966fc&language=en-US&page=1';
+
+    request(url, function(error, response, body) {
+        if(!error && res.statusCode === 200) {
+            // console.log(response)
+            //receive and parse the json
+            let parsedData = JSON.parse(body);
+            // console.log(parsedData)
+            //do something with the parsed json
+            res.render('results.ejs', {data: parsedData});
+            // console.log('data is' , {data: parsedData});            
+        } else {
+            //error handling    
+            res.render('results.ejs', {data: 'Error getting data'});
+        }   
+    });
+});
+
+//Listener
+app.listen(PORT, () => console.log(`App listening on port ${PORT}`))
+
+
+// <% data.results forEach(function(el) { %>
+//     <% let {original_title, voter_count, poster_path} = el %>
+//     <% console.log(el) %>
+
+//     <p>The movie title is: <%=el.original_title %></p>
+//     <% console.log(el.original_title) %>
+//     <p>The rating is: <%=el.voter_count %></p>
+//     <p>The image is: <%=el.poster_path %></p>
+// <% }) %>

@@ -1,0 +1,22 @@
+html, body {
+    height: 110%; 
+    font-family: 'Russo One', sans-serif;    
+}
+
+img {
+    background-image: url("https://cdn.pixabay.com/photo/2017/07/31/01/11/cinema-2556157_1280");   
+    width: 100%;
+    display: flex;
+    align-items: center;    
+}
+
+.btn-warning {
+    color: white;
+    font-size: 13px;
+
+}
+
+.text-center {
+    margin-top: -500px;
+    color: white;
+}

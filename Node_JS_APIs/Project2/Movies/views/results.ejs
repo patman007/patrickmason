@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+<h1>Now Playing at a Theater Near You</h1>
+
+<%# Movies %>
+<% console.log(data.results) %>
+<p>The movie title is: <%=data.results.title %></p>
+<p>The rating is: <%=data.results.vote_average %></p>
+<p>The image is: <%=data.results.poster_path %></p>
+
+<%- include('partials/footer') %>

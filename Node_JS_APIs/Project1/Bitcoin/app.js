@@ -13,13 +13,13 @@ const PORT = process.env.PORT || 3000
 //Route Handlers
 
 //Consume an endpoint for the API
-let endpoint = 'https://api.coindesk.com/v5/bpi/currentprice.json'
+let endpoint = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 //Coindesk price index page
 
 //Route Handlers
 
 //Index ejs Handler
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
     // res.send('I am the Route route')
     // console.log('I am the index route')
     res.render('index.ejs')
@@ -29,6 +29,7 @@ app.get('/index', (req, res) => {
 
 app.get('/results', (req, res ) => {
     let currencyChosen = req.query.currency;
+    console.log(`${req.query.currency}`)
     //Endpoint let endpoint = 'https://api.coindesk.com/v1/bpi/currentprice.json'
     //  Feedback: this following statement is not really doing much
     //            you might just use endpoint in the statement after
@@ -56,7 +57,9 @@ app.get('/results', (req, res ) => {
     .catch(err => {
         // Feedback: here you may render a specially designed
         //           error.ejs page if you wish and render it.
+        // res.render('error.ejs', {error: 'No matches found'})
         res.status(404).send(err)
+        console.log('Catch error', err)
     });     
 })
 

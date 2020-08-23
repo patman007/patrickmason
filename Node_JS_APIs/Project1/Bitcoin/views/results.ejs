@@ -2,7 +2,7 @@
 <%- include('index') %>
 
 <div class="container well" >
-    <p><%= data.code %>: <%= data.rate_float.toFixed(2) %></p>
+    <p><%- data.symbol %> <%= data.rate_float.toFixed(2) %></p>
 </div>
 
 <%- include('partials/footer') %>

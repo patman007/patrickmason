@@ -5,16 +5,17 @@ body, html {
 }
 
 .btn-primary {
-    padding: 60px;
+    padding: 25px 25px;
     font-weight: bold;
     border-radius: 75px;
     background-color: darkblue;
     font-size: 25px;
+    border: solid 2px white;
+    color: white;
 }
 
 h1 {
-    font-size: 45px; 
-    /* font-weight: bold;     */
+    font-size: 45px;    
 }
 
 .form-check {
