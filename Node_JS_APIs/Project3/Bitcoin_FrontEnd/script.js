@@ -1,25 +1,20 @@
+//API url as a variable
+let url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
 
-//USD variable by id
+// USD variable by id
 let usd = document.getElementById('usd');
-usd.getAttribute("src",
+usd.setAttribute("src",
 'https://api.coindesk.com/v1/bpi/currentprice.json')
 
 //Pounds variable by id
 let gbp = document.getElementById('gbp');
-gbp.getAttribute("src",
+gbp.setAttribute("src",
 'https://api.coindesk.com/v1/bpi/currentprice.json');
 
 //Euros variable by id
 let eur = document.getElementById('eur');
-eur.getAttribute("src",
+eur.setAttribute("src",
 'https://api.coindesk.com/v1/bpi/currentprice.json');
-
-//Button variable by id
-let btn = document.getElementById('btn');
-
-//API url as a variable
-let url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
-
 
 //Radio event listener buttons
 //based on individual listeners
@@ -54,10 +49,15 @@ for (var i = 0; i < rad.length; i++) {
     });
 }
 
+// Button variable by id
+let btn = document.getElementById('btn');
+
 
 //Event Listener
+//When an the Get Price button is clicked by the user
+//the fetch steps statements will be intiated  
 btn.addEventListener('click', () => {
-    console.log('You clicked me')
+    console.log('You clicked me')    
     //Fetch Url Statments
     //url
     fetch(url)
@@ -71,7 +71,7 @@ btn.addEventListener('click', () => {
         throw Error('The code is not working')
 
     }) 
-    //Get back data depending on the radio button selected   
+    //Set data depending on the radio button selected   
     .then (data => usd.getAttribute("src", data.message))
     .then (data => gbp.getAttribute("src", data.message))
     .then (data => eur.getAttribute("src", data.message))
@@ -79,3 +79,16 @@ btn.addEventListener('click', () => {
     //Catch an error to show in the console.log message
     .catch(err => console.error('Error connecting', err))   
 })
+
+
+//Attempt 2
+// function displayRadioValue() {
+//     var ele = document.getElementsByName('myRadios');
+
+//     for(i = 0; i < ele.length; i++) {
+//         if(ele[i].checked)
+//         document.getElementById("result").innerHTML = "myRadios"+ele[i].value;
+        
+//     }
+// }
+// console.log("result");
