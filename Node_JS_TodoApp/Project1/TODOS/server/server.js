@@ -42,6 +42,7 @@ app.get('/todos', (req, res) => {
     //res.json() is better to use for 
     //formatting
     // res.send(toDoArray);
+    //sends back the current toDOArray as json
     res.json(toDoArray);
 })
 
@@ -98,7 +99,7 @@ app.put("/todos/:todoid", function(req, res) {
 
     //find the todo in the array that matches the todoId
     //passed in
-    var requestedToDo = toDoArray.find(function(todo) {
+    let requestedToDo = toDoArray.find(function(todo) {
         return todo.id === requestedToDoId
     });
 
@@ -106,6 +107,7 @@ app.put("/todos/:todoid", function(req, res) {
     //false to true
     requestedToDo.isComplete = !requestedToDo.isComplete;
 
+    //if no element is found, let front end know
     res.status(200).send(requestedToDo);
 });
 

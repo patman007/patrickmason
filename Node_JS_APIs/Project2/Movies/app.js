@@ -20,11 +20,10 @@ app.get('/', (req, res) => {
 //API address
 app.get('/results', (req, res) => {
     console.log("I am the results ejs")
-
     //make the API call: https://api.themoviedb.org/3/authentication/token/new?api_key=pmason007
+    //API Key code 23dc5ffbe5f36f742c01757c0a8966fc
     //The token below is temporary and will need to be changed to access again
-    let endpoint = 'https://api.themoviedb.org/3/movie/now_playing?api_key=23dc5ffbe5f36f742c01757c0a8966fc&language=en-US&page=1';
-    // let defaultImg = 'https://api.themoviedb.org/3/movie/577922?api_key=23dc5ffbe5f36f742c01757c0a8966fc&language=en-US&append_to_response=backdrop_path,poster_path';
+    let endpoint = 'https://api.themoviedb.org/3/movie/now_playing?api_key=23dc5ffbe5f36f742c01757c0a8966fc&language=en-US&page=1';    
 
     request(endpoint, function(error, response, body) {
         // let url = `${endpoint}`
@@ -36,9 +35,7 @@ app.get('/results', (req, res) => {
 
             //do something with the parsed json
             res.render('results.ejs', {data: parsedData});            
-            console.log('The data is', {data: parsedData});
-            // res.render('results.ejs', {image: data.results});
-            // console.log('the image is', {image: data.results})            
+            console.log('The data is', {data: parsedData});          
         } else {
             //error handling    
             res.render('results.ejs', {data: 'Error getting data'});
@@ -48,9 +45,3 @@ app.get('/results', (req, res) => {
 
 //Listener
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
-
-// <% data.defaultImg.forEach(function(image) { %>
-//     <% let {poster_path} = image %>
-//     <p><%=image.poster_path %></p>
-//     console.log(image)
-// <% }) %>

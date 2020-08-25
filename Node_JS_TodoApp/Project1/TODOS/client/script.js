@@ -14,7 +14,7 @@ $(document).ready(() => {
     $('ul').empty()
     dataObj.map((todo)=> {
       $('ul').append(
-        `<li>${todo.description}<span><i class='far fa-trash-alt'></i></span></li>`
+        `<li> data-id=${todo.id}${todo.description}<span><i class='far fa-trash-alt'></i></span></li>`
       )
     })
 
@@ -70,9 +70,30 @@ $("ul").on("click", "li", function() {
   $(this).toggleClass("completed");
 });
 
+
+//Delete
 $("ul").on("click", "span", function(event) {
-  $(this)
+  console.log(this)
+  event.stopPropagation();
+  let todoId = $(this).partner().data('id')
+  $.ajax({
+    url: todoUrl + '/' + todoId,
+    method: 'DELETE'    
+  })
+  .done(() => {
+    console.log(this)
+    $(this)
     .parent()
     .remove();
+  })
+  .fail(() => {})
+
+
+  // $(this)
+  //   console.log(this)
+  //   .parent()
+  //   .remove();
 });
+
+
 
