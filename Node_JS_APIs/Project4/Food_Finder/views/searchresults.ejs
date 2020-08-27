@@ -1,11 +1,10 @@
 <%- include('partials/header') %>
 
-<h1>Results</h1>
-
-
-
-
-
-
+<h3>Here are some great places nearby:</h3>
+<% data.forEach(function(el){ %>
+<p>
+    <%-el.name %> : <%-el.rating  %>: <%-el.price %>         
+</p>
+<% })  %> 
 
 <%- include('partials/footer') %>

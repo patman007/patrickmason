@@ -13,10 +13,13 @@ const app = express();
 //Set up PORT 3000 
 const PORT = process.env.PORT || 3000;
 
+
 //Route Handlers
 //yelp api consume autocomplete api
 let endpoint = 'https://api.yelp.com/v3/businesses/search'
 console.log(endpoint)
+// let url3 = endpoint + apiKey
+// console.log(url3)
 
 //Home.ejs
 app.get('/', (req, res) => {
@@ -35,33 +38,29 @@ app.get('/', (req, res) => {
 // });
 
 //Searchresults.ejs 
-app.get('searchresults', (req, res) => {  
+app.get('/searchresults', (req, res) => { 
+  
+    //API and location for url not sure if
+    //important to use here or not
+    let location = `${endpoint}/${req.query.location}`
+    console.log(location)
+    
     //API documentation NPM use on website
     client.search({     
       location: location
     })
-    //location variable has an error at this point
-    // but also doe not work outside of the function
-    //code keeps breaking down on Line 46    
-    var location = req.query.location
 
-    //API and location for url not sure if
-    //important to use here or not
-    let url = `${endpoint}/${location}`
-    console.log(url) 
-    //Response
     .then(response => {
-      console.log(response.jsonBody.businesses[0].name)   
-      res.render('/searchresults.ejs', response)
+        console.log(response.jsonBody.businesses);
+        let data = response.jsonBody.businesses
+        res.render('searchresults.ejs', {data})         
     })
-    //Catch error had said  code 400, which is say my
-    //The request could not be understood by the server 
-    //due to malformed syntax. 
-    //The client SHOULD NOT repeat the request without modifications.
+    
     .catch(err => {
-      console.log('I am the error: ', err);
-    });    
-})
+        console.log("I am the error", err);
+    }); 
+});
+
 
 //Listeners
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`))

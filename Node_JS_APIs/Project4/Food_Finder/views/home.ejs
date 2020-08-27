@@ -1,9 +1,9 @@
         <%- include('partials/header') %>
-        <form>
+        <form action="/searchresults">
             <h1>Find a food place near you!</h1>
             <div class="form-group">
-              <label for="example1">Enter your location:</label>
-              <input type="text" class="form-control" id="location" 
+              <label for="location">Enter your location:</label>
+              <input type="text" class="form-control" id="location" name="location" 
               placeholder="Enter your location">              
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
