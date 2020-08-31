@@ -1,0 +1,106 @@
+How do you start mongo shell?
+
+    mongo
+
+How do you determine which databse is currently being used?
+
+    db 
+
+How to switch between databases?
+
+    use comics
+
+Insert document:
+
+    db.dc.insert({alias: 'Superman', fname: 'Clark', lname: "Kent", nemesis: 'Lex Luthor', hero: true})
+    db.dc.insert({alias: 'Batman', fname: 'Bruce', lname: "Wayne", nemesis: 'Joker', hero: true})
+    db.dc.insert({alias: 'Joker', fname: 'Jack', lname: "Napier", nemesis: 'Batman', hero: false})
+    db.dc.insert({alias: 'Catwoman', fname: 'Selena', lname: "Kyle", nemesis: 'Batman', hero: false})
+
+We need to sort the characters by alias:
+
+    db.dc.find().sort({alias: 1})
+
+
+Find who has nemesis is Batman?
+
+    db.dc.find({nemesis: 'Batman'})
+
+Who is a hero?
+
+     db.dc.find({hero: true})
+
+Who is a hero, alias only!!!!
+
+    db.dc.find({hero: true}, {alias: 1})
+
+Who is a hero , everything BUT alias!!!
+
+    db.dc.find({hero: true}, {alias: 0})
+
+Catwoman started dating Batman, and now is considered a hero. How do we update
+her hero status?
+
+    db.dc.update({alias: "Catwoman"}, {$set: {hero: true}})
+
+Catwoman broke up with Batman, she is a villain again. Update her status:
+
+    db.dc.update({alias: "Catwoman"}, {$set: {hero: false}})
+
+Batman adopted a son named Jason Todd. we need to add a new field to his document.
+We want to add a field called children and it is an array of objects with age, 
+fname, and lname of the child.
+
+    Use your mongo shell:
+
+    var children = [
+        {
+            age: 13,
+            fname: 'Jason',
+            lname: 'Todd'
+        }
+    ]
+
+    db.dc.update({alias: 'Batman'}, {$set: {children}})
+
+Superman decided to adopt the Wonder Twins:
+
+    var children = [
+        {
+            age: 18,
+            fname: "Zan",
+            lname: "Fleming"
+        },
+        {
+            age: 18,
+            fname: "Jayna",
+            lname: "Fleming"
+        }
+    ]
+
+    db.dc.update({alias: 'Superman'}, {$set: {children}})
+
+Catwoman had a daughter named Helena Wayne:
+
+    var children = [
+        {
+            age: 17,
+            fname: 'Helena',
+            lname: 'Wayne'
+        }
+    ]
+
+    db.dc.update({alias: 'Catwoman'}, {$set: {children}})
+
+How do we find those heroes with children under the age of 18?
+
+    db.dc.find({children: {$elemMatch: {age:{$lt: 18}}}})
+
+DC comics filed for bankruptcy, so we can delete the whole database.
+Make sure you are in the correct databse, then drop it:
+
+        db
+        
+            THEN, if you are in the correct datatbase: 
+
+        db.dropDatabase()
