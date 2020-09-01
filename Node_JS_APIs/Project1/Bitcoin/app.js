@@ -58,8 +58,8 @@ app.get('/results', (req, res ) => {
         // Feedback: here you may render a specially designed
         //           error.ejs page if you wish and render it.
         // res.render('error.ejs', {error: 'No matches found'})
-        res.status(404).send(err)
-        console.log('Catch error', err)
+        res.status(404).send({err})
+        console.log('Catch error', {err})
     });     
 })
 

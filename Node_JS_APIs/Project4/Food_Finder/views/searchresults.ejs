@@ -1,10 +1,39 @@
 <%- include('partials/header') %>
 
-<h3>Here are some great places nearby:</h3>
-<% data.forEach(function(el){ %>
+<!-- <h3>Here are some great places nearby:</h3>
+<%# data.forEach(function(el){ #%>
 <p>
-    <%-el.name %> : <%-el.rating  %>: <%-el.price %>         
+    <%#-el.name %> | Rating <%#-el.rating  %> out of 5 | Price <%#- el.price %>         
 </p>
-<% })  %> 
+<%# })  %>  -->
+
+<h1 class="text-center">Here are some great places nearby:</h1>
+<div class="container well">
+    <table class="table">
+        <tr>
+            <th>Distance</th>
+            <th>Name</th>
+            <th>Rating</th>
+        </tr>
+        
+        
+        <% data.forEach(function(display){ %>
+            <% if((display.rating % 1) == 0) { %>
+            <%    stars = '/public/yelp/regular/regular_' + display.rating + '.png'; %>
+            <% } else { %>
+            <%   stars = '/public/yelp/regular/regular_' + Math.floor(display.rating) + '_half.png'; %>
+        <% }; %>
+            
+            
+            <tr class="listResults">
+                <td><h4><%= ((display.distance)/1609.34).toFixed(1) %> miles</h4></td>
+                <td><h4><a href="<%= display.url%>" target="_blank"><%= display.name %></a></h4></td>
+                <td><h4><img src="<%= stars %>" alt="stars"></h4></td>
+            </tr>
+        <% }); %>
+
+    </table>
+    
+</div>
 
 <%- include('partials/footer') %>

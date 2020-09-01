@@ -16,11 +16,51 @@ app.use(cors())
 
 const port = process.env.PORT || 3000;
 
-let toDoArray = [
-  { id: 1, description: "Call mom", isComplete: false },
-  { id: 2, description: "Buy groceries", isComplete: false },
-  { id: 3, description: "Go to movies", isComplete: false }
-];
+//Note How to Convert to Mongo/Mongoose
+//1 Build our connection
+  //a install Mongoose
+  //b connect
+const mongoose =  require('mongoose')  
+
+const db = 'pm_todo_list'
+
+const url = 'mongodb://localhost:27017/' + db
+
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log(`Connected to ${db} database.`))
+.catch((error) => console.log(`Error connecting to ${db} database: `, error))
+
+
+//2 Build blueprints
+  //a Schema
+  //b Model
+let todoSchema =  new mongoose.Schema(
+  {      
+    description: {
+      type: String,
+      required:[true, 'Must have a description']
+    },
+    isComplete: {
+      type: Boolean,
+      default: false
+    } 
+  }
+)
+
+let TodoModel = mongoose.model('todos', todoSchema)
+
+//3 Build queries  
+  //a Read with Mongoose -> .find()
+  //b Read with Mongoose -> .create() or .save()
+  //c Read with Mongoose -> .findByIdAndDelete()
+  //d Read with Mongoose -> .findById() and .save()
+
+//Dont use this now
+// let toDoArray = [
+//   { id: 1, description: "Call mom", isComplete: false },
+//   { id: 2, description: "Buy groceries", isComplete: false },
+//   { id: 3, description: "Go to movies", isComplete: false }
+// ];
 
 let num = 4;
 
@@ -31,7 +71,18 @@ app.get("/", function(req, res) {
 // Read data
 app.get("/todos", function(req, res) {
   // sends back the current toDoArray as json
-  res.json(toDoArray);
+  //error and result need to be the callback 
+  TodoModel.find({}, (error, results) => {
+    if(error){
+      console.log('Error finding documents from database', error)
+    } else {
+      console.log('My results: ', results)
+      //Tool used to communicate for front end
+      res.status(220).json(results)
+      // res.json(results)
+    }
+  })
+  // res.json(toDoArray);
 });
 
 // Create data
@@ -44,19 +95,26 @@ app.post("/todos", function(req, res) {
   // };
   // NOTE: allows for real application where user inputs todo and 
   // auto-increment of id
-  let newTodo = { 
-    id: num++, 
-    description: req.body.description, 
-    isComplete: false 
-}
+  let newTodo = new TodoModel({ 
+    // id: num++, 
+    description: req.body.description
+    // isComplete: false 
+  })
+  newTodo.save((error, results)=> {
+    if(error) {
+      console.log('Error save document to db: ', error)
+    } else{
+      res.status(201).json(newTodo);
+    }
+  })
   // append the new todo object to toDoArray array
-  toDoArray.push(newTodo);
+  // toDoArray.push(newTodo);
   // displaying in terminal for testing/debugging purposes
-  console.log(toDoArray);
+  // console.log(toDoArray);
   // set status to 201 which is successful
   // send back json version of newTodo object
   // no need to send whole array back, just the new todo item
-  res.status(201).json(newTodo);
+  // res.status(201).json(newTodo);
 });
 
 // Delete data
