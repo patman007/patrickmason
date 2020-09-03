@@ -5,6 +5,7 @@ let url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
 //based on individual listeners
 var rad = document.myForm.currency;
 var curr = 'USD';
+var symbol = '&#36';
 
 // Button variable by id
 let btn = document.getElementById('btn');
@@ -24,10 +25,11 @@ btn.addEventListener('click', event => {
     }) 
     //Set data depending on the radio button selected   
     .then (data => {
-        rad.forEach(function(radio){
-            if(radio.checked) curr = radio.value;
+        rad.forEach(function(radio){            
+            if(radio.checked) curr = radio.value;            
         })
-        document.getElementById('result').innerHTML = data.bpi[curr].rate_float.toFixed(2)                
+        document.getElementById("symbol").innerHTML = data.bpi[curr].symbol;
+        document.getElementById("result").innerHTML = data.bpi[curr].rate_float.toFixed(2);         
     })
     
     //Catch an error to show in the console.log message

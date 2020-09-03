@@ -18,6 +18,16 @@ h1 {
     font-size: 45px; 
 }
 
+#symbol {
+    font-size: 35px;
+    font-weight: bold
+}
+
+#result {
+    font-size: 35px;
+    font-weight: bold
+}
+
 .form-check {
     font-size: 35px;
     font-weight: bold;
