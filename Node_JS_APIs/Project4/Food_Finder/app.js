@@ -15,13 +15,10 @@ const app = express();
 //Set up PORT 3000 
 const PORT = process.env.PORT || 3000;
 
-
 //Route Handlers
 //yelp api consume autocomplete api
 let endpoint = 'https://api.yelp.com/v3/businesses/search'
 console.log(endpoint)
-// let url3 = endpoint + apiKey
-// console.log(url3)
 
 //Home.ejs
 app.get('/', (req, res) => {

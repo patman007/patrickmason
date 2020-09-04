@@ -1,4 +1,4 @@
-//oundation
+//Foundation
 const express = require('express')
 
 const app = express()

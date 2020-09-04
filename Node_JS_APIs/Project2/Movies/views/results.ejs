@@ -4,15 +4,15 @@
 
 <%# Movies for Each loop %>
 <% data.results.forEach(function(el) { %>
-    <% let {title, overview, vote_average, backdrop_path, poster_path} = el %>
+    <% let {title, overview, vote_average, poster_path} = el %>
     <br>    
     <h3><%=el.title %></h3> 
     <p><%=el.overview %></p>   
     <p>Rating: <%=el.vote_average %> out of 10</p>
-    <p>Backdrop Image: <%=el.backdrop_path %></p>
-    <p>Poster Image: <%=el.poster_path %></p>     
-    <img src="<%= `https://image.tmdb.org/t/p/w400${el.poster_path}` %>" style="width: 35%" alt="<%= el.title %>"> 
-    <!-- https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg       -->
+    <!-- <p>Backdrop Image: <%#el.backdrop_path %></p>
+    <p>Poster Image: <%#el.poster_path %></p> -->
+    <img src="<%= `https://image.tmdb.org/t/p/w400${el.poster_path}` %>" style="width: 15%" alt="<%= el.title %>"> 
+    <!-- https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg -->
     <% console.log(el) %>    
 <% }) %>
 
