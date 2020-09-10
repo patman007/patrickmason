@@ -151,12 +151,13 @@ FROM employees
 ORDER BY last_name ASC, first_name DESC;
 
 
---SORTING example 1
+--SORTING Example 1
 --Select locations ordering them by city?
 SELECT city, state_province 
-FROM locations;
+FROM locations
+ORDER BY city;
 
---SORTING example 2
+--SORTING Example 2
 --Selet locations, ordering them by postal_code
 SELECT city, postal_code, state_province
 FROM hr.locations
