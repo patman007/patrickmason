@@ -225,7 +225,7 @@ WHERE last_name = 'King';
 --Select all rows for employees with last name starts with  'King'
 SELECT *
 FROM hr.employees
-WHERE last_name LIKE 'King';
+WHERE last_name LIKE 'King%';
 
 --------------------------------------------------------------------
 
@@ -246,7 +246,7 @@ WHERE ((EXTRACT(year FROM CURRENT_DATE) -
    OR EXTRACT(month FROM hire_date) = 6)
    AND job_id <> 'AD_PRES';
 
-   ------------------------------------------------------------------------
+--------------------------------------------------------------------------
 
  --SUBQUERIES Example 1
  --Find the employees that make greater than the average salary in the company.
@@ -259,12 +259,24 @@ WHERE salary >=
 
  --SUBQUERIES Example 2
  --Find the employees that make greater than the average salary in their departments.
-SELECT employee_id, first_name, department_id
+--Attempt 1 
+SELECT employee_id, 
+      last_name, 
+      first_name, 
+      department_id
  FROM employees
 WHERE salary >=
   (SELECT AVG(salary)
    FROM employees);
   
+--Correct Way
+SELECT first_name, last_name, salary, department_id
+FROM employees e1
+WHERE salary > (
+     SELECT avg(salary) FROM employees e2
+     WHERE e1.department_id = e2.department_id
+     GROUP BY e2.department_id
+);
 
 --SUGQUERIES Example 3
 -- List first names of all employees who work in Seattle, Washington.
@@ -294,32 +306,127 @@ WHERE country_id = 'UK';
 
 ------------------------------------------------------------------
 
---JOINS Example
+--JOINS Examples
+--LEFT JOIN Example
+SELECT 
+   e.first_name, 
+   d.department_name
+FROM      employees e 
+LEFT JOIN departments d
+   ON e.department_id = d.department_id;
 
 
+--FULL JOIN Example
+SELECT d.department_name   AS DEPT_NAME,
+       e.first_name        AS F_NAME,
+       e.job_id            AS JOB_ID
+FROM      employees e 
+FULL JOIN departments d
+ ON       e.department_id = d.department_id;
 
 
+--JOIN Example
+--*** 22 rows because Stephen Davies has no dept_id ***
+SELECT d.department_name   AS DEPT_NAME,
+      e.first_name        AS F_NAME,
+      e.last_name,
+      e.job_id            AS JOB_ID,
+      e.department_id
+FROM   employees e
+   JOIN departments d
+       ON  e.department_id = d.department_id;
 
 
+--LEFT JOIN Example
+--*** LEFT JOIN returns 24 rows because it includes 
+--unmatched rows of left table so NOW Stephen Davies 
+--is included!!! ***
+SELECT d.department_name   AS DEPT_NAME,
+      e.first_name        AS F_NAME,
+      e.last_name,
+      e.job_id            AS JOB_ID
+FROM   employees e
+   LEFT JOIN departments d
+       ON  e.department_id = d.department_id;
 
 
+--RIGHT JOIN Example
+--*** RIGHT JOIN returns 24 rows because there are 3 
+--depts (210, 500, and 10) that do not have first names 
+--and job ids attached ***
+SELECT d.department_name   AS DEPT_NAME,
+      e.first_name        AS F_NAME,
+      e.job_id            AS JOB_ID,
+      e.department_id
+FROM   employees e
+   RIGHT JOIN departments d
+       ON  e.department_id = d.department_id;
 
 
+--JOIN Example 6
+--Provide sales data from PRODUCTS and SALES in the 
+--following form
+SELECT to_char(saledate, 'MM/DD/YYYY') AS SALE_DATE,
+   description AS PRODUCT_NAME,
+   amount AS SALE_AMOUNT
+FROM sales s
+   JOIN products p
+       ON p.productid = s.productid;
 
 
+--JOIN Example 7
+--Provide players data in the form
+--first,  last,  height,  weight,  team
+--Alter above query to include players who have 
+--not been drafted
+SELECT
+ p.fname AS first_name,
+ p.lname AS last_name,
+ p.height,
+ p.weight,
+ t.name
+FROM
+ players p
+ LEFT JOIN teams t
+   on t.id = p.team_id;
 
 
+--CROSS JOIN Example
+SELECT first_name, department_name
+     FROM employees, departments;
+
+
+--SELF JOIN Example 1
+SELECT employee_id, first_name, last_name, manager_id
+FROM employees
+ORDER BY employee_id;     
+
+
+--SELF JOIN Example 2 refer back here for code correction
+--Please list all employees and their managers by their full names,
+SELECT e.first_name || ' ' || e.last_name "Employee",
+      m.first_name || ' ' || m.last_name "Manager"
+FROM employees e JOIN employees m ON (e.manager_id = m.employee_id);
+
+
+--SELF JOIN Example 3
+--Please list all employees and their managers by their full names, 
+--as follows. This includes employees who don't have an assigned 
+--manager.
+SELECT e.first_name || ' ' || e.last_name "Employee",
+      m.first_name || ' ' || m.last_name "Manager"
+FROM employees e JOIN employees m ON (e.manager_id = m.employee_id);
 
 -----------------------------------------------------------------
 
---Lecture 2 Start
+--LECTURE 2 Start
 -- List all countries that are within Europe, from our hr database.
 -- Steps: Write a SELECT statement to list all regions from the db. 
 --What query would you write to do it?
 SELECT region_id, region_name
 FROM regions;
 
--- Write another SELECT statement to list ALL countries.
+--Write another SELECT statement to list ALL countries.
 SELECT country_name, region_id
 FROM countries;
 

@@ -18,11 +18,15 @@ FROM hr.employees;
 -- In the first query you wrote above, please also report the employee's 
 -- total compensation (salary + commission, if any) as a percentage of 
 -- the minimum salary in the company from the #2 above.
-SELECT *
+SELECT employee_id AS "Employee_ID",
+        last_name AS "Last Name",
+        first_name AS "First Name",
+        hire_date AS "Hire Date",
+        salary AS "Salary",
+        commission_pct
 FROM hr.employees
-WHERE salary > 
+WHERE salary + commission_pct >
     (SELECT MIN(salary) 
     FROM hr.employees)
 AND hire_date > '31-Dec-1996'
 ORDER BY hire_date ASC;
-
