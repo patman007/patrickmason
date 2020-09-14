@@ -23,9 +23,9 @@ SELECT employee_id AS "Employee_ID",
         first_name AS "First Name",
         hire_date AS "Hire Date",
         salary AS "Salary",
-        commission_pct
+        commission_pct        
 FROM hr.employees
-WHERE salary + commission_pct >
+WHERE 100 * (salary+commission_pct/3000) >
     (SELECT MIN(salary) 
     FROM hr.employees)
 AND hire_date > '31-Dec-1996'

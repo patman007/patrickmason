@@ -21,13 +21,12 @@ LEFT JOIN departments d
 --Alternative Way
 --Using Subqueries instead of Joins to display only department_id
 SELECT first_name || ' ' || last_name AS "Full Name",
-        department_id               
+        department_id                     
 FROM hr.employees
 WHERE department_id IN
     (SELECT department_id
         FROM departments
         WHERE department_id IS NOT NULL);
-
 
 
 --Project 1 Task 4 Part 2
@@ -40,6 +39,18 @@ SELECT e.first_name || ' ' || e.last_name AS "Full Name",
 FROM employees e, departments d 
 WHERE d.department_name = 'Sales'
 ORDER BY e.hire_date DESC;
+
+--Alternative Way SUBQUERY
+--Using Subqueries instead of Joins to display only department_id
+SELECT first_name || ' ' || last_name AS "Full Name",
+        department_id,
+        hire_date                     
+FROM hr.employees
+WHERE department_id IN
+    (SELECT department_id
+        FROM departments
+        WHERE department_id = 80)
+        ORDER BY hire_date DESC;
 
 -- Hint: you may NOT look up the department_id of "Sales", but use the 
 --text "Sales" in the query. Do something like ... WHERE department_name = 'Sales'
@@ -55,9 +66,9 @@ ORDER BY e.hire_date DESC;
 --      Daniel Faviet     | Finance
 
 
---Alternative Way 
+--Alternative Way JOIN
 --Using LEFT JOIN lookup table with department_id using Sales in the query
---Not suggested to do
+--Not suggested way to do it
 SELECT e.first_name || ' ' || e.last_name AS "Full Name",
         e.hire_date AS "Hire Date",
         d.department_name AS "Department"               

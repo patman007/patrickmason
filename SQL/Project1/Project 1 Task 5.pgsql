@@ -5,14 +5,9 @@ SELECT e.first_name AS "FIRST",
         e.email AS "EMAIL",
         d.department_name AS "DEPT"                                           
 FROM employees e
-    JOIN departments d
+    INNER JOIN departments d
         ON e.department_id = d.department_id
     AND d.department_name = 'Executive'; 
-        -- FROM departments d
-        --     JOIN locations ls
-        --         ON d.location_id = ls.location_id
-        --     AND ls.city = 'Seattle';
-        
 
 --Hint: Join between EMPLOYEES, DEPARTMENTS and LOCATIONS 
 --using DEPARTMENT_NAME = 'appropriate department name'.
@@ -26,3 +21,18 @@ FROM employees e
 -- Lex        De Haan    LDEHAAN    Executive  Seattle
 -- Seely      Bruce      bman       Executive  Seattle
 -- Stephen    Noyce      snoyce     Executive  Seattle
+
+SELECT e.first_name AS "FIRST", 
+        e.last_name AS "LAST",
+        e.email AS "EMAIL",
+        d.department_name AS "DEPT"
+        -- hr.locations.city AS "CITY"                                         
+FROM employees e
+    INNER JOIN departments d ON e.department_id = d.department_id    
+    INNER JOIN locations ls ON d.location_id = ls.location_id
+    WHERE d.department_name = 'Executive'
+        AND ls.city = 'Seattle'; 
+        -- FROM departments d
+        --     JOIN locations ls
+        --         ON d.location_id = ls.location_id
+        --     AND ls.city = 'Seattle';
