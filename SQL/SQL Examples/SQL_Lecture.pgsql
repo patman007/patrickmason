@@ -222,21 +222,29 @@ SELECT *
 FROM hr.employees
 WHERE last_name = 'King';
 
+SELECT *
+FROM hr.employees
+WHERE lower(last_name) = lower('King');
+
 --Example 3
 --Select all rows for employees with last name starts with  'King'
 SELECT *
 FROM hr.employees
 WHERE last_name LIKE 'King%';
 
+SELECT *
+FROM hr.employees
+WHERE lower(last_name) = lower('k%');
+
 --------------------------------------------------------------------
 
---PRESIDENT's PREFERENCE Examples
+--PRESIDENT's PREFERENCE Example 1
 -- If there are folks who were hired in the company in the month of June in any year, 
 --or have worked for at least 20 years, place them on top of the list.
 -- Hence, please create another query where 
 -- Filter those who have been with the company for more than 20 years, or
--- Filter those who have been hired in the month of June (hint: can you splice out 
---the month from hire_date?)
+-- Filter those who have been hired in the month of June 
+--(hint: can you splice out the month from hire_date?)
 -- Create a list, such that it does not include Stephen
 -- Also show hire date in a human friendly date format.
 SELECT first_name || ' ' || last_name AS full_name,
@@ -247,15 +255,48 @@ WHERE ((EXTRACT(year FROM CURRENT_DATE) -
    OR EXTRACT(month FROM hire_date) = 6)
    AND job_id <> 'AD_PRES';
 
+
+--PRESIDENT'S PREFERENCE Example 2
+--Stephen King, the CEO of my fictional company would like to invite 
+-- his employees for discussion.  He wants a list of employees whose 
+-- first or last names start with the letter ‘k’.
+-- Please create such a list of those employees
+-- whose last names start with K (case doesn't matter)
+-- whose first names start with K (case doesn't matter)
+-- combine these in a single SQL query to fully meet the above requirements. 
+-- And obviously, please do not include the President in the list and provide 
+-- the names in the format "Neena Kocchar".
+SELECT first_name || ' ' ||last_name
+FROM employees 
+   WHERE 
+   ( 
+      lower(last_name) LIKE 'k%'
+      OR
+      lower(first_name) like 'k%'
+   )
+   AND employee_id <> 100;
+
 --------------------------------------------------------------------------
 
  --SUBQUERIES Example 1
  --Find the employees that make greater than the average salary in the company.
-SELECT employee_id, first_name
+SELECT employee_id, first_name, last_name, salary
  FROM employees
 WHERE salary >=
   (SELECT AVG(salary)
    FROM employees);
+
+--Find the employees that make greater than the average salary in department_id 90
+--in the company.
+SELECT first_name, last_name, salary
+FROM (
+      SELECT *
+      FROM hr.employees
+      WHERE department_id = 90
+     ) AS emptab
+WHERE salary >
+  (SELECT AVG(salary)
+   FROM employees);   
 
 
  --SUBQUERIES Example 2
@@ -280,6 +321,7 @@ WHERE salary > (
 );
 
 --SUGQUERIES Example 3
+--IN OPERATOR
 -- List first names of all employees who work in Seattle, Washington.
 -- 	Hints: 
 -- find all the departments in Seattle.
@@ -304,6 +346,17 @@ FROM departments
 INNER JOIN locations 
 ON departments.location_id = locations.location_id
 WHERE country_id = 'UK';
+
+
+--Not completely reiable updates
+-- SELECT department_name *
+-- FROM hr.departments
+-- WHERE location_id = 
+--    (SELECT location_id FROM hr.locations
+--    WHERE country_id = 'UK');
+
+-- SELECT location_id * FROM locations
+--       WHERE country_id = 'UK';
 
 ------------------------------------------------------------------
 
