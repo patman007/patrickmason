@@ -14,7 +14,8 @@ FROM employees
 WHERE department_id = 80;
 
 
--- 3)   How would you list employees that make more than 8000 in salary and have a manager whose id is NOT 124?
+-- 3)   How would you list employees that make more than 8000 in 
+--salary and have a manager whose id is NOT 124?
 SELECT *
 FROM employees      
 WHERE salary > 8000
@@ -34,7 +35,8 @@ ORDER BY salary DESC;
 
 
 -- Research:
--- 5)   How would you list employees whose last name starts with the letter K?  (Hint: try the LIKE function and use % as a wildcard)
+-- 5)   How would you list employees whose last name starts with the letter K?  
+--(Hint: try the LIKE function and use % as a wildcard)
 SELECT last_name,
         first_name,
         employee_id,
