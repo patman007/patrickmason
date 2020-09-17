@@ -11,7 +11,7 @@
 -- FROM hr.employees;
 
 
---FINAL ANSWER PROJECT 1 TASK 4
+--FINAL ANSWER PROJECT 1 TASK 4 PART 1
 --List full names, department names
 --JOIN table sequence 
 --EMPLOYEES -> DEPARTMENTS
@@ -24,7 +24,7 @@ SELECT e.first_name|| ' '|| e.last_name
         ON e.department_id = d.department_id;
 
 
---Alternative Way FINAL ANSWER
+--Alternative Way FINAL ANSWER TASK 4 PART 1
 --List full names, department names, cities
 --Close to Task 5
 --JOIN table sequence backwards
@@ -100,12 +100,25 @@ SELECT e.first_name || ' ' || e.last_name
         e.hire_date AS "Hire Date",
         d.department_name AS "Department"                       
 FROM employees e
-LEFT JOIN departments d
+JOIN departments d
     ON e.department_id = d.department_id
 WHERE d.department_name = 'Sales'
 -- WHERE d.department_name LIKE '%Sales%'
 ORDER BY e.hire_date DESC;
 
+
+-- Hint: you may NOT look up the department_id of "Sales", but use the 
+--text "Sales" in the query. Do something like ... WHERE department_name = 'Sales'
+-- What you would expect to see is somthing like this:
+
+--          Full Name     |    Department    
+--     -------------------+------------------
+--      Lex De Haan       | Executive
+--      Susan Mavris      | Human Resources
+--      William Gietz     | Accounting
+--      Hermann Baer      | Public Relations
+--      Shelley Higgins   | Accounting
+--      Daniel Faviet     | Finance
 
 
 --Alternative Way SUBQUERY
@@ -122,19 +135,6 @@ WHERE department_id IN
         WHERE department_id = 80)
         ORDER BY hire_date DESC;
 
-
--- Hint: you may NOT look up the department_id of "Sales", but use the 
---text "Sales" in the query. Do something like ... WHERE department_name = 'Sales'
--- What you would expect to see is somthing like this:
-
---          Full Name     |    Department    
---     -------------------+------------------
---      Lex De Haan       | Executive
---      Susan Mavris      | Human Resources
---      William Gietz     | Accounting
---      Hermann Baer      | Public Relations
---      Shelley Higgins   | Accounting
---      Daniel Faviet     | Finance
 
 -----------------------------------------------------------
 --Alternative Attempt 1 Not Right Answer
