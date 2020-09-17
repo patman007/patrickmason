@@ -133,4 +133,10 @@ RIGHT JOIN departments d --ALL DEPTS
 --How would we check how many people work from the company
 SELECT COUNT(*) FROM employees;
 
+-----------------------------------------------------------------
+
+SELECT *
+FROM employees JOIN hr.departments
+USING (department_id);
+
 
