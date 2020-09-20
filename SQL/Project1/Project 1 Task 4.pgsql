@@ -140,16 +140,16 @@ WHERE department_id IN
 --Alternative Attempt 1 Not Right Answer
 --Using Subqueries instead of Joins to display only 
 --department_id
-SELECT e.first_name || ' ' || e.last_name 
-        AS "Full Name",
-        e.hire_date AS "Hire Date",
-        d.department_name AS "Department"                       
-FROM employees e, departments d 
-WHERE d.department_name = 'Sales'
-ORDER BY e.hire_date DESC;
+-- SELECT e.first_name || ' ' || e.last_name 
+--         AS "Full Name",
+--         e.hire_date AS "Hire Date",
+--         d.department_name AS "Department"                       
+-- FROM employees e, departments d 
+-- WHERE d.department_name = 'Sales'
+-- ORDER BY e.hire_date DESC;
 
 
---Alternative Attempt 2 Not Rigt Answer
+--Alternative Attempt 1 Not Rigt Answer
 --Using Subqueries instead of Joins to display only 
 --department_id
 SELECT first_name || ' ' || last_name 
@@ -158,16 +158,7 @@ SELECT first_name || ' ' || last_name
 FROM hr.employees
 WHERE department_id IN
     (SELECT department_id
-        FROM departments)
-        ORDER BY hire_date DESC;
-
---Same thing as Alternative Attempt 2 above
-SELECT first_name || ' ' || last_name 
-        AS "Full Name",
-        department_id                     
-FROM hr.employees
-WHERE department_id IN
-    (SELECT department_id
         FROM departments
         WHERE department_id IS NOT NULL)
-ORDER BY hire_date DESC;
+        ORDER BY hire_date DESC;
+

@@ -5,7 +5,7 @@
 --FINAL ANSWER 1 PART 1
 SELECT first_name,
         last_name,
-        to_char(hire_date, 'DD-Mon-YYYY') 
+        to_char(hire_date, 'DD-Mon-YY') 
         AS "Hire Date"
 FROM hr.employees
 WHERE salary > 8000
@@ -45,13 +45,14 @@ ORDER BY hire_date;
 -- as a string to the DATE type).
 SELECT first_name,
         last_name,
-        salary,
+        salary,        
         hire_date
 FROM hr.employees
 WHERE salary > 8000
 --hired after 1996 (use implicit conversion of a date 
 -- as a string to the DATE type)
 AND to_date('01/01/1997', 'DD/MM/YYYY') < hire_date
+-- AND hire_date > '01/01/1997'
 --ORDER BY default sort order is set to Ascending ASC
 ORDER BY hire_date;
 
@@ -99,23 +100,35 @@ SELECT employee_id AS "Employee_ID",
         AS "Full Name",
         -- last_name AS "Last Name",
         -- first_name AS "First Name",
-        hire_date AS "Hire Date",
+        to_char(hire_date, 'DD-Mon-YYYY') AS "Hire Date",
         salary AS "Salary",
         commission_pct AS "Commission %",
-        --total compensation as a percentage 
-        --of minimum salary 10,0000 MIN(salary) 
-        100 * ROUND((salary) + COALESCE(commission_pct, 0),2)/10000 
-        AS total_salary    
+        -- forces commission_pct to 0 if null
+        salary * COALESCE(commission_pct, 0) 
+        AS "Total Commission",
+        -- adds result of salary * commission_pct 
+        --to salary for a final total compensation
+        salary + salary * COALESCE(commission_pct, 0)  
+        AS "Total Comp",
+        -- divides total compensation by the min salary of 
+        --company displayed to 2 decimal precision 
+        --Could use SELECT Min Salary or $10,000 here
+        TRUNC((salary + 
+        salary * COALESCE(commission_pct, 0))/
+        10000,2)
+        -- (SELECT MIN(salary)
+        -- FROM employees) * 100, 2) 
+        AS "% of Company Min Salary"   
 FROM hr.employees
 --hired after 1996 (use implicit 
 --conversion of a date 
 -- as a string to the DATE type)
-WHERE hire_date > to_date('31-Dec-1996','DD-Mon-YYYY')
+WHERE hire_date > '31-Dec-1996'
+AND salary > 10000
 --ORDER BY default sort order is set to Ascending ASC
 ORDER BY hire_date ASC;
 
 ---------------------------------------------------------------------
-
 
 --Attempt 1 Not the right answer
 SELECT employee_id AS "Employee_ID",

@@ -257,4 +257,4 @@ FROM employees e
         ON d.location_id = ls.location_id
     WHERE d.department_name = 'Executive'
         AND ls.city = 'Seattle'
-        ORDER BY e.last_name DESC; 
+        ORDER BY e.last_name ASC; 

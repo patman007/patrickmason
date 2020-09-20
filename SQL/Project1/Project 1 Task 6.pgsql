@@ -10,7 +10,7 @@
 -- FROM hr.employees;
 
 --FINAL ANSWER PROJECT 1 TASK 6 
---21 records
+--24 records
 --JOIN table sequence 
 --EMPLOYEES (Self Join) -> DEPARTMENTS -> LOCATION 
 --List first, last name, email, 
@@ -27,11 +27,11 @@ SELECT e.first_name AS "FIRST",
     --Employee in Employee table
     LEFT JOIN employees mgr
         ON e.manager_id = mgr.employee_id
-    --JOINS (outer Joins) to Department 
-    --and Locations Tables    
-    JOIN departments d 
+    --LEFT JOINS (outer Joins) to Department 
+    --and Locations Tables want the nulls 
+    LEFT JOIN departments d 
         ON e.department_id = d.department_id
-        JOIN locations l
+        LEFT JOIN locations l
             ON d.location_id = l.location_id
         ORDER BY mgr.first_name DESC;  
 
@@ -82,14 +82,14 @@ SELECT emp.first_name|| ' '||emp.last_name
 --------------------------------------------------------------------
 
 --ATTEMPT 1 DO NOT USE
-SELECT * 
-FROM hr.departments;
+-- SELECT * 
+-- FROM hr.departments;
 
-SELECT * 
-FROM hr.locations;
+-- SELECT * 
+-- FROM hr.locations;
 
-SELECT *
-FROM hr.employees;
+-- SELECT *
+-- FROM hr.employees;
 
 --FULL OUTER JOIN 
 --28 records
