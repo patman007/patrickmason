@@ -41,7 +41,7 @@ $('input').keypress(function(event) {
         $('input').val(""); // moved the "" to within the parentheses
       })
     }  // closes if (event.which === 13) ...
-  });
+});
 
 
 // Update - PUT

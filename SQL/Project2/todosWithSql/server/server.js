@@ -1,6 +1,8 @@
+//Foundation
 const express = require("express");
 const app = express();
 
+//Morgan logger
 const logger = require("morgan");
 app.use(logger("dev"));
 
@@ -28,6 +30,7 @@ app.use(express.static('client'))
 // const pg = require('pg')
 
 const{Client} = require('pg');
+const { request } = require("express");
 
 const dbConnectionDetails = {
   host: 'pgdb.accsoftwarebootcamp.com',
@@ -36,7 +39,7 @@ const dbConnectionDetails = {
   password: 'accrocks',
   database: 'accsoftwarebootcamp'
 }
-
+//Route Handler
 //constructor and is a function
 const dbconn =  new Client(dbConnectionDetails)
 dbconn.connect()
@@ -73,10 +76,10 @@ app.post("/todos", function(req, res) {
     INSERT INTO todos.todos (
       description,
       iscomplete,
-      user_id: 
+      user_id 
     ) VALUES (
-      ${description}', false, 1 )
-    ) RETURNING id as _id, *  
+      '${description}', false, 3 )
+    RETURNING id as _id, *  
   `
   console.log('query is : ', query)    
   dbconn.query(query)
@@ -104,10 +107,10 @@ app.post("/todos", function(req, res) {
 // DELETE data
 app.delete("/todos/:id", (req, res) => {
     let requestedToDoId = parseInt(req.params.id);
-    let query = 'DELETE id as _id, * FROM todos.todos';
+    let query = `DELETE FROM todos.todos WHERE id = ${requestedToDoId};`
   console.log(requestedToDoId)
   console.log(query)
-  dbconn.query(requestedToDoId, function(err, result){
+  dbconn.query(query, function(err, result){
     if(err){
       res.status(400).send('Id does not exist for deletion')
     } else {
@@ -129,29 +132,14 @@ app.delete("/todos/:id", (req, res) => {
 
 // UPDATE data
 app.put("/todos/:id", (req, res) => {  
-  let requestedToDoId = req.params.description;
-  let query =  `
-  UPDATE todos SET todos.todos (
-    description,
-    iscomplete,
-    user_id: 
-  ) VALUES (
-    ${description}', false, 3 )
-  ) RETURNING id as _id, *  
-`
+  let requestedToDoId = req.params.id;
+  let query =  `UPDATE todos.todos SET iscomplete = NOT iscomplete WHERE id = ${requestedToDoId} RETURNING *;`
   console.log('query is : ', query)  
-  dbconn.query(requestedToDoId, function(err, result){
+  dbconn.query(query, function(err, result){
     if(err){
       res.status(666).send('Id does not exist for updating')
     } else {
-      result.isComplete = !result.isComplete
-      result.save(function(err, updatedTodo){
-        if(err){
-          res.status(667).send('Cannot update document')
-        } else {
-          res.status(202).send(updatedTodo)
-        }
-      })
+      res.send(result.rows)
     }
   })
   //Previous Mongoose code for UPDATE
