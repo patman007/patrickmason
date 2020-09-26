@@ -13,7 +13,8 @@ app.get('/results', function(req, res) {
     //Fetch Framework
     //fetch(url)
     //.then((response) => {})
-    //.then(( => ))
+    //.then(() => {})
+    //.catch(() => {})
 
     // fill out the code here which calls the Star Wars api end point
     // gets the data and then renders the results.ejs page.
