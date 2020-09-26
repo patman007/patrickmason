@@ -8,3 +8,21 @@
 1. undefined 'Julia Roberts'
 1. 'Julia Roberts' 'Julia Roberts'
 1. 'Julia Roberts' undefined
+
+var star = {
+    knownAS: 'Julia Roberts',
+    getName: function () {
+        return this.knownAS;
+    }
+};
+
+var starsName = star.getName;
+
+console.log(starsName(), star.getName());
+
+
+### Answer: undefined 'Julia Roberts'
+### We are get undefined because we are running the starsName variable
+### first before we put the string Julia Roberts in the second part of the ### function. star.getName variable has the string value unlike the 
+### starName() variable 
+
