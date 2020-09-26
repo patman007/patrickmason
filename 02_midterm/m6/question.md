@@ -5,4 +5,4 @@
 1. In the browser
 1. On the end user's computer
 
-### Answer:
+### Answer: In the application server.

@@ -4,3 +4,6 @@
 2. req.body
 3. req.query.pic
 4. res.locals.pic
+
+
+### Answer: 
