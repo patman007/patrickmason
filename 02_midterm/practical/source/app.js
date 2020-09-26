@@ -2,6 +2,11 @@
 var express = require('express');
 var app = express();
 
+//Other way to do fetch are $fetch or _fetch
+const fetch = require('node-fetch')
+
+//Have 
+
 // render home page
 app.get('/', function(req, res) {
     res.render('home.ejs');
