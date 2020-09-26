@@ -6,4 +6,4 @@
 1. All of the above
 1. None of the above
 
-### Answer:
+### Answer: All the above

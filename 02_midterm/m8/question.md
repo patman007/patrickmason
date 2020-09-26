@@ -6,4 +6,4 @@
 4. res.locals.pic
 
 
-### Answer: 
+### Answer: req.body

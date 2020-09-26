@@ -6,4 +6,4 @@
 1. allows priority levels by specifying quality value, e.g. `text/html?q=1.0, application/xml?q=0.9`
 1. specifies what language a client will accept
 
-### Answer:
+### Answer: Is not mandatory that the server will be able to provide the data as preferred by a client

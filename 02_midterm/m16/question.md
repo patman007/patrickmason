@@ -8,6 +8,6 @@
 
 Pick all true statements
 
-### Answer: A foreign key is in a child table & refers to the PK in the parent table.
+### Answer: A foreign key is in a child table & refers to the PK the parent table.
 ###         A foreign key is possilby null.
 ###         A foreign possibly has duplicates in the column it belongs to. 

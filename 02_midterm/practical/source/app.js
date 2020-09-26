@@ -20,7 +20,9 @@ const PORT = process.env.PORT || 3000;
 //API endpoint used for consuming 
 //for Star Wars characters (people)
 //'http https://swapi.dev/api/people/:id'
-let endpoint = 'http https://swapi.dev/api/'
+// let endpoint = 'https://swapi.py4e.com/api/people/'
+let url = 'https://swapi.py4e.com/api/people/?format=json'
+
 
 
 //Root Route Handler ('/')
@@ -41,61 +43,91 @@ app.get('/results', function(req, res) {
     // fill out the code here which calls the Star Wars API 
     //end point and gets the data to later renders 
     //the results.ejs page.
-    let url = `${endpoint}/${req.query.people}/${req.query.id}`
-    console.log(req.query.people)
+    // let url = `${endpoint}/${req.query.people}/:${req.query.id}/`
+     let url = `${endpoint}/${req.query.id}/`
 
-
-    //Fetch Framework
+    //FETCH FRAMEWORK (4 Parts)
     //fetch(url)
     //.then((response) => {})
     //.then(() => {})
     //.catch(() => {})
 
-    //We are using the endpoint
+    
+    //We are using the url endpoint from API to use
+    //in the three other steps below.
     fetch(url)
-    .then(response => {
-        //do something with a response as long as there are 
-        //no errors.
+    console.log(url)
 
-        //IF Statment: Test for error first before returning
-        //response.json
+
+    //Getting raw data and parsing data for a large object
+    //to be usable data.
+    .then(response => {
+
+        //do something with a response as long as there are 
+        //no errors. We are getting raw data and parsing 
+        //the data, but more like extracting data (technically speaking)
+        console.log(response);
+
+
+        //IF Statment: Tests for errors first before returning
+        //response.json to see if we need to work on our code.
         if(!response.ok) {
              
+
             //Testing for errors first with throw errors.
             //Throw error will find other error differences 
             //from the catch errors
             throw Error('Issue with receiving Response')
         }
 
-        //When the response has no errors a response will
-        //be sent we can do something with the data. 
-        //json does parsing and return a string
+        //When the response has no errors a response is sent
+        //back that to use json format to allow us to manipulate
+        //the data later on. JSON does parsing and returns strings,
+        //which does the extracting of the data (technically speaking)
         return response.json()
     })
 
+    //Looking for results with success with the string valuess
+    //send inside of the url endpoint.
     .then(data => {
-        console.log(data)
-        let name = data.
-        let height = 
-        let hair_color = 
-        res.render('results.ejs', )
+
+        //do something with the data and renders the results EJS page
+        //success
+        // console.log('data is', data)
+
+        // //let variable for name
+        // //manipulating to get a string value
+        // let name = data.name
+        // console.log('data is', name)
+
+        // //let variable for height
+        // //manipulating to get a string value
+        // let height = data.height
+        // console.log('data is', height)
+
+        // //let variable for hair color
+        // //manipulating to get a string value
+        // let hair_color = data.hair_color
+        // console.log('data is', hair_color)
+
+
+        //results.ejs page rendered
+        res.render('results.ejs', data.ressults)
     })
 
-    //Catch error will only show connection error and
-    //handles errors only. Testing of errors not done here
+    //Catch error will show connection errors and
+    //handles errors only. Testing of errors are not done here.    
     .catch(err => {
-        console.log('I am the error: ', err)
 
-        res.render('error.ejs'{error: 'No matches found'})
+        //Console.log message that shows the error caught 
+        //to be handled
+        console.log('Catch error', err)
+
+        //Error results renderd with an error
+        //message to the user
+        res.render('error.ejs', err)
     })
-
-    // also remember to handle the errors if any
-
-    // you may have to use request or axios or any of the http modules
-    // to make the call to the sw api.
-
 });
-
 
 //LISTENER
 //app.listen is a function used to bind and listen to the 
