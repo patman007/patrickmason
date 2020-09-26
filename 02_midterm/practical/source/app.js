@@ -6,23 +6,26 @@ const app = express();
 //Other way to do fetch are $fetch or _fetch
 const fetch = require('node-fetch')
 
+
 //Makes the app.js aware of the public folder
 //that contains the style.css for ejs pages
 app.use(express.static('public'))
 
 
+//Set up a port if it has or has not
+//specified for other users on PORT 3000
+//or another PORT environment process.
 const PORT = process.env.PORT || 3000;
 
-//ROUTE HANDLERS
 
+//ROUTE HANDLERS
 //Consume an api to look for the end point
 //What kind of data? how much data?
 //API endpoint used for consuming 
 //for Star Wars characters (people)
 //'http https://swapi.dev/api/people/:id'
 // let endpoint = 'https://swapi.py4e.com/api/people/'
-let url = 'https://swapi.py4e.com/api/people/?format=json'
-
+let endpoint = 'https://swapi.py4e.com/api/people/?format=json'
 
 
 //Root Route Handler ('/')
@@ -44,20 +47,18 @@ app.get('/results', function(req, res) {
     //end point and gets the data to later renders 
     //the results.ejs page.
     // let url = `${endpoint}/${req.query.people}/:${req.query.id}/`
-     let url = `${endpoint}/${req.query.id}/`
+    
 
     //FETCH FRAMEWORK (4 Parts)
     //fetch(url)
     //.then((response) => {})
     //.then(() => {})
     //.catch(() => {})
-
     
     //We are using the url endpoint from API to use
     //in the three other steps below.
-    fetch(url)
-    console.log(url)
-
+    fetch(endpoint)
+    console.log(endpoint)
 
     //Getting raw data and parsing data for a large object
     //to be usable data.
@@ -93,26 +94,28 @@ app.get('/results', function(req, res) {
 
         //do something with the data and renders the results EJS page
         //success
-        // console.log('data is', data)
+        console.log('data is', data.results[0])
 
-        // //let variable for name
-        // //manipulating to get a string value
-        // let name = data.name
-        // console.log('data is', name)
-
-        // //let variable for height
-        // //manipulating to get a string value
-        // let height = data.height
-        // console.log('data is', height)
-
-        // //let variable for hair color
-        // //manipulating to get a string value
-        // let hair_color = data.hair_color
-        // console.log('data is', hair_color)
+        //create a variable to bring in JSON data
+        //to manipulate seamlessly
+        let starWars = data.results[0]
 
 
-        //results.ejs page rendered
-        res.render('results.ejs', data.ressults)
+        //let variable for name
+        //manipulating to get a string value
+        //for name, height, and hair color
+        //for star Wars character
+        console.log('data is', starWars.name)       
+        console.log('data is', starWars.height)       
+        console.log('data is', starWars.hair_color)
+        
+        //do something with the data and renders the results EJS page
+        //success for console log message
+        console.log('data is',  {data : starWars})
+
+        //results.ejs page rendered with data as an
+        //object for manipulation for string values
+        res.render('results.ejs', {data: starWars})
     })
 
     //Catch error will show connection errors and
@@ -123,8 +126,9 @@ app.get('/results', function(req, res) {
         //to be handled
         console.log('Catch error', err)
 
-        //Error results renderd with an error
-        //message to the user
+        //Error results.ejs renderd with an error
+        //message to the user when an error
+        //occurs on the handler end.
         res.render('error.ejs', err)
     })
 });

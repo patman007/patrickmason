@@ -33,3 +33,9 @@ Or access the database using your Robo3T client using the following settings (al
 <img src="../images/mongodb_connect.png" width="400px">
 <img src="../images/mongodb_connect_2.png" width="400px">
 
+
+### Answer: db.restaurants.find({ "borough" : { $eq : "Queens" }}) Right Answer
+###         db.restaurants.find({ "borough" : "Queens" }) Right Answer
+
+    
+                  

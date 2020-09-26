@@ -7,4 +7,9 @@
 1. 1
 1. 2
 1. (nothing would happen)
-1. foo    
+1. foo  
+
+### Answer: 2
+### Because our second function test occurence replaces whatever return value 
+### was given to the first function return value because it is called test as well 
+### for the function name. 
