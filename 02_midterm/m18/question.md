@@ -4,3 +4,6 @@
 1. join a table to itself, using one single column of the table
 1. join a table to its copy table using Primary Key as joining column
 1. join a table to itself, not based on any matching criteria
+
+
+### Answer: Join a table to itself, using one single column of the table.

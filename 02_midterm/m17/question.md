@@ -4,3 +4,5 @@
 1. number of not null fields in names column in cornucopia table
 1. number of named rows in cornucopia table
 1. the query errors out
+
+### Answer: Number of named rows in courucopia table.

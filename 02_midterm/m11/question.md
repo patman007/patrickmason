@@ -8,4 +8,5 @@ A GET request is not
 
 Choose all correct answers. All answers needed for full credit.
 
-### Answer:
+### Answer: A GET request is not used with sensitive data.
+###         A GET request is not used with files.            

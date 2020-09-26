@@ -7,3 +7,7 @@
 1. ... possibly has duplicates in the column it belongs to
 
 Pick all true statements
+
+### Answer: A foreign key is in a child table & refers to the PK in the parent table.
+###         A foreign key is possilby null.
+###         A foreign possibly has duplicates in the column it belongs to. 

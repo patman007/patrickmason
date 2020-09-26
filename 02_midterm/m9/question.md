@@ -4,3 +4,5 @@
 1. response.send({})
 1. response.render(locals, callback)
 1. response.status(404)
+
+### Answer: 

@@ -6,3 +6,5 @@
 1. has no restrictions on data length
 
 Pick one correct answer.
+
+### Answer: A POST request has no restrictions on data length.
