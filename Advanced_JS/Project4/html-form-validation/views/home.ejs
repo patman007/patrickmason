@@ -1,0 +1,81 @@
+<%-include('partials/header')%>
+
+        <h3>Software Developer - Dream Company</h3>
+        <medium class="form-text text-muted">Software Development - United States</medium><br> 
+
+        <p>Thank you for considering a career at Dream Company. Please take a minute to 
+            fill out the following form.</p>
+
+        <form action="/submit" method="POST">
+            <div class="form">
+
+               <%#First Name #%> 
+              <div class="col-md-3 mb-3">
+                <label for="validationDefault01">First Name*</label>
+                <input type="text" class="form-control" name="fname"
+                id="validationDefault01" pattern="[A-Za-z]{1,20}" required>
+               </div> 
+             </div>
+
+             <%#Last Name #%>
+             <div class="col-md-3 mb-3">
+                <label for="validationDefault02">Last Name*</label>
+                <input type="text" class="form-control" name="lname"
+                id="validationDefault02" pattern="[A-Za-z]{1,20}" required>
+             </div>
+
+             <%#Email #%>           
+             <div class="col-md-3 mb-3">
+                <label for="validationDefault03">Email*</label>
+                <input type="email" class="form-control" name ="email" 
+                id="validationDefault03" pattern="^[a-z0-9._%+-]+@email.com {1, 100}$" required>
+             </div>
+
+             <%#Phone #%>           
+             <div class="col-md-3 mb-3">
+                <label for="validationDefault04">Phone</label>
+                <input type="tel" class="form-control" name="phone" 
+                id="validationDefault04" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  
+                <medium id="phoneHelp" class="form-text text-muted">Format 555-555-5555</medium>             
+             </div>
+
+             <%#Country #%>
+             <div class="col-md-3 mb-3">
+               <label for="validationDeafult05">Country*</label>
+                <div class="form-group" id="validationDeafult05" name="country">
+                    <select class="custom-select" required>
+                      <option value="1">United States</option>
+                      <option value="2">United Kingdom</option>
+                      <option value="3">Canada</option>
+                      <option value="4">Austrailia</option>
+                    </select>                            
+                </div>                 
+              
+                <%#Radio Buttons #%>
+              <p>Are you at least 18 years of age or older?</p>              
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="customControlValidation1"
+                 name="radio-stacked" required>
+                <label class="custom-control-label" for="customControlValidation1">Yes</label>
+              </div><br>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="customControlValidation2" 
+                name="radio-stacked" required>
+                <label class="custom-control-label" for="customControlValidation2">No</label>                
+              </div><br>
+
+              <%#File Input #%>
+              <div class="form-group">
+                <label for="exampleFormControlFile1">Upload Resume</label>
+                <input type="file" accept=".doc,.docx,.pdf,.txt,.rtf" class="form-control-file" 
+                id="exampleFormControlFile1">
+             </div>
+
+             <%#Submit Button #%>
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>            
+        </form> 
+    </body>
+</html>
+
+<%-include('partials/footer') %>
