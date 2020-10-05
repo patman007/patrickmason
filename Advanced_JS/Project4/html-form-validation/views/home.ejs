@@ -29,12 +29,13 @@
                 <label for="validationDefault03">Email*</label>
                 <input type="email" class="form-control" name ="email" 
                 id="validationDefault03" pattern="^[a-z0-9._%+-]+@email.com {1, 100}$" required>
+                <%#"[a-z0-9._%+-]+@[a-z]+\.[a-z] {3,}$" #%>
              </div>
 
              <%#Phone #%>           
              <div class="col-md-3 mb-3">
                 <label for="validationDefault04">Phone</label>
-                <input type="tel" class="form-control" name="phone" 
+                <input type="tel" class="form-control" name="tel" 
                 id="validationDefault04" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  
                 <medium id="phoneHelp" class="form-text text-muted">Format 555-555-5555</medium>             
              </div>

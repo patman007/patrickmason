@@ -1,4 +1,3 @@
-const { request } = require('express');
 //Foundation
 const express = require('express');
 const app = express()
@@ -21,7 +20,7 @@ app.get('/', (req, res) => {
 //Submit.ejs route handler
 app.post('/submit', (req, res) => {
 
-    let endpoint = 'http://localhost:3000/submit'
+    let endpoint = `http://localhost:${PORT}/submit`
     
     request(endpoint, function(error, response, body) {
         

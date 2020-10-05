@@ -40,11 +40,11 @@
 
 // The function should return the correct BAC for arguments you feed in. For example:
 
-getBAC(125, "F", 4, "whiskey", 4) // => 0.2590
-getBAC(160, "M", 22, "beer", 2) // => 0.3573
-getBAC(180, "M", 45, "beer", 3) // => 0.6591
-getBAC(180, "F", 35, "beer", 3) // => 0.5607
-getBAC(400, "M", 1, "whiskey", 3) // => -0.0225 and answer should not generate because it is not
+// getBAC(125, "F", 4, "whiskey", 4) // => 0.2590
+// getBAC(160, "M", 22, "beer", 2) // => 0.3573
+// getBAC(180, "M", 45, "beer", 3) // => 0.6591
+// getBAC(180, "F", 35, "beer", 3) // => 0.5607
+// getBAC(400, "M", 1, "whiskey", 3) // => -0.0225 and answer should not generate because it is not
 // greater than or equal to zero. 0 is the lowest BAC, not a negative number.
 // Fun fact: You might wonder why weight and sex matters in this calculation. 
 //It's because the rate at which a person can metabolize alcohol is dependent on the amount of the enzyme 
@@ -72,11 +72,32 @@ function getBAC(weight, gender, drinks, drinkType, hours) {
 
     //BAC IF ELSE Statement
     const BAC = ((totalAlc * 5.14) / (weight * distribution)) - (0.015 * hours);
-    if (BAC >= 0) {
+    if (BAC > 0) {
         //Return a Number type BAC and have 4 decimal places.
         return Number(BAC.toFixed(4));
     }
-    else {
-        console.log("BAC is NOT greater than or equal to 0");
-    }      
+    else if (BAC < 0 || BAC == 0) {
+        console.log("BAC is NOT greater than 0");
+    }     
 }
+
+var myCalc = [ 
+    (getBAC(125, "F", 4, "whiskey", 4)), 
+    (getBAC(160, "M", 22, "beer", 2)),
+    (getBAC(180, "M", 45, "beer", 3)),    
+    (getBAC(180, "F", 35, "beer", 3))
+    //This one will be less than 0
+    // (getBAC(400, "M", 1, "whiskey", 3))    
+]
+
+// getBAC(125, "F", 4, "whiskey", 4) // => 0.2590
+// getBAC(160, "M", 22, "beer", 2) // => 0.3573
+// getBAC(180, "M", 45, "beer", 3) // => 0.6591
+// getBAC(180, "F", 35, "beer", 3) // => 0.5607
+// getBAC(400, "M", 1, "whiskey", 3); // => -0.0225 
+
+myCalc.forEach(function(e) {
+    console.log(e);
+})
+
+

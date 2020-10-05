@@ -40,3 +40,4 @@ function compare(a, b) {
   }
   
   myPets.sort(compare);
+  console.log(myPets.sort(compare));
