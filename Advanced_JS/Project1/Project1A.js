@@ -7,9 +7,13 @@ const student = ['a', 'b', 'c', 'c'];
 
 // ATTEMPT 7 - WITH FOR .. IN LOOP
 var score = 0;
-var x;
-for (x in teacher) {
+for (var i in teacher) {
     console.log(teacher);
-    if(teacher === student)
-    score += score[x] + 4; 
+    if(teacher === student){
+        score += score + 4;        
+    } else if(teacher !== student) {
+        score += score - 1;
+    }
+    console.log(score)
+    return(score)   
 }

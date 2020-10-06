@@ -1,11 +1,11 @@
 <%-include('partials/header')%>
-
-        <h3>Software Developer - Dream Company</h3>
-        <medium class="form-text text-muted">Software Development - United States</medium><br> 
-
-        <p>Thank you for considering a career at Dream Company. Please take a minute to 
-            fill out the following form.</p>
-
+        <div class = 'top'></div>
+          <h3>Software Developer - Dream Company</h3>
+          <medium class="form-text text-muted">Software Development - United States</medium>
+          <p>Thank you for considering a career at Dream Company. Please take a minute to 
+            fill out the following form.
+          </p>
+        </div>
         <form action="/submit" method="POST">
             <div class="form">
 
@@ -57,19 +57,21 @@
               <div class="custom-control custom-radio">
                 <input type="radio" class="custom-control-input" id="customControlValidation1"
                  name="radio-stacked" required>
-                <label class="custom-control-label" for="customControlValidation1">Yes</label>
+                <label class="custom-control-label" for="customControlValidation1">
+                  Yes</label>
               </div><br>
               <div class="custom-control custom-radio">
                 <input type="radio" class="custom-control-input" id="customControlValidation2" 
                 name="radio-stacked" required>
-                <label class="custom-control-label" for="customControlValidation2">No</label>                
+                <label class="custom-control-label" for="customControlValidation2">
+                  No</label>                
               </div><br>
 
               <%#File Input #%>
               <div class="form-group">
                 <label for="exampleFormControlFile1">Upload Resume</label>
-                <input type="file" accept=".doc,.docx,.pdf,.txt,.rtf" class="form-control-file" 
-                id="exampleFormControlFile1">
+                <input type="file" accept=".doc,.docx,.pdf,.txt,.rtf" name="resume" 
+                class="form-control-file" id="exampleFormControlFile1">
              </div>
 
              <%#Submit Button #%>

@@ -2,3 +2,7 @@ html, body {
     background-color: lightgrey;
     color: black;
 }
+
+.col-md-3  {
+    font-weight: bold;
+}
