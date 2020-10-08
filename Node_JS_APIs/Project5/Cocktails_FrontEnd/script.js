@@ -4,10 +4,10 @@ let image = document.getElementById('image');
 //INSTRUCTIONS as a variable
 let instructions = document.getElementById('instructions');
 
-// DRINK Name as a variable
+//DRINK Name as a variable
 let name = document.getElementById('name');
 
-// INGREDIENTs as a variable
+//INGREDIENTs as a variable
 let ingredient1 = document.getElementById('ingredient1');
 let ingredient2 = document.getElementById('ingredient2');
 let ingredient3 = document.getElementById('ingredient3');
@@ -15,7 +15,7 @@ let ingredient4 = document.getElementById('ingredient4');
 
 
 
-// MEASUREMENTS as a variable
+//MEASUREMENTS as a variable
 let measurement1 = document.getElementById('measurement1');
 let measurement2 = document.getElementById('measurement2');
 let measurement3 = document.getElementById('measurement3');

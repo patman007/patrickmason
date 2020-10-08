@@ -2,17 +2,15 @@
 
 <h3>Is this information correct?</h3>
 
-<div class="container well">
-    <% applicant.forEach(function(el) { %>
-        <% let {fname, lname, email, tel, country, resume} = el %>
-        <p><%=el.fname %></p>
-        <p><%=el.lname %></p>
-        <p><%=el.email %></p>
-        <p><%=el.tel %></p>
-        <p><%=el.country %></p>
-        <p><%=el.resume %></p>  
-        <%console.log(el) %>
-    <%  }) %>
+<div class="container well">    
+        <% let {fname, lname, email, tel, country, resume} = data %>
+        <p><%=fname %></p>
+        <p><%=lname %></p>
+        <p><%=email %></p>
+        <p><%=tel %></p>
+        <p><%=country %></p>
+        <p><%=resume %></p>  
+        <%console.log(data) %>
 </div>
 
 <%-include('partials/footer') %>
