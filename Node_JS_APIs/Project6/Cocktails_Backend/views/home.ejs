@@ -1,17 +1,14 @@
 <%-include('partials/header') %>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <form- name="myForm" action="/results" method="get">
+                <form name="myForm" action="/results" method="get">
                     <h1>"Hello, Cocktails"</h1>
                     <div class="container">
-
                         <%# COCKTAIL IMAGE AND NAME #%>
                         <p id="name" ><%=data.strDrink %></p>           
                         <img id="image" src= "<%= data.strDrinkThumb %>" 
                         alt="cocktail" name="cocktail" /><br><br>
-
                         <%#INGREDIENTS and MEASUREMENTS WHILE LOOP #%> 
                         <p style='text-decoration: underline'><strong>
                                 INGREDIENTS and MEASUREMENTS</strong></p>
@@ -37,16 +34,14 @@
                                     <% count ++ %>
                                 <%  }%>
                             </div>
-
                         <%# INSTRUCTIONS #%>
                         <p><strong font-size= '25px'>INSTRUCTIONS</strong></p>
                         <p id="instructions" name="instructions">
                              <%=data.strInstructions %>            
                         </p> 
-
                         <%# BUTTON #%>
                         <input id="btn" class="btn btn-success" 
-                        value="Need a drink?" name="drink"></input>
+                        value="Need a drink?" type="submit" name="drink"></input>
                         <br><br>          
                     </div>                     
                 </form>

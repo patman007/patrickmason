@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 
 //results ejs root route
 app.get('/results', (req, res) => { 
-
+console.log('/results was hit')
     // let initDrink = {
     //     strInstructions: req.body.data.drinks[0].strInstructions,
     //     strDrink: req.body.data.drinks[0].strDrink,
@@ -66,7 +66,7 @@ app.get('/results', (req, res) => {
 
     
     fetch(url)
-    console.log(url)
+    
 
     .then(response => {
         if(!response.ok) {
@@ -76,16 +76,14 @@ app.get('/results', (req, res) => {
             //catch errors
             throw Error(response.statusText)
         }
-        //json does parsing and returns a string
-        console.log(response.json())
+        //json does parsing and returns a string        
         return response.json()
 
     })
-
-    console.log('Get Through')
+    
     .then(data => {
         console.log('data is', {data: data.drinks[0]})
-        res.render('index.ejs', {data: data.drinks[0]})
+        res.render('home.ejs', {data: data.drinks[0]})
     })
 
     //Catch error will only show connection error
