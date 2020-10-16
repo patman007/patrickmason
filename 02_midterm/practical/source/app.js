@@ -33,6 +33,7 @@ let endpoint = 'https://swapi.py4e.com/api/people/?format=json'
 //app.get will handle only GET HTTP requests 
 app.get('/', function(req, res) {
 
+    console.log('I am the home ejs')
     //renders and send HTML or EJS to the front-end
     //for data to pass from the backend to the home.ejs 
     res.render('home.ejs');
@@ -47,6 +48,7 @@ app.get('/results', function(req, res) {
     //end point and gets the data to later renders 
     //the results.ejs page.
     // let url = `${endpoint}/${req.query.people}/:${req.query.id}/`
+    // let url = `${endpoint}/${req.query.id}/?format=json`
     
 
     //FETCH FRAMEWORK (4 Parts)
@@ -54,11 +56,12 @@ app.get('/results', function(req, res) {
     //.then((response) => {})
     //.then(() => {})
     //.catch(() => {})
-    
+    console.log(endpoint)      
+
+
     //We are using the url endpoint from API to use
     //in the three other steps below.
     fetch(endpoint)
-    console.log(endpoint)
 
     //Getting raw data and parsing data for a large object
     //to be usable data.
@@ -67,18 +70,19 @@ app.get('/results', function(req, res) {
         //do something with a response as long as there are 
         //no errors. We are getting raw data and parsing 
         //the data, but more like extracting data (technically speaking)
-        console.log(response);
-
+        // console.log(response);
 
         //IF Statment: Tests for errors first before returning
         //response.json to see if we need to work on our code.
         if(!response.ok) {
-             
 
             //Testing for errors first with throw errors.
             //Throw error will find other error differences 
             //from the catch errors
-            throw Error('Issue with receiving Response')
+            //throw Error('Issue with receiving Response')
+
+            //Use a res.send instead of a throw Error because this kills the server
+            res.send({code: 1234, message: 'Your response failed, please contact support at support@'})
         }
 
         //When the response has no errors a response is sent
@@ -100,22 +104,24 @@ app.get('/results', function(req, res) {
         //to manipulate seamlessly
         let starWars = data.results[0]
 
-
         //let variable for name
         //manipulating to get a string value
         //for name, height, and hair color
         //for star Wars character
-        console.log('data is', starWars.name)       
-        console.log('data is', starWars.height)       
-        console.log('data is', starWars.hair_color)
+        console.log(starWars.name)       
+        console.log(starWars.height)       
+        console.log(starWars.hair_color)
+        console.log(starWars.eye_color)
+        console.log(starWars.gender)
+        console.log(starWars.url)
         
         //do something with the data and renders the results EJS page
         //success for console log message
-        console.log('data is',  {data : starWars})
+        // console.log('data is', {starWars})
 
         //results.ejs page rendered with data as an
         //object for manipulation for string values
-        res.render('results.ejs', {data: starWars})
+        res.render('results.ejs', {starWars})
     })
 
     //Catch error will show connection errors and
@@ -129,7 +135,7 @@ app.get('/results', function(req, res) {
         //Error results.ejs renderd with an error
         //message to the user when an error
         //occurs on the handler end.
-        res.render('error.ejs', err)
+        res.render('error.ejs', {err: err})
     })
 });
 
