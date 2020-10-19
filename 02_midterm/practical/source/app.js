@@ -23,9 +23,12 @@ const PORT = process.env.PORT || 3000;
 //What kind of data? how much data?
 //API endpoint used for consuming 
 //for Star Wars characters (people)
-//'http https://swapi.dev/api/people/:id'
-// let endpoint = 'https://swapi.py4e.com/api/people/'
-let endpoint = 'https://swapi.py4e.com/api/people/?format=json'
+//'http https://swapi.dev/api/people/'
+//Correct endpoint
+let endpoint = 'https://swapi.py4e.com/api/people'
+
+//Incorrect endpoint
+// let endpoint = 'https://swapi.py4e.com/api/people/?format=json'
 
 
 //Root Route Handler ('/')
@@ -39,6 +42,7 @@ app.get('/', function(req, res) {
     res.render('home.ejs');
 });
 
+
 //Results Handler
 // render results
 //app.get will handle only GET HTTP requests
@@ -47,7 +51,10 @@ app.get('/results', function(req, res) {
     // fill out the code here which calls the Star Wars API 
     //end point and gets the data to later renders 
     //the results.ejs page.
-    // let url = `${endpoint}/${req.query.people}/:${req.query.id}/`
+    //Correct URL
+    let url = `${endpoint}/${req.query.userNumber}/`
+
+    //Incorrect URL
     // let url = `${endpoint}/${req.query.id}/?format=json`
     
 
@@ -56,12 +63,15 @@ app.get('/results', function(req, res) {
     //.then((response) => {})
     //.then(() => {})
     //.catch(() => {})
-    console.log(endpoint)      
+
+    console.log(endpoint) 
+    console.log(url)
+    // console.log(req.query.userNumber)     
 
 
     //We are using the url endpoint from API to use
     //in the three other steps below.
-    fetch(endpoint)
+    fetch(url)
 
     //Getting raw data and parsing data for a large object
     //to be usable data.
@@ -98,22 +108,32 @@ app.get('/results', function(req, res) {
 
         //do something with the data and renders the results EJS page
         //success
-        console.log('data is', data.results[0])
+        console.log('data is', {data})
 
         //create a variable to bring in JSON data
         //to manipulate seamlessly
-        let starWars = data.results[0]
+        // let starWars = data.results[req.query.userNumber]
 
+        //Incorrect way on exam
         //let variable for name
         //manipulating to get a string value
         //for name, height, and hair color
         //for star Wars character
-        console.log(starWars.name)       
-        console.log(starWars.height)       
-        console.log(starWars.hair_color)
-        console.log(starWars.eye_color)
-        console.log(starWars.gender)
-        console.log(starWars.url)
+        // console.log(starWars.name)       
+        // console.log(starWars.height)       
+        // console.log(starWars.hair_color)
+        // console.log(starWars.eye_color)
+        // console.log(starWars.gender)
+        // console.log(starWars.url)
+
+        //Correct Way on Exam
+        console.log('I am the results.ejs')
+        console.log(data.name)       
+        console.log(data.height)       
+        console.log(data.hair_color)
+        console.log(data.eye_color)
+        console.log(data.gender)
+        console.log(data.url)
         
         //do something with the data and renders the results EJS page
         //success for console log message
@@ -121,7 +141,8 @@ app.get('/results', function(req, res) {
 
         //results.ejs page rendered with data as an
         //object for manipulation for string values
-        res.render('results.ejs', {starWars})
+        // res.render('results.ejs', {starWars})
+        res.render('results.ejs', {data})
     })
 
     //Catch error will show connection errors and
@@ -135,9 +156,10 @@ app.get('/results', function(req, res) {
         //Error results.ejs renderd with an error
         //message to the user when an error
         //occurs on the handler end.
-        res.render('error.ejs', {err: err})
+        res.render('error.ejs', {err})
     })
 });
+
 
 //LISTENER
 //app.listen is a function used to bind and listen to the 
