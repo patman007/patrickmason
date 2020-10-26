@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Project1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--React CDN Development CDN Links-->
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+        <!--Babel CDN Link-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
+    </head>
+    <body>
+        <div id="app1"></div>
+        <div id="app2"></div>
+        <div id="app3"></div>
+        <div id="app4"></div>  
+        
+        <!--Babel Compiler-->
+        <script type="text/babel">
+
+        class RandomBox extends React.Component {
+            render() {
+                const backgroundColor = [
+                    'yellow',
+                    'red',
+                    'blue',
+                    'green',
+                    'orange',
+                    'brown',
+                    'purple',
+                    'grey']
+                    [Math.floor(Math.random() * 8)];  
+                  return (
+                    <div styles={{
+                        display: "flex",                        
+                        justifyContent: "center",
+                        backgroundColor: backgroundColor,                        
+                        height: "200px",
+                        width: "500px"                                               
+                    }}>
+                        Random Box
+                    </div>
+                  )           
+            }
+        }
+
+        class RandomBox1 extends React.Component {
+            render() {
+                const backgroundColor1 = [
+                    'yellow',
+                    'red',
+                    'blue',
+                    'green',
+                    'orange',
+                    'brown',
+                    'purple',
+                    'grey']
+                    [Math.floor(Math.random() * 8)];  
+                  return (
+                    <div styles={{
+                        display: "flex",                        
+                        justifyContent: "center",
+                        backgroundColor: backgroundColor1,                        
+                        height: "200px",
+                        width: "500px"                                              
+                    }}>
+                        Random Box1
+                    </div>
+                  )           
+            }
+        }
+
+        class RandomBox2 extends React.Component {
+            render() {
+                const backgroundColor = [
+                    'yellow',
+                    'red',
+                    'blue',
+                    'green',
+                    'orange',
+                    'brown',
+                    'purple',
+                    'grey']
+                    [Math.floor(Math.random() * 8)];  
+                  return (
+                    <div styles={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        backgroundColor: backgroundColor,                        
+                        height: "200px",
+                        width: "500px",                                              
+                    }}>
+                        Random Box2
+                    </div>
+                  )           
+            }
+        }
+
+        class RandomBox3 extends React.Component {
+            render() {
+                const backgroundColor = [
+                    'yellow',
+                    'red',
+                    'blue',
+                    'green',
+                    'orange',
+                    'brown',
+                    'purple',
+                    'grey']
+                    [Math.floor(Math.random() * 8)];  
+                  return (
+                    <div styles={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        backgroundColor: backgroundColor,                        
+                        height: "200px",
+                        width: "500px",                                              
+                    }}>
+                        Random Box3
+                    </div>
+                  )           
+            }
+        }
+        ReactDOM.render(<RandomBox />, document.getElementById('app1')); 
+        ReactDOM.render(<RandomBox1 />, document.getElementById('app2')); 
+        ReactDOM.render(<RandomBox2 />, document.getElementById('app3'));  
+        ReactDOM.render(<RandomBox3 />, document.getElementById('app4'));       
+        </script>       
+    </body>
+</html>
