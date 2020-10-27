@@ -15,11 +15,11 @@ class Box1Component extends Component {
             [Math.floor(Math.random() * 8)];
         return (
             <div style={{
-                display: "flex",   
-                flexDirection: 'row',                                            
+                // display: "flex",   
+                // flexDirection: 'row',                                            
                 // justifyContent: "center",
                 // alignItems: "center",
-                // display: "inline-block",
+                display: "inline",
                 backgroundColor: backgroundColor,                        
                 height: "150px",
                 width: "200px",
