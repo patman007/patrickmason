@@ -12,7 +12,17 @@ class Box4Component extends Component {
             'brown',
             'purple',
             'grey']
-            [Math.floor(Math.random() * 8)];    
+            [Math.floor(Math.random() * 8)];
+            let borderColor = [
+                'yellow',
+                'red',
+                'blue',
+                'green',
+                'orange',
+                'brown',
+                'purple',
+                'grey'
+                ][Math.floor(Math.random() *8)];;
         return (
             <div style={{
                 // display: "flex", 
@@ -25,7 +35,8 @@ class Box4Component extends Component {
                 width: "200px",
                 margin: "30px",
                 fontWeight: "bold",  
-                color: "white"                                               
+                color: "white",
+                border: `10px groove ${borderColor}`                                               
             }}>
                 Box4Component</div>
         )

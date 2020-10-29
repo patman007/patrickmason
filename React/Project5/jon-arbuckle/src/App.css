@@ -1,0 +1,20 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#text_container {
+  width: 75vw;
+  margin: auto;
+}
+
+
+img {
+  border: blue 20px groove;
+}
