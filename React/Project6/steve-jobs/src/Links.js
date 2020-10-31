@@ -28,5 +28,5 @@ class Links extends Component {
     }
   }
   
-  //Exporting Top Component
+  //Exporting Links Component
   export {Links};
