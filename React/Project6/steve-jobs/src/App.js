@@ -19,7 +19,5 @@ class App extends Component {
   }
 }
 
-
-
 //Export App Component
 export {App};
