@@ -1,0 +1,14 @@
+<%#information %>
+<%= data.id.powerstats.forEach(function(el)  { %>
+    <% let {id, name, intelligence, strength, speed, durability, power, combat} = el %>
+    <br>
+    <p><%=el.id %></p>
+    <p><%=el.name %></p>
+    <p><%=el.intelligence %></p>
+    <p><%=el.strength %></p>
+    <p><%=el.speed %></p>
+    <p><%=el.durability %></p>
+    <p><%=el.power %></p>
+    <p><%=el.combat %></p>
+    <% console.log(el) %>
+<% }) %>    
