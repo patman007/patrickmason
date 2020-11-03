@@ -1,47 +1,27 @@
-// import React, { Component } from 'react';
-// import './App.css';
+import React, { Component } from 'react';
+import './App.css';
 
-// //Video Class Component
-// class Videos extends Component {
-//     //static properties with video array as an object
-//     static defaultProps = {
-//         videos: [
-//             {
-//                 title: "Steve Jobs Vision of the World",
-//                 iframe: "https://www.youtube.com/embed/KGFhML-rNHg"
-//             },
-//             {
-//                 title: "Steve Jobs Vision of the World",
-//                 iframe: "https://www.youtube.com/embed/KGFhML-rNHg"
-//             },
-//             {
-//                 title: "Steve Jobs Vision of the World",
-//                 iframe: "https://www.youtube.com/embed/KGFhML-rNHg"
-//             }
-//         ]
-//     }    
+//Video Class Component
+class Videos extends Component {
+    render() {
+        const {title, videos} = this.props;
+        //map method
+        // const videos = this.props.videos.map((ing, index) => (
+        //     <li key={index}>{ing}</li>
+        // )); 
+        return(
+            <div className="Bottom">
+                <h3 className="title">{title}</h3>
+                <ul className="videos">
+                    {videos}
+                </ul>
+            </div>
+        )
+    }
+}
 
-
-//     //Check the validity of the props received
-//     static propTypes = {
-//         videos: PropTypes.arrayOf(PropTypes.object).isRequired,
-//     } 
-
-//     render() {
-//         const videos = this.props.videos.map((r, index) => (
-//             <Videos key={index}{...r} />
-//         ));
-            
-//         return (
-//             <div className="Videos">
-//                 {videos}                
-//             </div>
-//        );
-//     }
-// }
-
-// //Exporting Videos Component
-// export {Videos};
+//Exporting Videos Component
+export {Videos};
 
 
 

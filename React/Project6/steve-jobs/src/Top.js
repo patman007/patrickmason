@@ -5,7 +5,7 @@ import './App.css';
 class Top extends Component {
   render() {
   return (
-    <div className="Top_portion">
+    <div className="Top">
       <h2>Welcome to the Ultimate Steve Jobs Fan Website</h2>
         <img src="./steve1.jpg" alt="SteveJobs" />
         <p> 

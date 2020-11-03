@@ -4,7 +4,7 @@ import './App.css';
 //Components for importing
 import { Top } from './Top';
 import { Links } from './Links';
-import {Videos} from './Videos';
+import { VideosList } from './VideosList';
 
 //App Component
 class App extends Component {
@@ -12,12 +12,14 @@ class App extends Component {
   return (
     <div className="App">
       <Top />
-      <Links />
-      <Videos />
+      <Links />       
+      <VideosList /> 
     </div>
      );
   }
 }
+
+
 
 //Export App Component
 export {App};
