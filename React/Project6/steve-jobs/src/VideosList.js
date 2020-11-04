@@ -9,18 +9,15 @@ class VideosList extends Component {
         videos: [
             {
                 title: "Steve Jobs Vision of the World",
-                videos: 'https://www.youtube.com/embed/KGFhML-rNHg',
-                // videos: <a href='https://www.youtube.com/embed/KGFhML-rNHg' />             
+                img: <a href='https://www.youtube.com/embed/KGFhML-rNHg'/>,                            
             },
             {
                 title: "Steve Jobs on Microsoft",
-                videos: 'https://www.youtube.com/embed/upzKj-1HaKw',
-                // videos: <a href='https://www.youtube.com/embed/upzKj-1HaKw' />
+                img: <a href='https://www.youtube.com/embed/upzKj-1HaKw'/>,                
             },
             {
                 title: "Steve Jobs on programming",
-                videos: 'https://www.youtube.com/embed/kVOTHKAqgK4',
-                // videos: <a href='https://www.youtube.com/embed/kVOTHKAqgK4' />
+                img: <a href='https://www.youtube.com/embed/kVOTHKAqgK4'/>,                
             }
         ]
     }    
@@ -31,14 +28,15 @@ class VideosList extends Component {
     // } 
 
     render() {
-        const videos = this.props.videos.map((r, index) => (
-            
-            <Videos key={index}{...r} />
-        ));
+        // const videos = this.props.videos.map((r, index) => (            
+        //     <Videos key={index}{...r} />
+        // ));
             
         return (
-            <div className="videos-list">                
-                {videos}                
+            <div className="card">   
+                {this.props.videos.map((r, index) =>(
+                    <Videos key={index} {...r} />
+                ))}                             
             </div>
        );
     }
