@@ -13,15 +13,16 @@ class Movie extends Component {
         return (
             <div className="card">
                 {/* <div className="now-playing">{poster}</div> */}
-                <div className="poster">
+                <image className="poster">
                     <img src={img} 
                     alt={title}/>
-                </div>                
+                </image>                
                 <h1 className="title">
                     {title}
                 </h1>
                 <h3 className="director">
-                    Directed By: {director}
+                    Directed By: 
+                    {director}
                 </h3>
                 <h3 className="cast"> CAST:
                     <ul>
