@@ -1,0 +1,29 @@
+/* div { border: solid purple 5px }
+
+p{ color: purple} */
+
+.card {
+    border: solid 5px;
+}
+
+.card--green {
+    color: green;
+    border-color: green;
+}
+
+.card--purple {
+    color: purple;
+    border-color: purple;
+}
+
+.card__title {
+    font-style: italic;
+}
+
+.card__title--lg {
+    font-size: 20px;
+}
+
+.card__title--sm {
+    font-size: 8px;
+}
