@@ -13,16 +13,27 @@
         <%# Google Fonts #%>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">        
     </head>
-    <body>        
-        <script src="" async defer></script>
+    <body>
+        <%# Take 1 involving only a click of a button #%>
+        <%#<form action='/results' method="get">
+            <div class="button">
+                <button type="submit">
+                    Show me characters
+                </button>        
+            </div>
+        </form> #%>     
+
+        <%# Take 2 involving input of a number and click of a button #%>
+        <h1>SuperHero Characters</h1>
+        <form action='/results' method="GET">
+            <input type="number" class="form-control"
+                mix="1"
+                max="731"
+                placeholder="Enter your number (between 1 and 731)"
+                name="id" autofocus>
+            <input type="submit"></button>     
+        </form>
     </body>
 </html>
 
 
-<form action='/results' method="get">
-    <div class="button">
-        <button type="submit">
-            Show me characters
-        </button>        
-    </div>
-</form>
