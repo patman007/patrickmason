@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center;    
 }
 
 .App-header {
@@ -13,12 +13,19 @@
   color: white;
 }
 
+ul {  
+  list-style-type: none;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;  
+  background-color: tan;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {  
+  display: inline;
+  padding: 60px;  
+}
+
+p {
+  font-size: 21px;
 }

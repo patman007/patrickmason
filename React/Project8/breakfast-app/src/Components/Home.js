@@ -2,13 +2,15 @@ import React from 'react';
 //Import Links
 import{ Link } from 'react-router-dom'
 
+//Import Images
+import Food from '../assets/image/food.jpg'
 
 //Functional Component for Home
 const Home = () => (
         <div className="home">
             <h1>The Breakfast Restaurant</h1>
-            <img src='../assets/image/food.jpg'
-                alt="food" width="500" height="400" />
+            <img src={Food}
+                alt="food" width="550" height="400" />
                 <h2>We serve the most delicous breakfast 
                     you will ever find!
                 </h2>

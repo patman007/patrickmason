@@ -11,7 +11,7 @@ import Catering from './Components/Catering';
 //Functional Component for App
 const App = () => (
   <div className="App">
-    <div className="container">
+    <div className="container">    
       <Router>
           <ul>
             <li><Link to='/home'>Home</Link></li> 
@@ -19,12 +19,12 @@ const App = () => (
             <li><Link to='/catering'>Catering</Link></li> 
           </ul>  
           <hr/>
-            <Route path='/home' component={Home} />
-            <Route path='/menu' component={Menu} />
-            <Route path='/catering' component={Catering} /> 
+            <Route exact path='/home' component={ Home } />
+            <Route path='/menu' component={ Menu } />
+            <Route path='/catering' component={ Catering } /> 
       </Router>         
     </div>    
-  </div>
+  </div>  
 )
 
 
