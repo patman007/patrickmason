@@ -9,15 +9,18 @@ class VideosList extends Component {
         videos: [
             {
                 title: "Steve Jobs Vision of the World",
-                img: <a href='https://www.youtube.com/embed/KGFhML-rNHg'/>,                            
+                //youtube video link 1
+                img: <li><a href='https://www.youtube.com/embed/KGFhML-rNHg'/></li>,                            
             },
             {
                 title: "Steve Jobs on Microsoft",
-                img: <a href='https://www.youtube.com/embed/upzKj-1HaKw'/>,                
+                 //youtube video link 2
+                img: <li><a href='https://www.youtube.com/embed/upzKj-1HaKw'/></li>,                
             },
             {
                 title: "Steve Jobs on programming",
-                img: <a href='https://www.youtube.com/embed/kVOTHKAqgK4'/>,                
+                 //youtube video link 3
+                img: <li><a href='https://www.youtube.com/embed/kVOTHKAqgK4'/></li>,                
             }
         ]
     }    

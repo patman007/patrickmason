@@ -17,7 +17,10 @@ class Videos extends Component {
                 <div>
                     <ul className="videos">
                         <img src={img} 
-                        alt={title} />
+                        alt={title} 
+                        width="500"
+                        height="390"
+                        allowFullScreen/>
                     </ul>
                 </div>
             </div>

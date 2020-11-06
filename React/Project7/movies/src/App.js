@@ -4,7 +4,6 @@ import './App.css';
 // Import if using components folder
 // import MovieComp from './components/MovieComp'
 
-
 //Import Components
 import Title from './title';
 // import Movie from './data';
