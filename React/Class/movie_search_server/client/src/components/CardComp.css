@@ -1,0 +1,29 @@
+.card-group {
+    width: 30vw;
+    display: inline-block;
+    margin: 2vh .7vw;
+}
+
+.card img {
+    border: red 5px solid;
+    width: 100%;
+    height: 50vh;
+}
+
+.card-body {
+    height: 50vh;
+    overflow: auto;
+}
+
+
+.card-text {
+    border: 2px green solid;
+    width: 100%;
+    
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}

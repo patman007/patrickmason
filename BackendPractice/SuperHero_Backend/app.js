@@ -4,12 +4,22 @@ const app = express()
 
 const request = require('request')
 
+const bodyParser = require('body-parser')
+
+
+//Body Parser app.use
+app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(bodyParser.urlencoded({ extended: false }))
+
+//Have the ability to use static files 
+//to acces them and use in the public folder
 app.use(express.static('public'));
 
-//Setup up Port 3000
+//Establish PORT 3000 environment (env)
 const PORT = process.env.PORT || 3000
 
-//Root Routes
+
+//Route Handlers
 
 //Home.ejs Root Handler
 app.get('/', (req, res) => {
@@ -27,7 +37,9 @@ app.get('/results', (req, res) => {
     let endpoint = 'https://superheroapi.com/api/10158830495094328/'
     
     // let url = `${endpoint}/${req.query.id}` 
-    let url = `${endpoint}1/powerstats`  
+    //ID is enabled to be randomized between
+    //any called from the API
+    let url = `${endpoint}${req.query.id}/powerstats`  
     console.log(url) 
 
     //Request the API instead of Fetch
@@ -39,7 +51,7 @@ app.get('/results', (req, res) => {
             // console.log(body)
 
             res.render('results.ejs', {data: parsedData});
-            console.log('The data is', {data: parsedData});
+            console.log('The data is', {data: parsedData});            
 
         } else {
 

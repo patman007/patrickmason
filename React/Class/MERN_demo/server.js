@@ -1,3 +1,4 @@
+//Foundation
 const express = require("express");
 const app = express();
 
@@ -12,11 +13,13 @@ const mongoose = require("mongoose");
 
 const url = "mongodb://localhost:27017/mern_demo";
 
+//Moongoose Connection
 mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("connected"))
   .catch();
 
+//Moongoose BluePrints
 let mernSchema = new mongoose.Schema({
   fname: {
     type: String,
@@ -24,14 +27,20 @@ let mernSchema = new mongoose.Schema({
   },
 });
 
+//Mongoose Model
 let MernModel = mongoose.model("Mern", mernSchema);
 
 const port = process.env.PORT || 5000;
 
+
+//Root Routes
+//TEST Root Handler GET
+//Write Queries
 app.get("/test", (req, res) => {
   res.json({ message: "Hello from server.js!!" });
 });
 
+//NEW Root Handler POST
 app.post("/new", (req, res) => {
   MernModel.create(
     {
@@ -44,6 +53,7 @@ app.post("/new", (req, res) => {
   );
 });
 
+//Listener
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
