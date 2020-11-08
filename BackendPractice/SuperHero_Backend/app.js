@@ -6,7 +6,6 @@ const request = require('request')
 
 const bodyParser = require('body-parser')
 
-
 //Body Parser app.use
 app.use(bodyParser.json({ type: 'application/*+json' }))
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -27,7 +26,6 @@ app.get('/', (req, res) => {
     res.render('home.ejs');
 })
 
-
 //Results.ejs Root Handler
 app.get('/results', (req, res) => {
     console.log('I am the results ejs')    
@@ -36,10 +34,15 @@ app.get('/results', (req, res) => {
     // const access_token = 10158830495094328
     let endpoint = 'https://superheroapi.com/api/10158830495094328/'
     
-    // let url = `${endpoint}/${req.query.id}` 
+    //Trying to call only the powerstats only
+    //then the results would be data.intelligence
+    //not data.powerstats.intelligence
+    // let url = `${endpoint}${req.query.id}/powerstats`
+
+    
     //ID is enabled to be randomized between
     //any called from the API
-    let url = `${endpoint}${req.query.id}/powerstats`  
+    let url = `${endpoint}${req.query.id}`  
     console.log(url) 
 
     //Request the API instead of Fetch
@@ -59,7 +62,6 @@ app.get('/results', (req, res) => {
             res.render('results.ejs', {data: 'Error getting data'});
         }
     });
-
 });
 
 //Listeners

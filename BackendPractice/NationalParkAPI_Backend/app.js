@@ -51,6 +51,7 @@ app.get('/results', (req, res) => {
 
     .catch(err => {
         // res.status(404).send({err})
+        res.render('results.ejs', {err: 'No matches found'})
         console.log('Catch the error', err)
     });
 })

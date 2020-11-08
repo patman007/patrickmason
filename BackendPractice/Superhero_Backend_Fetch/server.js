@@ -7,8 +7,12 @@ const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
 
 // //Body Parser app.use
-app.use(bodyParser.json({ type: 'application/*+json' }))
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+//Can use the below as well
+// app.use(bodyParser.json({ type: 'application/*+json' }))
+// app.use(bodyParser.urlencoded({ extended: false }))
+
 
 //Have the ability to use static files 
 //to acces them and use in the public folder
@@ -27,9 +31,9 @@ app.get ('/', (req, res) => {
 })
 
 //Results EJS Root Route
-app.get ('results', (req, res) => {
+app.get ('/results', (req, res) => {
 
-    console.log('I am the reusults ejs')
+    console.log('I am the results ejs')
     //ID is enabled to be randomized between
     //any called from the API
     //Consume API 
@@ -56,26 +60,26 @@ app.get ('results', (req, res) => {
             //different from catch errors. 
             console.log(response)
 
-            throw Error('API is not working')
+            // throw Error('API is not working')
             //Use a res.send instead of a throw Error because 
             //this kills the server
-            // res.send({code: 1234, message: 'Your response failed, please contact support at support@'})
+            res.send({code: 1234, message: 'Your response failed, please contact support at support@'})
         } 
-        //json does parsing and returns a string     
+        //json does parsing and returns a string 
         return response.json();
+
     })
-    .then((data) => {
-        console.log('data is' , {data} )
-        res.render('results.ejs',{data} )
+    .then((data) => {    
+        console.log('data is' , {data: data})       
+        res.render('results.ejs', {data: data})              
     })
 
     //Catch error wil only show connection error
-    .catch(err => {
-        console.log('I am error: ', err)
+    .catch(err => {        
         res.render('results.ejs', {err: 'No matches found'})
+        console.log('I am error: ', err)
     })
-
 })
 
 //Listener
-app.listen(PORT, () => console.log(`App listening on post ${PORT}`))
+app.listen(PORT, () => console.log(`App listening on post ${PORT}`));
