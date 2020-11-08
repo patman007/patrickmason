@@ -2,7 +2,13 @@
 const express = require('express')
 const app =express()
 
+const bodyParser = require('body-parser')
+
 const fetch = require('node-fetch')
+
+//Body Parser app.use
+app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //Setup up a PORT 3000
 const PORT =process.env.PORT || 3000
@@ -32,14 +38,15 @@ app.get('/results', (req, res) => {
         if (!response.ok) {
             //throw an error will find other errors
             // throw "National Parks returned error"
-            res.send({code: 0077, message: 'Your response failed, please contact support at support@'})
+            // console.log(response)
+            res.send({code: 0067, message: 'Your response failed, please contact support at support@'})
         }
         //jsondoes parsing and returns a string
         return res.json()
     })
     .then(data => {
-        console.log('data is', {data: data[0]})
-        res.render('results.ejs', {data : data[0]})
+        console.log('data is', {data: data})
+        res.render('results.ejs', {data : data})
     })
 
     .catch(err => {
