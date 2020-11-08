@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 
-const fetch =require('node-fetch')
+const fetch = require('node-fetch')
 
 const bodyParser = require('body-parser')
 
@@ -34,14 +34,15 @@ app.get ('results', (req, res) => {
     //any called from the API
     //Consume API 
     //Access Token = 10158830495094328
+    // Endpoint = 'https://superheroapi.com/api/10158830495094328/'
     let apiKey = 10158830495094328 
     let endpoint = `https://superheroapi.com/api/${apiKey}/`
-    // let endpoint = 'https://superheroapi.com/api/10158830495094328/'
+    
     console.log(endpoint)
-    // let superhero = req.query.id
+    let superhero = req.query.id
 
     //API call to be used in the fetch(url)
-    let url =`${endpoint}1`
+    let url =`${endpoint}${superhero}`
 
     console.log(url)
 
@@ -71,7 +72,7 @@ app.get ('results', (req, res) => {
     //Catch error wil only show connection error
     .catch(err => {
         console.log('I am error: ', err)
-        res.render('home.ejs', {error: 'No matches found'})
+        res.render('results.ejs', {err: 'No matches found'})
     })
 
 })
