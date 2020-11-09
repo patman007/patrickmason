@@ -8,8 +8,10 @@
 4. jquery.min.js has additional functionality which results in its larger file size.
 5. None of the above.
 
-### Answer: 1, jquery.min.js is miniature jQuery with only core functionality.
+### Wrong Answer: 1, jquery.min.js is miniature jQuery with only core functionality.
 
+
+### Correct Answer:  Correct answer is 5. None of the Above
 
 
 ### B. The advantages of jQuery are, EXCEPT ..
@@ -21,4 +23,7 @@
 5. Exhaustive set of animations and effects.
 
 
-### Answer: 5, Exhaustive set of animation and effects
+### Wrong Answer: 5, Exhaustive set of animation and effects
+
+
+### Correct Answer: 3. Can be used in a browser as well as on a server

@@ -9,3 +9,6 @@
 
 ### Answer: 3, `h1 {background-color: #FFF}`
 
+
+### Correct Answer: 
+### 3. `h1 {background-color: #FFF}` and 4. `h1 {background: #FFF}`
