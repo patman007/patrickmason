@@ -8,4 +8,7 @@ When a html form submits, where action attribute is missing, which of the follow
 Reference: https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data
 
 
-### Answer: Nothing happens, the form remains unsubmitted
+### Wrong Answer: Nothing happens, the form remains unsubmitted
+
+### Correct Answer:
+### The form clears its fields and moves to the root of the website.

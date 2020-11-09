@@ -5,4 +5,7 @@
 1. Tells the browser what version of HTML has been returned 
 1. Tells the user agent what to expect in the response from another machine, e.g. a restful API?
 
-### Answer: Tells javascript engine how to interpret a JSON object.
+### Wrong Answer: Tells javascript engine how to interpret a JSON object.
+
+### Correct Answer:
+### Tells the user agent what to expect in the response from another machine. e.g. a rest 

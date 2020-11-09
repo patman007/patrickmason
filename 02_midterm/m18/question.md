@@ -6,4 +6,7 @@
 1. join a table to itself, not based on any matching criteria
 
 
-### Answer: Join a table to itself, using one single column of the table.
+### Wrong Answer: Join a table to itself, using one single column of the table.
+
+### Correct Answer:
+### Join a table to itself, using different columsn of the table.

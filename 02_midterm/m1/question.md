@@ -5,5 +5,7 @@
 1. waits and runs after the requested get method returns with data or error
 1. asks the user what she wants to do
 
-### Answer: Runs immediately alongside the method in a 2nd thread without waiting.
+### Wrong Answer: Runs immediately alongside the method in a 2nd thread without waiting.
 
+### Correct Answer:
+### Waits and runs after the request get method returns with data or error.
