@@ -37,22 +37,23 @@ app.get('/results', (req, res) => {
 
         if (!response.ok) {
             //throw an error will find other errors
-            // throw "National Parks returned error"
-            // console.log(response)
-            res.send({code: 0067, message: 'Your response failed, please contact support at support@'})
+            // throw Error('Your response failed, please contact support at support@')
+            console.log(response)
+            res.send({code: 67, message: 'Your response failed, please contact support at support@'})
+        } else { 
+            //jsondoes parsing and returns a string
+            return response.json()
         }
-        //jsondoes parsing and returns a string
-        return res.json()
     })
     .then(data => {
-        console.log('data is', {data: data})
-        res.render('results.ejs', {data : data})
+        console.log('data is', {data: data[0]})
+        res.render('results.ejs', {data: data[0]})
     })
 
     .catch(err => {
-        // res.status(404).send({err})
-        res.render('results.ejs', {err: 'No matches found'})
-        console.log('Catch the error', err)
+        res.status(404).send({err: 'There is an error catching'})        
+        res.render('results.ejs', err) 
+        console.log('Catch the error', err)       
     });
 })
 
