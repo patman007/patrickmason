@@ -31,7 +31,7 @@ console.log(url)
 
 //IMAGE variable of SuperHero
 let image = document.getElementById('pic')
-image.setAttribute('src', `https://superheroapi.com/api/${apiKey}/1/image`)
+image.setAttribute('src', 'https://www.superherodb.com/pictures2/portraits/10/100/1460.jpg')
 
 //Suggested Fix online for Cor
 // (function() {
@@ -69,7 +69,7 @@ btn.addEventListener('click', event  => {
         return response.json()     
 
     })
-    .then(data =>(image.setAttribute("src", data.image),                    
+    .then(data =>(image.setAttribute('src', data.image),                    
                 (id.innerHTML = data.id),                    
                 (name.innerHTML = data.name),
                 (intelligence.innerHTML = data.intelligence),
