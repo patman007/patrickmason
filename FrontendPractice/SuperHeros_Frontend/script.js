@@ -19,55 +19,67 @@ let combat = document.getElementById('combat');
 let btn = document.getElementById('btn');
 
 
-
 //Consume apiKey and API Url endpoint
-// let apiKey = 10158830495094328; 
-let endpoint = 'https://superheroapi.com/api/10158830495094328';
+let apiKey = 10158830495094328; 
+// let endpoint = 'https://superheroapi.com/api/10158830495094328';
+let endpoint = `https://superheroapi.com/api/${apiKey}/`
 console.log(endpoint)
 
-// let superhero = 'req.query.id'
-
-let url = `${endpoint}/1/`
+// let superhero = document.getElementById('superhero').value
+let url = `${endpoint}1/powerstats`
 console.log(url)
-
-const proxyurl = 'https://cors-amywhere.herokuapp.com/'
 
 //IMAGE variable of SuperHero
 let image = document.getElementById('pic')
-// image.setAttribute('src', `https://superheroapi.com/api/${apiKey}${req.query.id}/image`)
+image.setAttribute('src', `https://superheroapi.com/api/${apiKey}/1/image`)
 
-
+//Suggested Fix online for Cor
+// (function() {
+//     var cors_api_host = 'cors-anywhere.herokuapp.com';
+//     var cors_api_url = 'https://' + cors_api_host + '/';
+//     var slice = [].slice;
+//     var origin = window.location.protocol + '//' + window.location.host;
+//     var open = XMLHttpRequest.prototype.open;
+//     XMLHttpRequest.prototype.open = function() {
+//         var args = slice.call(arguments);
+//         var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+//         if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
+//             targetOrigin[1] !== cors_api_host) {
+//             args[1] = cors_api_url + args[1];
+//         }
+//         return open.apply(this, args);
+//     };
+// })();
 
 btn.addEventListener('click', event  => {    
     event.preventDefault();
     console.log('You clicked me')
 
     //4 parts of Fetch API
-    fetch(proxyurl + url)
+    fetch(url)
     .then(function(response) {
 
         console.log(response)
-        response.text()
-        if(response.ok) {
+        
+        if(!response.ok) {
 
-            return response.json()                        
-        }
-        res.send({code: 67, message: "SuperHero API not working"})   
+             // throw Error('SuperHeros API is not working !!!')
+            res.send({code: 67, message: "SuperHero API not working"})                      
+        }       
+        return response.json()     
 
     })
     .then(data =>(image.setAttribute("src", data.image),                    
                 (id.innerHTML = data.id),                    
                 (name.innerHTML = data.name),
-                (intelligence.innerHTML = data.powerstats.intelligence),
-                (strength.innerHTML = data.powerstats.strength),
+                (intelligence.innerHTML = data.intelligence),
+                (strength.innerHTML = data.strength),
                 (speed.innerHTML = data.speed),
                 (durability.innerHTML = data.durability),
                 (power.innerHTML = data.power),
-                (combat.innerHTML = data.combat)))
-                
-    
+                (combat.innerHTML = data.combat)))    
                     
-    // .catch(err => console.error("Error connecting", err))   
-    .catch(() => console.log("Cant access " + url + "response.Blocked by Browser"))             
+    .catch(err => console.error("Error connecting", err))   
+    // .catch(() => console.log("Cant access " + url + "response.Blocked by Browser"))             
 
 });
