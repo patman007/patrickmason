@@ -6,8 +6,10 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3000
 
 //Connection
+//Connect to mongodb using the db you want to access/create
 mongoose.connect('mongodb://localhost:27017/PM', {useNewUrlParser: true , useUnifiedTopology: true,})
 
+//Visual verification that connection succeded
 .then(()=>
 console.log('Mongo db running'))
 
