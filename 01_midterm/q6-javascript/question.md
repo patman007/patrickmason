@@ -22,13 +22,13 @@ const Loop = (5, 15) => { //object
 
      //A variable is created to show the loop will go through each of the properties
      //inside the object of the varible called numbers  
-     var numbers = {
-             1: "odd", 
+     var numbers = [{
+             "1 : odd", Other way to satisfy an array if going that way.
              2: "even", 
              3: "odd", 
              4: "even",
              5: "odd"
-          };
+         }];
            var txt = '';//empty string
 
            //FOR LOOP: goes through iterating each of the values at i 

@@ -10,6 +10,7 @@ btn.onclick = function Multiply(firstNum, secondNum){
    let p = document.getElementById('message');
    p.innerHTML = `The answer is: ${message}`;
 
+   console.log(firstNum * secondNum)
    // let answer = Multiply(firstNum, secondNum)
    // msg.innerHTML = `The answer is ${answer || ''}`;
 }

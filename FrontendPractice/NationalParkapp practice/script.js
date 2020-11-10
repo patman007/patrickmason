@@ -1,6 +1,3 @@
-
-
-
 //Button variable by Ids
 let btn = document.getElementById('btn');
 

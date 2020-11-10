@@ -12,6 +12,7 @@ Please answer the following with maximum 50 words each (keep it short):
 ### are working on from beginning to end and the ability to go back to a 
 ### previous states (previous commits) to see differences in the code.
 
+
 ### Give at least 2 other reasons why git/github are useful to a team of developers.
 ### Git/Github is a popular industry standard tool teams of developers use to 
 ### store for current and future use. Also, it is free online cloud storage 

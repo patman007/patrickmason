@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 // //Body Parser app.use
 app.use(bodyParser.json())
 
-//Can use the below as well
+//Body-Parser use
 // app.use(bodyParser.json({ type: 'application/*+json' }))
 // app.use(bodyParser.urlencoded({ extended: false }))
 
