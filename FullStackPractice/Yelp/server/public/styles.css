@@ -1,0 +1,13 @@
+.form{
+    margin:0 auto;
+    padding-left:40px;
+}
+h1{
+    padding-left: 45px;
+}
+p{
+    font-size:30px;
+    color: rgb(11, 109, 201);
+    background-color:lightblue;
+    padding-left: 40px;
+}

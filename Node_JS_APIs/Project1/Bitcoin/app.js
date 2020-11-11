@@ -26,7 +26,6 @@ app.get('/', (req, res) => {
 })
 
 //Results ejs Handler
-
 app.get('/results', (req, res ) => {
     let currencyChosen = req.query.currency;
     console.log(`${req.query.currency}`)
