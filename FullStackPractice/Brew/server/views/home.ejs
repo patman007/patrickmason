@@ -1,0 +1,30 @@
+<%-include('partials/header') %>
+    <body>
+        <h1>Brewery Search</h1>
+        <div class="container well">
+            <form action="results" method="get" class="myForm">
+                <%# City #%>
+                <label for="city">Enter a city</label>
+                <input id="city" name="city" type="text"
+                placeholder="Enter desired city here" required>
+                <br>
+                <%# State #%>
+                <label for="state">Enter a state</label>
+                <input id="state" name="state" type="text"
+                placeholder="Enter desired state here" required>
+                <br> 
+                <%# Type of Brew #%>
+                <label for="type">Enter type of brew</label>
+                <input id="type" name="type" type="text"
+                placeholder="Enter brew type" required> 
+                <br>
+                <small style="color: red;">Enter micro, nano, 
+                    regional, brewpub, large, planning, bar, 
+                    contract, proprietor, or closed
+                </small>
+                <br>
+                <button type="submit">Submit</button>           
+            </form>
+        </div>       
+    </body>
+</html>

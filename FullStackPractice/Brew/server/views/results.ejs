@@ -1,0 +1,15 @@
+<%-include('partials/header') %>
+
+<h1>Results</h1>
+<% data.forEach(function(el) { %>
+    <p>Name: <%=el.name %></p>
+    <p>City: <%=el.city %></p>
+    <p>State: <%=el.state %></p>
+    <p>Street Address: <%=el.street %></p>
+    <p>Phone Number: <%=el.phone %></p>
+    <p>Brewery Type: <%=el.brewery_type %></p>
+    <p>Longitude: <%=parseFloat(el.longitude).toFixed(2) %></p>
+    <p>Latitude: <%=parseFloat(el.latitude).toFixed(2) %></p>
+    <a href="<%=el.website_url %>">Website</a>   
+    <hr>  
+<% }) %>
