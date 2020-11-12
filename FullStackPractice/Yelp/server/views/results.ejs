@@ -1,9 +1,26 @@
-<%- include('partials/header')%>
+<%-include('partials/header')%>
+
+<% data.forEach(function(el) { %>
+    <p>Name</p>
+    <h2><%=el.name %></h2>
+    <p>Description</p>
+    <h2><%=el.description %></h2>
+    <p>Attendance</p>
+    <h2><%=el.attending_count %></h2>
+    <p>Latitude</p>
+    <h2><%=el.latitude %></h2>
+    <p>Longitude</p>
+    <h2><%=el.longitude %></h2>
+    <p>Time Start</p>
+    <h2><%=el.time_start %></h2>
+    <p>Time End</p>
+    <h2><%=el.time_end %></h2>
+    <p>Event Image</p>
+    <img src="<%=el.image_url %>" alt="image"></p>
+    <br>
+<% }) %>
+
+<!-- ejseach this code gets the forEach array working -->
 
 
-
-
-
-
-
-<%- include('partials/footer')%>
+<%-include('partials/footer')%>

@@ -11,7 +11,7 @@ $(document).ready(function(){
         dataObj.map(function(todo){
             let completed = todo.isComplete ? "completed" : "";
             $('ul').append(
-                `<li data-id=${todo.id} class=${completed}>${todo.description}<span><i class='far fa-trash-alt'></i></span></li>`
+                `<li data-id=${todo._id} class=${completed}>${todo.description}<span><i class='far fa-trash-alt'></i></span></li>`
             );
         })
     })
@@ -34,7 +34,7 @@ $('input').keypress(function(event) {
       .done(function(newTodo){ 
         let completed = newTodo.isComplete ? "completed" : "";
         $('ul').append(
-            `<li data-id=${newTodo.id} class=${completed}>${newTodo.description}<span><i class='far fa-trash-alt'></i></span></li>`
+            `<li data-id=${newTodo._id} class=${completed}>${newTodo.description}<span><i class='far fa-trash-alt'></i></span></li>`
         );
         $('input').val(""); // moved the "" to within the parentheses
       })

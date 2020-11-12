@@ -16,6 +16,8 @@ app.use(cors())
 
 const port = process.env.PORT || 3000;
 
+app.use(express.static('client'))
+
 //Note How to Convert to Mongo/Mongoose
 //1 Build our connection
   //a install Mongoose
@@ -47,7 +49,7 @@ let todoSchema =  new mongoose.Schema(
   }
 )
 
-let TodoModel = mongoose.model('todos', todoSchema)
+let TodoModel = mongoose.model('Todo', todoSchema)
 
 //3 Build queries  
   //a Read with Mongoose -> .find()
@@ -62,7 +64,7 @@ let TodoModel = mongoose.model('todos', todoSchema)
 //   { id: 3, description: "Go to movies", isComplete: false }
 // ];
 
-let num = 4;
+// let num = 4;
 
 app.get("/", function(req, res) {
   res.send("Hello");
@@ -78,8 +80,8 @@ app.get("/todos", function(req, res) {
     } else {
       console.log('My results: ', results)
       //Tool used to communicate for front end
-      res.status(220).json(results)
-      // res.json(results)
+      // res.status(220).json(results)
+      res.json(results)
     }
   })
   // res.json(toDoArray);
@@ -100,11 +102,13 @@ app.post("/todos", function(req, res) {
     description: req.body.description
     // isComplete: false 
   })
-  newTodo.save((error, results)=> {
+  newTodo.save((error, result)=> {
     if(error) {
       console.log('Error save document to db: ', error)
     } else{
-      res.status(201).json(newTodo);
+      console.log('Saved new todo: ', result)
+      // res.status(201).json(newTodo);
+      res.status(201).json(result)
     }
   })
   // append the new todo object to toDoArray array
