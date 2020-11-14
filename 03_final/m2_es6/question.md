@@ -17,5 +17,5 @@ What new ES6 method replaces the above annoying piece of code?
 4. None of the above
 
 
-### Answer:
+### Answer: skipped
 

@@ -6,4 +6,4 @@
 4. when you run `typeof null` you would get `undefined`
 
 
-### Answer:
+### Answer: 4 - when you run typeof null you would get undefined
