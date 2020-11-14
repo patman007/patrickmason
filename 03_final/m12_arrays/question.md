@@ -11,8 +11,13 @@ function test(myArr) {
   }
   return false
 }
+### test(myArray);
 ```
 
 1. find
 2. findIndex
 3. search
+
+### Answer: 1 - find, will give a value of 64 because it is the only number over 32.
+
+### I am attaching the code because I am unsure if you are asking a value or an array

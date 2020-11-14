@@ -7,5 +7,5 @@
 4. back-end data for the app
 ```
 
-### Answer: 3, internal data store of the component
+### Answer: 3 - internal data store of the component
 
