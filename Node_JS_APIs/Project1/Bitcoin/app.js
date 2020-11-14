@@ -10,10 +10,21 @@ app.use(express.static('public'))
 //establish PORT 3000 environment (env)
 const PORT = process.env.PORT || 3000
 
+// UTILITY FUNCTIONS
+var formatCurrency = function(curr){
+    let c = (new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: curr
+            })
+    )
+    console.log('c:', c)
+    return c
+}
+
 //Route Handlers
 
 //Consume an endpoint for the API
-let endpoint = 'https://api.coindesk.com/v5/bpi/currentprice.json'
+let endpoint = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 //Coindesk price index page
 
 //Route Handlers
@@ -45,9 +56,16 @@ app.get('/results', (req, res ) => {
         //json does parsing and returns a string
         return res.json()
     })
-    .then(data => {
-        console.log('data is', data.bpi[currencyChosen])        
-        res.render('results.ejs', {data: data.bpi[currencyChosen]})
+    .then(d => {
+        console.log('d:', d)
+        let data = {}
+        // sending a reference to the function
+        // for formatting currency to the ejs file
+        data.formatCurrency = formatCurrency(currencyChosen)
+        data.amount = d.bpi[currencyChosen].rate_float
+        data.code = d.bpi[currencyChosen].code
+        console.log('data:', JSON.stringify(data))
+        res.render('results.ejs', data)
     })
     //Catch error will only show connection error
     //   Feedback: you returning console.log below
@@ -56,6 +74,7 @@ app.get('/results', (req, res ) => {
     .catch(err => {
         // Feedback: here you may render a specially designed
         //           error.ejs page if you wish and render it.
+        console.log("Error:", err) 
         res.status(404).send(err)
     });     
 })
