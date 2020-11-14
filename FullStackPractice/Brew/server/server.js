@@ -24,21 +24,24 @@ app.get('/', (req, res) => {
 
 //Results EJS Root Route Handler
 app.get('/results', (req, res) => {
-    // let by_city = req.query.city
-    // let by_state = req.query.state
-    // let by_type = req.query.type
-    let url = `${endpoint}?by_city=${req.query.city}&?by_state=${req.query.state}&?by_type=${req.query.type}`
+    //Variables used to setup the query
+    let city = req.query.city
+    let state = req.query.state
+    let type = req.query.type
+    let url = `${endpoint}?by_city=${city}&?by_state=${state}&?by_type=${type}?per_page=50`
 
+    //FETCH Statement
+    //4 parts
     fetch(url)
     .then (response => {
         if(!response.ok) {
-
             // console.log(response)
 
             //We are testing errors first            
             //different from catch errors.
             //Use a res.send instead of a throw Error
-            res.send({code: 55, message: 'Your response failed, please contact support at support@'})
+            res.send({code: 55, 
+                message: 'Your response failed, please contact support at support@'})
         }
         //json does parsing and returns a string
         return response.json()

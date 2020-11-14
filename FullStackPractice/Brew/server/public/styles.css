@@ -18,3 +18,8 @@ a {
 a:hover {
     color: green
 }
+
+small {
+    font-weight: bold;
+    color: red
+}
