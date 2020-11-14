@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    background: #eceff1;
+     
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+    overflow: hidden;                      
+  }
+  
+  /*Navigation Bar*/
+  li {    
+    float: left;
+    border-right: 0.05em solid white;
+    background: #01579b;                 
+  }
+  
+  /*Drop down menu All Submenu and Top Menu*/
+  li a {        
+    display: block;        
+    color: white;
+    padding: 0em;     
+    font-size: auto;
+    width: 287px;
+    height: 70px;
+    line-height: 4em;
+    text-decoration: none;
+    text-align: center;            
+    font-family: 'Oswald', sans-serif;    
+  }
+
+  /*Hover over Navigation Bar*/
+  li a:hover {
+    background: #9ad1e3;    
+  }
+
+  li a ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #eceff1;
+                         
+  }
+
+  li a ul li {    
+    float: left;
+    vertical-align: auto;                    
+  }
+
+  /*Submenu Drop Down*/
+  li a ul li a {        
+    display: block;
+    color: white;
+    padding: 0em; 
+    width: 300px;
+    height: 70px;         
+    font-size: auto;
+    text-decoration: none;
+    text-align: center;    
+    font-family: 'Oswald', sans-serif;
+    font: bold;        
+  }
+
+  /*Hover over Navigation Bar*/
+  li ul li a:hover {      
+    background: #ace39a;
+    color: white;
+  }
+
+   /*This will select ALL ul's that are desc of li's which are
+  desc of  ul's */
+  ul li ul {
+    display: none;
+  }
+
+  /* Then ask yourself, what are you 'hovering over?' */
+
+  ul li:hover ul {
+    display: initial; /* sets the value back to default */
+  }
