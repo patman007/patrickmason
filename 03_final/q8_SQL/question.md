@@ -12,7 +12,28 @@
 
 The output may look something like this. Some intermediate rows have been removed for brevity.
 
-```
+SELECT *
+FROM teams;
+
+SELECT *
+FROM players;
+ 
+### Answer:  
+SELECT p.fname || ' ' || p.lname AS FULLNAME,   
+    p.weight AS WEIGHT,
+    t.name AS TEAM_NAME,
+    t.city AS CITY,
+    t.state AS STATE,
+CASE
+    WHEN p.weight > 200 THEN 'HEAVY'
+    ELSE 'MEDIUM'
+    END AS WEIGHT    
+FROM players p
+INNER JOIN teams t
+ON t.id = p.team_id
+ORDER BY p.weight DESC;
+
+``
  team_id |  name  |     city      | state |     fullname      | weight | Weight Category
 ---------+--------+---------------+-------+-------------------+--------+-----------------
        1 | Royals | Kansas City   | MO    | Jarrod Dyson      |    160 | Medium
