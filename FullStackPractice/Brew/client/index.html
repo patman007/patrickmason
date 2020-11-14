@@ -13,14 +13,45 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Brew Search</h1>
+        <h1>Brewery Search</h1>
         <div class="container well">
-            <!--City-->
-            <label for="city"></label>
-            <input>
-
-
-        </div>        
+            <form method="get" class="myForm">
+                <!--City--> 
+                <label for="city">Enter a city</label>
+                <input id="city" name="city" type="text"
+                placeholder="Enter desired city here" 
+                required>
+                <br>
+                <!--State--> 
+                <label for="state">Enter a state</label>
+                <input id="state" name="state" type="text"
+                placeholder="Enter desired state here" 
+                required>
+                <br> 
+                <!--Type of Brew -->
+                <label for="type">Enter type of brew</label>
+                <input id="type" name="type" type="text" 
+                placeholder="Enter brew type" 
+                required> 
+                <br>
+                <small>Enter micro, nano, regional, 
+                    brewpub, large, planning, bar, 
+                    contract, proprietor, or closed
+                </small>
+                <br>
+                <button type="submit" id="btn">Submit</button>           
+            </form>
+            <!--Results-->
+            <p id="name"></p>
+            <p id="CITY"></p>
+            <p id="STATE"></p>
+            <p id="TYPE"></p>
+            <p id="phone"></p>
+            <p id="street"></p>
+            <p id="lat"></p>
+            <p id="long"></p>
+            <p id="url"></p>
+        </div>       
         <script src="script.js"></script>
     </body>
 </html>

@@ -1,0 +1,25 @@
+html, body {
+    text-align: center;
+}
+
+.myForm {
+    font-size: 20px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a {
+    font-size: 20px;
+}
+
+a:hover {
+    color: green
+}
+
+small {
+    font-weight: bold;
+    color: red
+}
