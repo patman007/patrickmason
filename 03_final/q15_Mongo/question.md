@@ -27,8 +27,15 @@ values of each of the keys
     - egg, 
     - hello // non existent
 
+## distinct() is used to find unique value of each key.
+### Answerdb.animals.distinct("type") =>[ "cat", "cow", "dog" ]
+### db.animals.distinct("egg") =>[ "duck", "hen", "ostrich" ]
+### db.animals.distinct("hello") => [ ]
+
 
 ## Question B:
 
 In the above database, how would you count the number of mongo documents which contain a type "cat".
 
+### Answer: To count the number of documents that contain "cat" you must use the count() in Mongo
+### db.animals.count({type: "cat"})
