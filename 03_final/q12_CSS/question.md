@@ -11,3 +11,8 @@ or
 3. What are the differences between a relative, fixed, absolute and statically positioned element?
 
 4. What are the different ways to visually hide content (and make it available only for screen readers)?
+
+
+
+Feedback: why didn't you do this. This was look up on w3schools and copy and paste the answer!! You could
+make a few changes to simplify the explanation. 

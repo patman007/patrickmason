@@ -12,3 +12,8 @@ and it works with using continue, break, and return. It is used mainly to loop o
 My choice of iterator for arrays is forEach. A benefit of ForEach is the user does not need todeclare indexing or value variables
 in the scope where it is contained. the forEach iterator has overall time to run through the code compared to most of the other
 iterators listed above in the first answer. 
+
+
+Feedback: where are the code examples of your favorite iterators?
+
+Score: 1.5 / 3.0

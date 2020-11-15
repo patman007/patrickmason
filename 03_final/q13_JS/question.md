@@ -12,3 +12,5 @@ A possible solution is attached here as `script.js` here. You may run it using t
 
 Hint: You might need to use the debugger to fix this function so it does the right thing. Please do not punt this question, by finding another solution and providing it instead. You'd gain only 50% of the credit.
 
+
+### Feedback: skipped or not attempted? I am marking it as not-attempted.

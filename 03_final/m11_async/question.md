@@ -7,3 +7,7 @@
 5. bind or call
 
 ### Answer: skipped
+
+You may use all of these, except 5. 
+4 is not commonly used.
+1-3 are very common for async execution

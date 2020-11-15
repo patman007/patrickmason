@@ -9,3 +9,4 @@
 
 ### Answer: 3 - internal data store of the component
 
+Correct

@@ -6,3 +6,5 @@
 4. you should not use them as they slow down the page load.
 
 ### Answer: 1 - you need a large number of images on a page, e.g. on a carousel
+
+Correct

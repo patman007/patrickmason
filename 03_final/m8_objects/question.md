@@ -11,3 +11,5 @@ Pick any incorrect statements about enumerable properties of objects
 
 
 ### Answer: 6 - All of the above are true
+
+Correct

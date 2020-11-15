@@ -34,3 +34,7 @@ What's wrong with my code below?  How would you fix it?  Would using `var pi =` 
 ### scoped. Variable with var can be redeclared and updated in the the scope, while const variable cannot
 ### be redeclared or updated. Let variable cannot be re-declared, but can be updated.
     
+
+All the above answers are good.  However, you are making a distinction of let vs. var saying let cannot be redeclared.  Really?  Block scoped really means it can only be accessed within the block.  Even var cannot be redeclared within a scope.
+
+Score: 2.5/3.0

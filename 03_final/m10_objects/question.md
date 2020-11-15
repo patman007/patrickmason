@@ -6,3 +6,5 @@
 4. delete myObj.key
 
 ### Answer: 1 - delete myObj[key]
+
+Correct. You may also do 4. 

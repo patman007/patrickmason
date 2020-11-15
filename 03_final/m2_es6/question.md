@@ -20,3 +20,4 @@ What new ES6 method replaces the above annoying piece of code?
 
 ### Answer: 3 - someText.includes
 
+Correct

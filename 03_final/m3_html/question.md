@@ -10,3 +10,4 @@
 ###         `span` is an display:inline element, whereas `div` is a display:block element.
 ###         `span` is used when you need to show elements in a line, one after the other
 
+Correct

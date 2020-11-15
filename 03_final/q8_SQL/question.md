@@ -71,3 +71,9 @@ The connection details to our class SQL database are as follows:
   "database": "accsoftwarebootcamp",
   "password": "accrocks"
 }
+
+
+
+### Feedback: good work. However you need to use an outer join to satisfy the first condition.
+
+### Score: 2.25 / 3.00

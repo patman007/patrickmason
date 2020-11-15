@@ -21,3 +21,7 @@ function test(myArr) {
 ### Answer: 1 - find, will give a value of 64 because it is the only number over 32.
 
 ### I am attaching the code because I am unsure if you are asking a value or an array
+
+
+Correct. However, the question is asking what is this code doing. Yes, it is
+find -ing. 
