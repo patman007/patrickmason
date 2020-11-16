@@ -15,6 +15,6 @@ function isIsogram(str){
     return true; 
 }
 
-var test = "Hello"
+var test = "test"
 
 console.log(`test: ${isIsogram(test)}`)

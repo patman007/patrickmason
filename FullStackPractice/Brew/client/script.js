@@ -6,7 +6,7 @@ let city = document.getElementById('city');
 //State
 let state = document.getElementById('state');
 //Type
-let type = document.getElementById('type');
+let brewery_type = document.getElementById('brewery_type');
 //Phone
 let phone = document.getElementById('phone');
 //Street
@@ -28,57 +28,50 @@ console.log(endpoint);
 //Event Listener
 btn.addEventListener('click', event => { 
     event.preventDefault();   
-    let finalurl = `${endpoint}?by_city=${city.value}&?by_state=${state.value}&?by_type=${type.value}?`;
+    let finalurl = `${endpoint}?by_city=${city.value}&?by_state=${state.value}&?by_type=${brewery_type.value}`
     console.log(finalurl);
-
-    // axios.get(finalurl)
-    //     .then(response => {
-    //         console.log(response.data);
-    //         if(response.ok) {
-    //             return response.json()
-    //         } else {
-    //             console.log('The json could not be returned properly')
-    //         }
-    //      })
-
-    //     .catch(error => {
-    //         console.log(error);
-    //     })
 
     fetch(finalurl)
     .then(function(response) {
         if(response.ok) {
-            return response.json()
+
+            return response.json();
         }
         throw Error('The code is not working')
         // res.send({code: 55, 
         //     message: 'Your response failed, please contact support at support@'})
     })
    
-    //Looking for results with success with the string valuess
-    //send inside of the url endpoint.     
-    .then(data => {
-        // Set data up with a forEach loop
+    // // Looking for results with success with the string valuess
+    // // send inside of the url endpoint.     
+    .then(data => 
+       // Set data up with a forEach loop
         data.forEach(function(el) {
-            name.innerHTML = el.name
-            city.innerHTML = el.city
-            state.innerHTML = el.state
-            type.innerHTML = el.type 
-            console.log(el)                     
-        })
-
+            name.innerHTML = el.name,
+            city.innerHTML = el.city,
+            state.innerHTML = el.state,
+            brewery_type.innerHTML = el.brewery_type,
+            console.log(el);                
         
-        // let iterator = data.values()
-        // for (let i of iterator) {
-        //     console.log(i);
-            // name.innerHTML = data.name
-            // city.innerHTML = data.city
-            // state.innerHTML = data.state
-            // type.innerHTML = data.brewery_type            
-        //}
-    })
+    //      Other method does the same thing as the forEach        
+    //     let i = 0;
+    //     let total = data.length;
+    //     let ids = [];
+    //     for (; i < total; i++) {
+    //         ids.push(data[i].id)
+    //     }
+    //     console.log(ids)
+        
+    //     let iterator = data.values()
+    //     for (let i of iterator) {
+    //         console.log(i);
+    //         name.innerHTML = data.name
+    //         city.innerHTML = data.city
+    //         state.innerHTML = data.state
+    //         type.innerHTML = data.brewery_type            
+    //     }
+    }))
 
     //Catch an error to show in the console.log message
     .catch(err => console.error('Error connecting', err))
-})
-
+});
