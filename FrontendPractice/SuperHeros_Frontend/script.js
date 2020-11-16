@@ -22,38 +22,21 @@ let btn = document.getElementById('btn');
 //Consume apiKey and API Url endpoint
 let apiKey = 10158830495094328; 
 // let endpoint = 'https://superheroapi.com/api/10158830495094328';
-let endpoint = `https://superheroapi.com/api/${apiKey}/`
+let endpoint = `https://superheroapi.com/api/${apiKey}`
 console.log(endpoint)
 
-// let superhero = document.getElementById('superhero').value
-let url = `${endpoint}1/powerstats`
-console.log(url)
 
 //IMAGE variable of SuperHero
 let image = document.getElementById('pic')
 image.setAttribute('src', 'https://www.superherodb.com/pictures2/portraits/10/100/1460.jpg')
 
-//Suggested Fix online for Cor
-// (function() {
-//     var cors_api_host = 'cors-anywhere.herokuapp.com';
-//     var cors_api_url = 'https://' + cors_api_host + '/';
-//     var slice = [].slice;
-//     var origin = window.location.protocol + '//' + window.location.host;
-//     var open = XMLHttpRequest.prototype.open;
-//     XMLHttpRequest.prototype.open = function() {
-//         var args = slice.call(arguments);
-//         var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
-//         if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
-//             targetOrigin[1] !== cors_api_host) {
-//             args[1] = cors_api_url + args[1];
-//         }
-//         return open.apply(this, args);
-//     };
-// })();
-
 btn.addEventListener('click', event  => {    
     event.preventDefault();
     console.log('You clicked me')
+    // let superhero = document.getElementById('superhero').value
+    // let url = `${endpoint}1/powerstats`
+    let url = `${endpoint}/${id.value}/powerstats/image/url`
+    console.log(url)
 
     //4 parts of Fetch API
     fetch(url)
@@ -62,13 +45,13 @@ btn.addEventListener('click', event  => {
         console.log(response)
         
         if(!response.ok) {
-
              // throw Error('SuperHeros API is not working !!!')
             res.send({code: 67, message: "SuperHero API not working"})                      
-        }       
+        }      
+        //parse the information in json
         return response.json()     
-
     })
+    
     .then(data =>(image.setAttribute('src', data.image),                    
                 (id.innerHTML = data.id),                    
                 (name.innerHTML = data.name),
@@ -77,8 +60,9 @@ btn.addEventListener('click', event  => {
                 (speed.innerHTML = data.speed),
                 (durability.innerHTML = data.durability),
                 (power.innerHTML = data.power),
-                (combat.innerHTML = data.combat)))    
-                    
+                (combat.innerHTML = data.combat)
+    ))                        
+
     .catch(err => console.error("Error connecting", err))   
     // .catch(() => console.log("Cant access " + url + "response.Blocked by Browser"))             
 
