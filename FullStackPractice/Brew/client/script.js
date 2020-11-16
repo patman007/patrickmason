@@ -28,7 +28,7 @@ console.log(endpoint);
 //Event Listener
 btn.addEventListener('click', event => { 
     event.preventDefault();   
-    let finalurl = `${endpoint}?by_city=${Object.values(city)}&?by_state=${Object.values(state)}&?by_type=${Object.values(type)}?`;
+    let finalurl = `${endpoint}?by_city=${city.value}&?by_state=${state.value}&?by_type=${type.value}?`;
     console.log(finalurl);
 
     // axios.get(finalurl)
