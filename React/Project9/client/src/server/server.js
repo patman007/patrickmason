@@ -75,7 +75,7 @@ let formSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Must have a string email key']
     },
-    phone: String,
+    phone: Number,
     message: {
         type: String,
         default: 'No message submited'
