@@ -63,11 +63,11 @@ mongoose.connect(url,
 
 //Mongoose Schema
 let formSchema = new mongoose.Schema({
-    first_name: {
+    fname: {
         type: String,
         required: [true, 'Must have string first name key']
     }, 
-    last_name: {
+    lname: {
         type: String,
         required: [true, 'Must have a string last name key']
     },    

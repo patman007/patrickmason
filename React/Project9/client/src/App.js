@@ -109,7 +109,7 @@ function App() {
       </FormGroup>
       <Button className='btn-success' style={{background: "darkgreen"}}>Submit</Button>
       <Button className='btn-success' 
-              type='reset' 
+              type='reset' onClick={resetFields}
               style={{background: "darkred"}}>
               Reset
       </Button>
