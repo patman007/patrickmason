@@ -5,7 +5,6 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import './App.css';
 //Import Form components
-import 'https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js'
 
 import { Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
@@ -91,14 +90,16 @@ function App() {
         <Label for="phone">Phone:</Label>
         <Input type="phone" name="phone" id="phone" 
         value={phone} onChange={handleChange}
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+        pattern="^\d([0-9 -]{0,10}\d)?$" 
+        required/>
         <FormText><span>Ex. 5555555555</span></FormText>
       </FormGroup>
       <FormGroup>
         <Label for="email">Email:</Label>
         <Input type="email" name="email" id="email" 
         value={email} onChange={handleChange}
-        pattern="^[a-z0-9._%+-]+@email.com {1, 100}$" required/>
+        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" 
+        required/>
         <FormText><span>Ex. name@example.com</span></FormText>
       </FormGroup>
       <FormGroup>

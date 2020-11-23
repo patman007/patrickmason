@@ -47,7 +47,7 @@ const PORT = process.env.PORT || 3000
 
 //Mongoose
 const mongoose =  require('mongoose')
-const url = 'mongodb:://localhost:27017/PM'
+const url = 'mongodb://localhost:27017/PM'
 console.log(chalk.green('I am Mongoose'));
 
 //Mongoose Connection
@@ -87,6 +87,7 @@ console.log(chalk.yellow(formSchema))
 let FormModel = mongoose.model('Form', formSchema)
 console.log(chalk.green(FormModel))
 
+//////////////////////////////////////////////////////////
 
 //Root Route Handlers
 //Root Handler - GET METHOD
@@ -111,6 +112,7 @@ app.post('/new', (req, res)=>{
     )
 })
 
+/////////////////////////////////////////////////////////////////////
 
 //Listener
 app.listen(PORT, () => 
