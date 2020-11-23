@@ -4,7 +4,10 @@ import './App.css';
 import TodoHeader from './components/todoHeader/TodoHeader'
 import TodoInput from './components/todoInput/TodoInput'
 import Todos from './components/todos/Todos'
+
+//Class Component
 class App extends Component {
+  //constructor and props
   constructor(props) {
     super(props);
     this.state = {
@@ -12,9 +15,13 @@ class App extends Component {
       newTodo: ''
     };
   }
+
+  //HandleChange event
   handleChange = event => {
     this.setState({[event.target.name]: event.target.value});
   }
+
+  //Hanlde Submit event
   handleSubmit = event => {
     event.preventDefault();
     const todos = [...this.state.todos, {
@@ -24,6 +31,8 @@ class App extends Component {
     }];
     this.setState({todos, newTodo: ''});
   }
+
+  //Handle Complete id
   handleComplete = id => {
     this.setState(function(cloneOfState){
       let indexOfTodo = cloneOfState.todos.findIndex(todo => {
@@ -35,6 +44,8 @@ class App extends Component {
       return cloneOfState
     })
   }
+
+  //Handle Change id
   handleDelete = id => {
     this.setState(cloneOfState => {
           //filter through current todos and return everything that is not equal

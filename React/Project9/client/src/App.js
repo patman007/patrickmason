@@ -7,7 +7,7 @@ import './App.css';
 //Import Form components
 import 'https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js'
 
-// import { Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
 // Assigns the baseUrl as port 3001 if development otherwise, use the public url
 // used to start react, usually 3000
@@ -34,7 +34,7 @@ function App() {
 
   //Reset Button
   const resetFields = () => {
-    setFormData(initialState)
+    setFormData({...initialState})
   }
 
   // const handleClick = () => {
@@ -46,16 +46,6 @@ function App() {
   //     .finally(() => console.log("Always!!!"));
   // };
 
-  //Handle Submit event
-  const handleSubmit = (event) =>{
-    event.preventDefault()
-    //Axios Front End call with POST
-    axios.post('/new', formData)
-    .then(response => console.log('Response data: ', response.data))
-    .catch(err => console.log('Error: ', err))
-    resetFields()
-  }
-
   //Handle Change event
   const handleChange = (event)=>{
     setFormData({
@@ -64,47 +54,100 @@ function App() {
     })
   }
 
+  //Handle Submit event
+  const handleSubmit = (event) =>{
+    event.preventDefault()
+    //Axios Front End call with POST
+    axios.post(`${baseUrl}/new`, {...formData})
+    .then(response => console.log('Response data: ', response.data))
+    .catch(err => console.log('Error: ', err))
+    resetFields()
+  }
+
   //Destructuring
-  let {fname, lname, email, phone, message} =  formData
+  let {fname, lname, email, phone, message} = formData
 
   ////////////////////////////////////////////////////////////////////////
 
   //Form Seen on the React page
   return (
+
     <div className="App">
-      <form onSubmit={handleSubmit}>
-
-        <label htmlFor="fname">First Name: </label><br/>
-        <input type="text" name="fname" id="fname" 
-        value={fname} onChange={handleChange} 
-        pattern="[A-Za-z]{1,20}" required/><br/>
-
-        <label htmlFor="lname">Last Name: </label><br/>
-        <input type="text" name="lname" id="lname" 
-        value={lname} onChange={handleChange} 
-        pattern="[A-Za-z]{1,20}" required/><br/>
-
-        <label htmlFor="phone">Phone: </label><br/>
-        <input type="te" name="phone" id="phone" 
-        value={phone} onChange={handleChange} 
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/><br/>
-        <small id="phoneHelp" >Format 555-555-5555</small><br/>
-
-        <label htmlFor="fname">Email: </label><br/>
-        <input type="email" name="email" id="email" 
-        value={email} onChange={handleChange} 
+    <Form onSubmit={handleSubmit} autoComplete="off">
+      <FormGroup>
+        <Label for="fname">First Name:</Label>
+        <Input type="text" name="fname" id="fname" 
+        value={fname} onChange={handleChange}
+        pattern="[A-Za-z]{1,20}" required/>
+        
+      </FormGroup>
+      <FormGroup>
+        <Label for="lname">Last Name:</Label>
+        <Input type="text" name="lname" id="lname" 
+        value={lname} onChange={handleChange}
+        pattern="[A-Za-z]{1,20}" required/>
+      </FormGroup>
+      <FormGroup>
+        <Label for="phone">Phone:</Label>
+        <Input type="phone" name="phone" id="phone" 
+        value={phone} onChange={handleChange}
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+        <FormText><span>Ex. 5555555555</span></FormText>
+      </FormGroup>
+      <FormGroup>
+        <Label for="email">Email:</Label>
+        <Input type="email" name="email" id="email" 
+        value={email} onChange={handleChange}
         pattern="^[a-z0-9._%+-]+@email.com {1, 100}$" required/>
-        <br/>
+        <FormText><span>Ex. name@example.com</span></FormText>
+      </FormGroup>
+      <FormGroup>
+        <Label for="message">Message: </Label>
+        <Input type="textarea" name="message" id="message" 
+        value={message} onChange={handleChange} required/>
+      </FormGroup>
+      <Button className='btn-success' style={{background: "darkgreen"}}>Submit</Button>
+      <Button className='btn-success' 
+              type='reset' 
+              style={{background: "darkred"}}>
+              Reset
+      </Button>
+    </Form>
+  </div>
+    // <div className="App">
+    //   <form onSubmit={handleSubmit}>
 
-        <label htmlFor="fname">Message: </label><br/>
-        <input type="text" name="message" id="message" 
-        value={message} onChange={handleChange} required/><br/><br/>
+    //     <label htmlFor="fname">First Name: </label><br/>
+    //     <input type="text" name="fname" id="fname" 
+    //     value={fname} onChange={handleChange} 
+    //     pattern="[A-Za-z]{1,20}" required/><br/>
 
-        <button type="submit">Submit</button>
-        <button type="reset" onClick={resetFields}>Reset</button>
-      </form>
+    //     <label htmlFor="lname">Last Name: </label><br/>
+    //     <input type="text" name="lname" id="lname" 
+    //     value={lname} onChange={handleChange} 
+    //     pattern="[A-Za-z]{1,20}" required/><br/>
 
-    </div>
+    //     <label htmlFor="phone">Phone: </label><br/>
+    //     <input type="te" name="phone" id="phone" 
+    //     value={phone} onChange={handleChange} 
+    //     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/><br/>
+    //     <small id="phoneHelp" >Format 555-555-5555</small><br/>
+
+    //     <label htmlFor="fname">Email: </label><br/>
+    //     <input type="email" name="email" id="email" 
+    //     value={email} onChange={handleChange} 
+    //     pattern="^[a-z0-9._%+-]+@email.com {1, 100}$" required/>
+    //     <br/>
+
+    //     <label htmlFor="fname">Message: </label><br/>
+    //     <input type="text" name="message" id="message" 
+    //     value={message} onChange={handleChange} required/><br/><br/>
+
+    //     <button type="submit">Submit</button>
+    //     <button type="reset" onClick={resetFields}>Reset</button>
+    //   </form>
+
+    // </div>
   );
 }
 

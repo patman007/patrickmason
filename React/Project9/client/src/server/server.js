@@ -103,7 +103,7 @@ app.post('/new', (req, res)=>{
         { ...req.body},
         (err, result) => {
             err ?
-                console.log('Error: ', chalk.yellow(err.message), ()=>{
+                console.log('Error: ', chalk.yellow(err.message), () => {
                     res.status(400).json(err)
                 })
                 :res.status(201).json(result);
