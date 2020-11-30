@@ -6,7 +6,7 @@
                     <div class="card m-3">
                         <div class="card-body" >
                             <% data.forEach(function(el) { %>                                                              
-                                <form method="post" action="/results"> 
+                                <form method="post" action="/savestars"> 
                                     <img src="<%=el.image_url %>" alt=" Image"/>                                    
                                         <% let checked = el.options ? "checked" : "" %> 
                                         <input class="star" name="checked" 
