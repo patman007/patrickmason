@@ -32,6 +32,9 @@ values of each of the keys
 ### db.animals.distinct("egg") =>[ "duck", "hen", "ostrich" ]
 ### db.animals.distinct("hello") => [ ]
 
+### Correct
+
+
 
 ## Question B:
 
@@ -39,3 +42,6 @@ In the above database, how would you count the number of mongo documents which c
 
 ### Answer: To count the number of documents that contain "cat" you must use the count() in Mongo
 ### db.animals.count({type: "cat"})
+
+### Correct
+

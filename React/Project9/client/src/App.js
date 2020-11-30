@@ -58,9 +58,10 @@ function App() {
     event.preventDefault()
     //Axios Front End call with POST
     axios.post(`${baseUrl}/new`, {...formData})
-    .then(response => console.log('Response data: ', response.data))
-    .catch(err => console.log('Error: ', err))
-    resetFields()
+    .then(response => {console.log('Response data: ', response.data)
+        resetFields()
+  })    
+    .catch(err => console.log('Error: ', err))    
   }
 
   //Destructuring

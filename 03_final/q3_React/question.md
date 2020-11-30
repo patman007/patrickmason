@@ -5,3 +5,53 @@ and in its JSX it renders that specific state variable within the h1 "Hello {nam
 It should work like this when done:
 
 <img src="assets/React-State-Demo.gif" width="400px">
+
+
+## CHILD COMPONENT CODE
+import React from 'react'
+
+//Child Functional Component
+//passed with props as argument(parameter)
+const Child = props => {
+
+    //Console.log message of the props 
+    //when sending data from child
+    //to parent.
+    console.log(props)
+
+    return (
+        <div>
+            <input type="text" 
+            placeholder="Please Enter Your Name"
+            onChange={event => props.onChange(event.target.value)}
+            />
+        </div>
+    )
+}
+
+//Export Child Component
+export default Child
+
+//////////////////////////////////////////////////////////////////
+
+## PARENT COMPONENT CODE
+import React, { useState } from 'react'
+import Child from './Child'
+
+//Parent Functional Component
+const Parent = () => {
+
+  //Array Destructuring
+  //name is a state variable 
+  const [name, setName] = useState('')
+
+  return (
+    <div>
+      <h1>Hello {name}</h1>
+      <Child onChange={value => setName(value)}/>
+    </div>
+  )
+}
+
+//Export Parent Component
+export default Parent

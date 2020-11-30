@@ -8,3 +8,8 @@ The big differences between relational (aka SQL databases) and document based da
 4. The schema flexibility of document databases make them suitable for quick experimentation.
 
 ### Answer: skipped
+
+### New Answer: 2
+
+### Correct answer is 2. SQL has in-database procedures called stored procedures.  
+### Mongo doesn't have them. To the best of my knowledge other document db's also don't.

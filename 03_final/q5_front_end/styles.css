@@ -1,4 +1,88 @@
-body, html {
+/*NEW WAY ON EXAM */
+
+#menu {
+  /* Position Sticky holds the 
+  navigation bar in place
+  when scroll with the mouse
+  up and down the webpage */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /*Bullet points will not display */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* the menu will be visible */
+  overflow: hidden;
+  background-color: #333;
+  border: 1px solid grey;
+}
+
+/*Items in Menu and Submenu 
+go on left side of screen */
+li {
+  float: left;  
+}
+
+/* Main Menu item boxes
+are displayed */
+li a, .dropbtn {
+  
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+ 
+}
+
+ /*Main Menu light up red
+  when hovering over */
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+ /*Main Menu light up red
+  when hovering over */
+li.dropdown {
+  display: inline;    
+}
+
+ /*Sub Menu light up red
+  when hovering over */
+.dropdown-content {
+  display: none;  
+  background-color: #f9f9f9;
+  min-width: 160px;   
+}
+
+/* Sub Menu items boxes
+are displayed */
+.dropdown-content a {
+  color:white;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ /*Sub menus light up green 
+  when hovering over */
+.dropdown-content a:hover {
+  background-color: green;
+  }
+
+  /*Sub menus are inline display 
+  when hovering over */
+.dropdown:hover .dropdown-content {
+  display: inline;
+} 
+
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+
+/* OLD WAY EXAM /* 
+
+/* body, html {
     margin: 0;
     background: #eceff1;
      
@@ -12,14 +96,14 @@ body, html {
   }
   
   /*Navigation Bar*/
-  li {    
+  /* li {    
     float: left;
     border-right: 0.05em solid white;
     background: #01579b;                 
-  }
+  } */
   
   /*Drop down menu All Submenu and Top Menu*/
-  li a {        
+  /* li a {        
     display: block;        
     color: white;
     padding: 0em;     
@@ -30,29 +114,29 @@ body, html {
     text-decoration: none;
     text-align: center;            
     font-family: 'Oswald', sans-serif;    
-  }
+  } */
 
   /*Hover over Navigation Bar*/
-  li a:hover {
+  /* li a:hover {
     background: #9ad1e3;    
-  }
+  } */
 
-  li a ul {
+  /* li a ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background: #eceff1;
                          
-  }
+  } */
 
-  li a ul li {    
+  /* li a ul li {    
     float: left;
     vertical-align: auto;                    
-  }
+  } */
 
   /*Submenu Drop Down*/
-  li a ul li a {        
+  /* li a ul li a {        
     display: block;
     color: white;
     padding: 0em; 
@@ -63,22 +147,22 @@ body, html {
     text-align: center;    
     font-family: 'Oswald', sans-serif;
     font: bold;        
-  }
+  } */
 
   /*Hover over Navigation Bar*/
-  li ul li a:hover {      
+  /* li ul li a:hover {      
     background: #ace39a;
     color: white;
-  }
+  } */
 
    /*This will select ALL ul's that are desc of li's which are
   desc of  ul's */
-  ul li ul {
+  /* ul li ul {
     display: none;
-  }
+  } */
 
   /* Then ask yourself, what are you 'hovering over?' */
 
-  ul li:hover ul {
-    display: initial; /* sets the value back to default */
-  }
+  /* ul li:hover ul {
+    display: initial; /* sets the value back to default 
+  } */

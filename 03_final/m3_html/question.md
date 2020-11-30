@@ -5,8 +5,9 @@
 3. `span` is used when you need to show elements in a line, one after the other
 4. It's ok to nest a `div` in a `span` element.
 
-
 ### Answer: 1 and 3 - 
-###         `span` is an display:inline element, whereas `div` is a display:block element.
-###         `span` is used when you need to show elements in a line, one after the other
+### `span` is an display:inline element, whereas `div` is a display:block element.
+### `span` is used when you need to show elements in a line, one after the other.
 
+
+### Correct

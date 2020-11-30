@@ -12,3 +12,9 @@
 4. none of the above
 
 ### Answer: skipped
+
+### New Answer: 3.
+
+### Feedback
+### Answer is 3.  JS selecting elements gives you an array like structure called nodelist, which is
+### missing some key Array methods. Hence Array.from(nodelist) solves this problem like the code above.

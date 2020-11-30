@@ -12,3 +12,4 @@ See example below ...
 
 In the above example, the function should return 7.
 
+### Answer see the script.js file for the

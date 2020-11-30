@@ -1,0 +1,25 @@
+<%-include('partials/header') %>   
+        <%# Results #%>
+        <div class="container-flow justify-content-center mx-3">
+            <div class="row" >
+                <div class="container col-sm-4 mb-4">
+                    <div class="card m-3">
+                        <div class="card-body" >
+                            <% data.forEach(function(el) { %>                                                              
+                                <form method="post" action="/results"> 
+                                    <img src="<%=el.image_url %>" alt=" Image"/>                                    
+                                        <% let checked = el.options ? "checked" : "" %> 
+                                        <input class="star" name="checked" 
+                                        type="checkbox" value="true" onChange="this.form.submit()">
+                                    <h6 class="card-title"><%=el.name %></h6> 
+                                    <h6 class="card-title"><%=el.description %></h6>                                
+                                    <hr>
+                                </form>
+                            <% }) %>                                                  
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+<%-include('partials/footer') %>  

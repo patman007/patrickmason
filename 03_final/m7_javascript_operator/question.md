@@ -7,3 +7,6 @@
 
 
 ### Answer: 4 - when you run typeof null you would get undefined
+
+
+### Correct Interestingly  'typeof null' gives you "object"

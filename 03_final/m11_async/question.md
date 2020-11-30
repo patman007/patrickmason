@@ -7,3 +7,10 @@
 5. bind or call
 
 ### Answer: skipped
+
+### New Answe: 1, 2, 3, 4
+
+### Correct Answer: 1, 2, 3, 4
+### You may use all of these, except 5. 
+### 4 is not commonly used.
+### 1-3 are very common for async execution

@@ -3,8 +3,18 @@ const express = require('express');
 const app = express()
 const fetch =  require('node-fetch')
 
+//Axios
+const axios =  require('axios');
+
+//Morgan
+const logger = require("morgan");
+app.use(logger("dev"));
+
 const bodyParser = require('body-parser')
-// //Body Parser app.use
+// Body Parser app.use
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
 app.use(bodyParser.json())
 
 //Cors
@@ -40,10 +50,10 @@ app.get('/', (req, res) => {
 
 //Results Handler
 //app.get will handle only GET HTTP requests
-app.get('/getBeer', (req, res) => {
+app.get('/results', (req, res) => {
     //Variable used to setup the query
     //in url to be fetched
-    let beer_name  = req.query.name
+    let beer_name = req.query.name
     let url = `${endpoint}?name=${beer_name}`
 
     //FETCH FRAMEWORK (4 Parts)
@@ -78,7 +88,7 @@ app.get('/getBeer', (req, res) => {
         //do something with the data and renders the results EJS page
         //success
         console.log('data is', {data : data})
-        res.render('index.ejs', {data : data})
+        res.render('results.ejs', {data : data})
     })
 
     //Catch error will show connection errors and
@@ -91,6 +101,50 @@ app.get('/getBeer', (req, res) => {
         console.log('Catch error: ', error)             
     })
 })
+
+//POST METHOD
+axios({
+    method: 'post',
+    url: '/results',
+    data: {
+        name: 'Beer',
+        description: 'Description'
+    }
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+// const BeerUrl = 'http://localhost:3000/results'
+
+//POST METHOD OTHER WAY
+// app.post('/results', (req, res) => {
+//     console.log("I am the saves ejs")
+//     let name = req.body.name       
+//     let newBeer = {name: name} 
+//     $.ajax({
+//         url: BeerUrl,
+//         method: "POST",
+//         data: newBeer
+//     })
+//     .done(function(newBeer){
+//         let checked = newBeer.isComplete ? "checked" : "";
+//         $('input').append(
+//         `<input data-id=${newBeer.name}class=${checked}>${newBeer.name} name="checked" 
+//         type="checkbox" value="true" onChange="this.form.submit()"></input>`
+//         );
+//         $('input').val('');
+    
+//     })    
+//     visited.push(newBeer)   
+//     // console.log(req.body.name); //Output=> like { searchid: 'Array of checked checkbox' }
+//     // console.log(req.body.image); // to get array of checked checkbox    
+//     res.redirect('/results')
+// });
+
 
 //Listener
 //app.listen is a function used to bind and listen to the 

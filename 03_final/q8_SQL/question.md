@@ -18,7 +18,8 @@ FROM teams;
 SELECT *
 FROM players;
  
-### Answer:  
+### Answer: 
+## 83 records 
 SELECT p.fname || ' ' || p.lname AS FULLNAME,   
     p.weight AS WEIGHT,
     t.name AS TEAM_NAME,
@@ -32,6 +33,29 @@ FROM players p
 INNER JOIN teams t
 ON t.id = p.team_id
 ORDER BY p.weight DESC;
+
+### Feedback: good work. However you need to use an outer join to satisfy the first condition.
+
+#### #######################################################################################
+
+### Rewritten code to satisfy the null values
+### with FULL OUTER JOIN on Line 53 instead of INNER JOIN POST EXAM
+### 87 records
+SELECT p.fname || ' ' || p.lname AS FULLNAME,   
+    p.weight AS WEIGHT,
+    t.name AS TEAM_NAME,
+    t.id AS TEAM_ID,
+    t.city AS CITY,
+    t.state AS STATE,
+CASE
+    WHEN p.weight > 200 THEN 'HEAVY'
+    ELSE 'MEDIUM'
+    END AS WEIGHT    
+FROM players p
+FULL OUTER JOIN teams t
+ON t.id = p.team_id
+ORDER BY p.weight DESC;
+
 
 ``
  team_id |  name  |     city      | state |     fullname      | weight | Weight Category
