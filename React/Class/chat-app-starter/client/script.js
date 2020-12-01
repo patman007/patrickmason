@@ -31,6 +31,14 @@ const chatMessages = document.querySelector('.chat__messages')
 //    the class "chat__submit"
 const sendNewMessage = document.querySelector('.chat__submit')
 
+
+// ---------------------------------------------------------
+//      Set a new nickname in the session storage object   |
+// ---------------------------------------------------------
+
+// If no nickname is set then display the nickname modal that covers the screen
+
+
 //check if a user exists, if not ,ask to create one
 if(!sessionStorage.getItem('nickname')) {
     nickname.style.display = 'initial';
@@ -45,33 +53,17 @@ if(!sessionStorage.getItem('nickname')) {
 
 socket.on('New User', nickname => {
     console.log('new user: ', nickname)
-    chatMessage.innerHTNL += newUserJoined(nickname)
+    chatMessages.innerHTML += newUserJoined(nickname)
 })
 
 const newUserJoined = nickname => {
     return `
         <div class="chat__new-user-joined">
             <i>${nickname} has joined the chat </i>
-        </div>`    
+        </div>
+    `    
 }
  
-
-
- 
-
-
-
-// Create new io instance:
-
-// ---------------------------------------------------------
-//      Set a new nickname in the session storage object   |
-// ---------------------------------------------------------
-
-// If no nickname is set then display the nickname modal that covers the screen
-
-
-
-
 // ------------------------------------
 // Functions to create new messages:  |
 // ------------------------------------
@@ -80,9 +72,6 @@ const newUserJoined = nickname => {
 
 
 // Create a new message from a user
-
-
-
 
 
 // ------------------------------------
@@ -118,7 +107,6 @@ socket.on('New Message', messageObj => {
     )
 })
  
-
 // When the socket receives a new message
 
  //When the socket receives a new message event
@@ -130,25 +118,20 @@ socket.on('New Message', messageObj => {
 //event where we take the data we receive and then console.log it
 
  //browser receives a  new message and does somethhing with it
- socket.on('New Message', message => {
-    console.log(message)
-})
-
-
-
+//  socket.on('New Message', message => {
+//     console.log(message)
+// })
 
 // When the socket receives a new user
-const newUserMessage = (user, message) => {
+const newUserMessage = (nickname, messageText) => {
     return `<div class="chat__user-message">
-                <div class="chat__user-nickname">${user}</div>
+                <div class="chat__user-nickname">${nickname}</div>
                 <div class="chat__user-text">
-                ${message}
+                ${messageText}
                 </div>
             </div>`
  }
  
-
-
 // Optimizations
 // 1. Load all previous messages and users who joined
 // 2. Add error handling so that users cannot enter empty nicknames or messages

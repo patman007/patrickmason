@@ -4,7 +4,7 @@ const app = express()
 const fetch =  require('node-fetch')
 
 //Request
-const request = require('request')
+// const request = require('request')
 
 //Morgan
 const logger = require("morgan");
@@ -13,7 +13,7 @@ app.use(logger("dev"));
 const bodyParser = require('body-parser')
 // Body Parser app.use
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json())
 
@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 //app.get will handle only GET HTTP requests
 app.get('/results', (req, res) => {
     //Variable used to setup the query in url to be fetched
-    console.log('req.query is ', req.query)
+    console.log('req.query is ', req.query)        
     let beer_name = req.query.beer_name
     let url = `${endpoint}?beer_name=${beer_name}`
     console.log('my uri is ', url)
@@ -72,7 +72,7 @@ app.get('/results', (req, res) => {
     //Looking for results with success with the string valuess
     //send inside of the url endpoint.
     .then(data => {
-        data.map(d => console.log(d.id, d.name))
+        // data.map(d => console.log(d.id, d.name))
         //do something with the data and renders the results EJS page
         res.render('results.ejs', {data : data})
     })
@@ -93,8 +93,9 @@ app.get('/results', (req, res) => {
 //     console.log('I am the post')
 //     let endpoint = `https://api.punkapi.com/v2/beers`
 //     console.log(endpoint)
-//     let beer_name = req.body.name
+//     let beer_name = req.params.beer_name
 //     let url = `https://api.punkapi.com/v2/beers/?beer_name=${beer_name}`
+//     console.log(url)
 //     request (url, function(error, response, body) {
 //         if(!error && response.statusCode === 200) {
 //             // console.log(response)
@@ -111,23 +112,25 @@ app.get('/results', (req, res) => {
 // })
 
 
-app.post('/savestars', (req, res) => {  
-    let beer_body = req.body.name
-    let beer_description = req.body.description
-    let image = req.body.image
+app.post('/savestars', (req, res)  => {  
+
+    const body = { 
+        beer_name : 'Buzz'        
+    }
+
+    console.log(req.body)
+    // let beer_body = req.body.name
+    // let beer_description = req.body.description
+    // let image = req.body.image
 
     // let beer_name = req.query.beer_name
 
-    fetch("https://api.punkapi.com/v2/beers/", {
-        method: 'post',
+    fetch(`https://api.punkapi.com/v2/beers/?beer_name=Buzz`, {
+        method: 'POST',
+        body: JSON.stringify(body),
         headers: {
-          "Content-type": "application/json; charset=UTF-8"
-        },
-        body: JSON.stringify({
-            "name": `${beer_body}`,
-            "description": `${beer_description}`,
-            "image": `${image}`
-        })
+            'Accept': 'application/json, text/plain, */*',
+            'Content-type': 'application/json'},
       })
       .then(response => {
         
@@ -144,14 +147,14 @@ app.post('/savestars', (req, res) => {
         }
      
         //json does parsing and returns a string
-        return response.json(JSON.stringify(body))
+        return response.json()
     })
-      .then(function (data) {
-        console.log('Request succeeded with JSON response', data);
-        res.render('/savestars', data)
+      .then(function (json) {
+        console.log('Request succeeded with JSON response: ', json);
+        res.render('/savestars', json)
       })
       .catch(function (error) {
-        console.log('Request failed', error);
+        console.log('Request failed: ', error);
       });
 })
 
