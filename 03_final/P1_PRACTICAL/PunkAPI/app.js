@@ -3,6 +3,9 @@ const express = require('express');
 const app = express()
 const fetch =  require('node-fetch')
 
+//Request
+const request = require('request')
+
 //Morgan
 const logger = require("morgan");
 app.use(logger("dev"));
@@ -86,19 +89,41 @@ app.get('/results', (req, res) => {
     })
 })
 
+// app.post('/savestars', (req, res) => {
+//     console.log('I am the post')
+//     let endpoint = `https://api.punkapi.com/v2/beers`
+//     console.log(endpoint)
+//     let beer_name = req.body.name
+//     let url = `https://api.punkapi.com/v2/beers/?beer_name=${beer_name}`
+//     request (url, function(error, response, body) {
+//         if(!error && response.statusCode === 200) {
+//             // console.log(response)
+//             //receive and parse the json
+//             let parsedData = JSON.parse(body)
+//             console.log(parsedData)
+//             //do something with parsed json
+//             res.render('/savestars', {data : parsedData});
+//         } else {
+//             res.status(404).send({error})
+//             res.render('/error', {error})
+//         }
+//     })
+// })
+
+
 app.post('/savestars', (req, res) => {  
     let beer_body = req.body.name
     let beer_description = req.body.description
     let image = req.body.image
 
-    let beer_name = req.query.beer_name
+    // let beer_name = req.query.beer_name
 
-    fetch("https://api.punkapi.com/v2/beers/?beer_name=", {
+    fetch("https://api.punkapi.com/v2/beers/", {
         method: 'post',
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         },
-        body: JSON.parse({
+        body: JSON.stringify({
             "name": `${beer_body}`,
             "description": `${beer_description}`,
             "image": `${image}`
@@ -114,11 +139,12 @@ app.post('/savestars', (req, res) => {
             //We are testing errors first            
             //different from catch errors.
             //Use a res.send instead of a throw Error
-            res.send({code: 55, 
+            res.send({code: 200, 
                 message: 'Your response failed, please contact support at support@'})
         }
+     
         //json does parsing and returns a string
-        return response.json()
+        return response.json(JSON.stringify(body))
     })
       .then(function (data) {
         console.log('Request succeeded with JSON response', data);
