@@ -1,2 +1,2 @@
 # patrickmason
-Patrick repository from ACC Full Stack Bootcamp Assignments 2020
+Patrick Mason repository from ACC Full Stack Bootcamp Assignments 2020
