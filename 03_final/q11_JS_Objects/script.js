@@ -7,6 +7,10 @@ const apple = {
 //Object.assign copies the apple object
 var orange = Object.assign({}, apple);
 
+//With object.assign Clementine
+//is ignored.
 orange.type = 'Clementine';
 
-console.log('Apple type is ', apple.type);
+//Console message to show the type
+//of apple is a Granny Smith
+console.log('Apple type is', apple.type);
