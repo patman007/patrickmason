@@ -12,10 +12,10 @@
                     <% let checked = el.options ? "checked" : "" %>
                     <div>
                       <input name="favorite" id="favorite" type="checkbox" value="true"
-                      onChange="function1" >
+                      onchange="browser()">
                       <label for="favorite">Save as a favorite</label>
                     </div>
-                    <h6 class="card-title"><%=el.name %></h6>
+                    <h6 id="beer_name"class="card-title"><%=el.name %></h6>
                   <h6 class="card-title"><%=el.description %></h6>
                   <hr>
                 </form>

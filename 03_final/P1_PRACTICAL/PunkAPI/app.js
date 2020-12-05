@@ -25,7 +25,7 @@ app.use(cors())
 //access them in public folder
 //Examples are CSS, JS and HTML files
 app.use(express.static('public'))
-app.use('/js', express.static(__dirname + 'public'))
+// app.use('/js', express.static(__dirname + 'public'))
 
 //specified on PORT 3000 or another
 //will be used for the environment (env)
