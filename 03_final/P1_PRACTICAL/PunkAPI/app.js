@@ -73,100 +73,49 @@ app.get('/results', (req, res) => {
     .catch(error => {
         //Console.log message shows a status message to be handled
         res.status(404).send({error})
-        res.render('/error', {error})
+        res.render('/error', error)
         console.log('Catch error: ', error)
     })
 })
 
 
-app.get('/favorite', (req, res)  => {
-    // let id = req.query.id
-    console.log('req.query is ', req.query)
-    // let beer_name = req.query.beer_name
-    // let url = `${endpoint}?beer_name=${beer_name}`
+app.get('/favorites', (req, res)  => {
+    res.render('favorites.ejs')
+})
 
-    // let url = 'http://localhost:3000/favorite?favorite=true'
+app.get('/singlebeer/:id', (req, res) => {
+    let url = `https://api.punkapi.com/v2/beers/${req.params.id}`
 
-    // // let url = `${endpoint}/random`
-    // console.log('my uri is ', url)
+    fetch(url)
+    .then (response => {
+        //IF Statment: Tests for errors first before returning
+        //response.json to see if we need to work on our code.
+        if(!response.ok) {
+            //We are testing errors first
+            //Use a res.send instead of a throw Error
+            res.send({code: 400,
+                message: 'Your response failed, please contact support at support@'})
+        }
+        //json does parsing and returns a string
+        return response.json(bodyParser)
+    })
+    //Looking for results with success with the string valuess
+    .then(data => {
+        // console.log(data[0])
+        //do something with the data and renders the results EJS page
+        res.render('singlebeer.ejs', {data : data})
+    })
 
-    // // send a new view which renders a list of favorite beers
-    // // it finds the previously favorited beers from localStorage
-    // // and it loopes over it to render the list of fav beers
-    // console.log("I am the favorites ejs")
-    // fetch(url)
-    // .then (response => {
-    //     //IF Statment: Tests for errors first before returning
-    //     //response.json to see if we need to work on our code.
-    //     if(!response.ok) {
-    //         //We are testing errors first
-    //         //Use a res.send instead of a throw Error
-    //         res.send({code: 400,
-    //             message: 'Your response failed, please contact support at support@'})
-    //     }
-    //     //json does parsing and returns a string
-    //     return response.json(bodyParser)
-    // })
-    // //Looking for results with success with the string valuess
-    // .then(data => {
-    //     console.log(data)
-    //     //do something with the data and renders the results EJS page
-    //     res.render('favorites.ejs', {data : data})
-    // })
-
-    // //handles errors only. Testing of errors are not done here.
-    // .catch(error => {
-    //     //Console.log message shows a status message to be handled
-    //     // res.status(404).send({error})
-    //     res.render('/error', {error})
-    //     console.log('Catch error: ', error)
-    // })
+    //handles errors only. Testing of errors are not done here.
+    .catch(error => {
+        //Console.log message shows a status message to be handled
+        res.status(404).send({error})
+        res.render('/error', error)
+        console.log('Catch error: ', error)
+    })
 })
 
 
-// app.get('/favorite', (req, res)  => {
-//     // let id = req.query.id
-//     console.log('req.query is ', req.query)
-//     // let beer_name = req.query.beer_name
-//     // let url = `${endpoint}?beer_name=${beer_name}`
-
-//     let url = 'http://localhost:3000/favorite?favorite=true'
-
-//     // let url = `${endpoint}/random`
-//     console.log('my uri is ', url)
-
-//     // send a new view which renders a list of favorite beers
-//     // it finds the previously favorited beers from localStorage
-//     // and it loopes over it to render the list of fav beers
-//     console.log("I am the favorites ejs")
-//     fetch(url)
-//     .then (response => {
-//         //IF Statment: Tests for errors first before returning
-//         //response.json to see if we need to work on our code.
-//         if(!response.ok) {
-//             //We are testing errors first
-//             //Use a res.send instead of a throw Error
-//             res.send({code: 400,
-//                 message: 'Your response failed, please contact support at support@'})
-//         }
-//         //json does parsing and returns a string
-//         return response.json(bodyParser)
-//     })
-//     //Looking for results with success with the string valuess
-//     .then(data => {
-//         console.log(data)
-//         //do something with the data and renders the results EJS page
-//         res.render('favorites.ejs', {data : data})
-//     })
-
-//     //handles errors only. Testing of errors are not done here.
-//     .catch(error => {
-//         //Console.log message shows a status message to be handled
-//         // res.status(404).send({error})
-//         res.render('/error', {error})
-//         console.log('Catch error: ', error)
-//     })
-// })
 
 //Listener
 //app.listen is a function used to bind and listen to the

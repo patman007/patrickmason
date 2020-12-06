@@ -1,15 +1,16 @@
-myfavories<%-include('partials/header') %>
-  <%# Results #%>
+<%-include('partials/header') %>
+  <%# Favorites #%>
   <div class="container-flow justify-content-center mx-3">
     <div class="row" >
       <div class="container col-sm-4 mb-4">
         <div class="card m-3">
           <div class="card-body" >
-            <div id="myfavorites">  </div>
-            <script type='text/javascript 'src="script.js"></script>
+            <h4>Favorites</h4>
+            <div id="myfavorites"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script src="loadfavorites.js"></script>
 <%-include('partials/footer') %>

@@ -1,33 +1,33 @@
 .form-inline.my-3 {
     display: flex;
-    align-items: center;        
-    max-width: 18rem;
-} 
+    align-items: center;
+    flex-wrap: wrap;
 
-img {
-    background-repeat: no-repeat; 
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 175px;
-    height: 275px;     
+    max-width: 18rem;
 }
 
- 
-  .star {
-    margin: 75px;  
+img {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 75px;
+    height: 225px;
+}
+
+  /* .favorite {
     visibility: hidden;
-    font-size: 55px;
+    font-size: 25px;
     color: gold;
     cursor:pointer;
 }
 
-.star:before {
+.favorite:before {
    content: "\2606";
    position: absolute;
    visibility:visible;
 }
 
-.star:checked:before {
+.favorite:checked:before {
    content: "\2605";
    position: absolute;
-}
+} */
