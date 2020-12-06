@@ -9,7 +9,7 @@
               <div class="mycontainer">
                 <form method="get" action="/favorite">
                   <img id="beer_image" src="<%=el.image_url %>" alt=" Image"/>
-                    <%let checked = el.options ? "checked" : "" %>
+                    <%# let checked = el.options ? "checked" : "" %>
                     <div>
                       <input data-id="<%=el.id%>" data-name="<%=el.name%>" name="favorite" class="favorite" type="checkbox" value="true">
                       <label for="favorite">Save as a favorite</label>

@@ -2,14 +2,14 @@
   <%# Single Beer#%>
   <div class="container-flow justify-content-center mx-3">
     <div class="row" >
-      <div class="container col-sm-4 mb-4">
+      <div class="container col-sm-4">
         <div class="card m-3">
           <div class="card-body" >
             <% data.forEach(function(el) { %>
               <div class="mycontainer">
                 <form method="get" action="/singlebeer/:id">
                   <img id="beer_image" src="<%=el.image_url %>" alt=" Image"/>
-                    <%let checked = el.options ? "checked" : "" %>
+                    <%# let checked = el.options ? "checked" : "" %>
                     <div>
                       <input data-id="<%=el.id%>" data-name="<%=el.name%>" name="favorite" class="favorite" type="checkbox" value="true">
                       <label for="favorite">Save as a favorite</label>
